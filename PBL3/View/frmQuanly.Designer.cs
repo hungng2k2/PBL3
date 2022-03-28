@@ -39,11 +39,11 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btnNV = new FontAwesome.Sharp.IconButton();
             btnKH = new FontAwesome.Sharp.IconButton();
             btnTD = new FontAwesome.Sharp.IconButton();
@@ -54,9 +54,9 @@
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNV
@@ -69,7 +69,7 @@
             btnNV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnNV.IconSize = 36;
             btnNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnNV.Location = new System.Drawing.Point(-3, 80);
+            btnNV.Location = new System.Drawing.Point(-3, 74);
             btnNV.Name = "btnNV";
             btnNV.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             btnNV.Size = new System.Drawing.Size(143, 60);
@@ -90,7 +90,7 @@
             btnKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnKH.IconSize = 36;
             btnKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnKH.Location = new System.Drawing.Point(-3, 146);
+            btnKH.Location = new System.Drawing.Point(-3, 140);
             btnKH.Name = "btnKH";
             btnKH.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             btnKH.Size = new System.Drawing.Size(143, 60);
@@ -132,7 +132,7 @@
             bthQuit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             bthQuit.IconSize = 36;
             bthQuit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            bthQuit.Location = new System.Drawing.Point(-2, 466);
+            bthQuit.Location = new System.Drawing.Point(-3, 476);
             bthQuit.Name = "bthQuit";
             bthQuit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             bthQuit.Size = new System.Drawing.Size(143, 60);
@@ -153,7 +153,7 @@
             btnHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnHD.IconSize = 36;
             btnHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnHD.Location = new System.Drawing.Point(-2, 277);
+            btnHD.Location = new System.Drawing.Point(-3, 277);
             btnHD.Name = "btnHD";
             btnHD.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             btnHD.Size = new System.Drawing.Size(143, 60);
@@ -174,7 +174,7 @@
             btnKHO.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnKHO.IconSize = 36;
             btnKHO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnKHO.Location = new System.Drawing.Point(-2, 343);
+            btnKHO.Location = new System.Drawing.Point(-3, 343);
             btnKHO.Name = "btnKHO";
             btnKHO.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             btnKHO.Size = new System.Drawing.Size(143, 60);
@@ -195,7 +195,7 @@
             btnDT.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnDT.IconSize = 36;
             btnDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnDT.Location = new System.Drawing.Point(-2, 399);
+            btnDT.Location = new System.Drawing.Point(-3, 410);
             btnDT.Name = "btnDT";
             btnDT.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             btnDT.Size = new System.Drawing.Size(143, 60);
@@ -220,7 +220,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(141, 526);
+            this.panelMenu.Size = new System.Drawing.Size(141, 625);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
@@ -243,6 +243,16 @@
             this.panel1.Size = new System.Drawing.Size(141, 74);
             this.panel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelTl
             // 
             this.panelTl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -251,7 +261,7 @@
             this.panelTl.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTl.Location = new System.Drawing.Point(141, 0);
             this.panelTl.Name = "panelTl";
-            this.panelTl.Size = new System.Drawing.Size(880, 74);
+            this.panelTl.Size = new System.Drawing.Size(989, 74);
             this.panelTl.TabIndex = 1;
             // 
             // label1
@@ -285,24 +295,14 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(141, 74);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(880, 452);
+            this.panelDesktop.Size = new System.Drawing.Size(989, 551);
             this.panelDesktop.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // frmQuanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 526);
+            this.ClientSize = new System.Drawing.Size(1130, 625);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTl);
             this.Controls.Add(this.panelMenu);
@@ -311,10 +311,10 @@
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTl.ResumeLayout(false);
             this.panelTl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

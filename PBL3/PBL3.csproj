@@ -127,8 +127,17 @@
     <EmbeddedResource Include="View\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDatmon.resx">
+      <DependentUpon>frmDatmon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmKhachhang.resx">
+      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmQLNhanvien.resx">
+      <DependentUpon>frmQLNhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQuanly.resx">
       <DependentUpon>frmQuanly.cs</DependentUpon>
@@ -138,6 +147,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="View\frmThucdon.resx">
+      <DependentUpon>frmThucdon.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

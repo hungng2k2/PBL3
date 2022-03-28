@@ -16,5 +16,6 @@ namespace PBL3.View
         {
             InitializeComponent();
         }
+
     }
 }
