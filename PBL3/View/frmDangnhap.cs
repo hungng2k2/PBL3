@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.View
 {
-    public partial class Form1 : Form
+    public partial class frmDangnhap : Form
     {
-        public Form1()
+        public frmDangnhap()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace PBL3.View
         {
             if (txtUsername.Text == "demo" && txtPassword.Text == "1234")
             {
-                new Form2().Show();
+                new frmQuanly().Show();
                 this.Hide();
             }
 

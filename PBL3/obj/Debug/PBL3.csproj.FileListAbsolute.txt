@@ -4,11 +4,12 @@ C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\PBL3.pdb
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.Form1.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.exe
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.pdb
 C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.Form2.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDangnhap.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmNhanvien.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmQuanly.resources

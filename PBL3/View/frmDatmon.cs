@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace PBL3.View
 {
-    public partial class Form2 : Form
+    public partial class frmDatmon : Form
     {
-        public Form2()
+        public frmDatmon()
         {
             InitializeComponent();
         }
-
-       
     }
 }
