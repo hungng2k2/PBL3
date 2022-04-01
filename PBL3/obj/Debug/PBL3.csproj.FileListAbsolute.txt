@@ -31,3 +31,4 @@ D:\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 D:\PBL3\PBL3\obj\Debug\PBL3.exe
 D:\PBL3\PBL3\obj\Debug\PBL3.pdb
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKho.resources
