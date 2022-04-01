@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvDSKhachHang = new System.Windows.Forms.DataGridView();
+            this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -50,22 +50,22 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvDSKhachHang
+            // dgvDSNhanVien
             // 
-            this.dgvDSKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSKhachHang.Location = new System.Drawing.Point(3, 18);
-            this.dgvDSKhachHang.Name = "dgvDSKhachHang";
-            this.dgvDSKhachHang.RowHeadersWidth = 51;
-            this.dgvDSKhachHang.RowTemplate.Height = 24;
-            this.dgvDSKhachHang.Size = new System.Drawing.Size(965, 157);
-            this.dgvDSKhachHang.TabIndex = 0;
+            this.dgvDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSNhanVien.Location = new System.Drawing.Point(3, 18);
+            this.dgvDSNhanVien.Name = "dgvDSNhanVien";
+            this.dgvDSNhanVien.RowHeadersWidth = 51;
+            this.dgvDSNhanVien.RowTemplate.Height = 24;
+            this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
+            this.dgvDSNhanVien.TabIndex = 0;
             // 
             // label1
             // 
@@ -81,7 +81,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvDSKhachHang);
+            this.groupBox1.Controls.Add(this.dgvDSNhanVien);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
@@ -323,7 +323,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmQLNhanvien";
             this.Text = "frmNhanvien";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -335,7 +335,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvDSKhachHang;
+        private System.Windows.Forms.DataGridView dgvDSNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbGioiTinh;
