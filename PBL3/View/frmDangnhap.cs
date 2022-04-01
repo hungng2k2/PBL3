@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PBL3.View
@@ -19,15 +12,19 @@ namespace PBL3.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "demo" && txtPassword.Text == "1234")
+            if (txtUsername.Text == "admin" && txtPassword.Text == "1234")
             {
                 new frmQuanly().Show();
                 this.Hide();
             }
-
+            else if (txtUsername.Text == "user" && txtPassword.Text == "1234")
+            {
+                new frmNhanvien().Show();
+                this.Hide();
+            }
             else
             {
-                MessageBox.Show("The User name or password you entered is incorrect, try again");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                 txtUsername.Clear();
                 txtPassword.Clear();
                 txtUsername.Focus();
