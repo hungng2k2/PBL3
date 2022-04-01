@@ -130,6 +130,12 @@
     <EmbeddedResource Include="View\frmDatmon.resx">
       <DependentUpon>frmDatmon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDoanhthu.resx">
+      <DependentUpon>frmDoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHoadon.resx">
+      <DependentUpon>frmHoadon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmKhachhang.resx">
       <DependentUpon>frmKhachhang.cs</DependentUpon>
     </EmbeddedResource>
