@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.butDetail = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.butSave = new System.Windows.Forms.Button();
             this.butDelete = new System.Windows.Forms.Button();
             this.butUpdate = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,8 +65,8 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.butDetail);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.butSave);
             this.panel2.Controls.Add(this.butDelete);
             this.panel2.Controls.Add(this.butUpdate);
@@ -94,18 +94,6 @@
             this.butDetail.TabIndex = 12;
             this.butDetail.Text = "Chi tiết";
             this.butDetail.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(394, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hóa đơn";
             // 
             // butSave
             // 
@@ -253,6 +241,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(976, 172);
             this.dataGridView1.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(394, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 29);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Hóa đơn";
+            // 
             // frmHoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,7 +277,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button butDetail;
         private System.Windows.Forms.Button butSave;
@@ -292,5 +291,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
     }
 }
