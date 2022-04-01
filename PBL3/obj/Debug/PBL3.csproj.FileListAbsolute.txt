@@ -34,3 +34,10 @@ D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKho.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDoanhthu.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmHoadon.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDatmon.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoanhthu.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmHoadon.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmKho.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmQLNhanvien.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThucdon.resources
