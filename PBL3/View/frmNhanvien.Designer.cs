@@ -101,7 +101,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(141, 526);
+            this.panelMenu.Size = new System.Drawing.Size(141, 625);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
@@ -163,7 +163,7 @@
             this.panelTl.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTl.Location = new System.Drawing.Point(141, 0);
             this.panelTl.Name = "panelTl";
-            this.panelTl.Size = new System.Drawing.Size(880, 74);
+            this.panelTl.Size = new System.Drawing.Size(989, 74);
             this.panelTl.TabIndex = 1;
             // 
             // label1
@@ -197,14 +197,14 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(141, 74);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(880, 452);
+            this.panelDesktop.Size = new System.Drawing.Size(989, 551);
             this.panelDesktop.TabIndex = 2;
             // 
             // frmNhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 526);
+            this.ClientSize = new System.Drawing.Size(1130, 625);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTl);
             this.Controls.Add(this.panelMenu);
