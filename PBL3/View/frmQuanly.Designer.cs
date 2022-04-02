@@ -300,13 +300,14 @@
             // 
             // frmQuanly
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1130, 625);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTl);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmQuanly";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
