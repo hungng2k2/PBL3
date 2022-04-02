@@ -130,7 +130,7 @@
             this.txtUsername.Location = new System.Drawing.Point(160, 235);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(301, 22);
-            this.txtUsername.TabIndex = 6;
+            this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
@@ -138,9 +138,9 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(301, 22);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 2;
             // 
-            // Form1
+            // frmDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmDangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
