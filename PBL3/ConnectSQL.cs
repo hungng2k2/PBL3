@@ -8,6 +8,6 @@ namespace PBL3
 {
     public  class ConnectSQL
     {
-        public static string connectionString = @"Data Source=LAPTOP-E8SKH19R\SQLEXPRESS;Initial Catalog=qlchtan;Integrated Security=True";
+        public static string connectionString = @"Data Source=LAPTOP-BCBKO5G2\MSSQL181;Initial Catalog=qlchtan;Integrated Security=True";
     }
 }

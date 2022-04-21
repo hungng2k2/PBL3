@@ -37,7 +37,6 @@
             this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qlchtanDataSet = new PBL3.qlchtanDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -59,10 +58,8 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nhanvienTableAdapter = new PBL3.qlchtanDataSetTableAdapters.NhanvienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,12 +136,9 @@
             // nhanvienBindingSource
             // 
             this.nhanvienBindingSource.DataMember = "Nhanvien";
-            this.nhanvienBindingSource.DataSource = this.qlchtanDataSet;
             // 
             // qlchtanDataSet
-            // 
-            this.qlchtanDataSet.DataSetName = "qlchtanDataSet";
-            this.qlchtanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //
             // 
             // label1
             // 
@@ -283,7 +277,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(669, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 22);
+            this.label7.Size = new System.Drawing.Size(67, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "Địa chỉ";
             // 
@@ -294,7 +288,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(669, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 22);
+            this.label6.Size = new System.Drawing.Size(94, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh";
             // 
@@ -305,7 +299,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(334, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 22);
+            this.label5.Size = new System.Drawing.Size(121, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Số điện thoại";
             // 
@@ -316,7 +310,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(18, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(78, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giới tính";
             // 
@@ -327,7 +321,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(334, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 22);
+            this.label3.Size = new System.Drawing.Size(132, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên nhân viên";
             // 
@@ -338,7 +332,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(18, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 22);
+            this.label2.Size = new System.Drawing.Size(124, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -394,12 +388,11 @@
             // 
             // nhanvienTableAdapter
             // 
-            this.nhanvienTableAdapter.ClearBeforeFill = true;
             // 
             // frmQLNhanvien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(971, 504);
             this.Controls.Add(this.groupBox1);
@@ -409,7 +402,6 @@
             this.Load += new System.EventHandler(this.frmQLNhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -443,9 +435,7 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private qlchtanDataSet qlchtanDataSet;
         private System.Windows.Forms.BindingSource nhanvienBindingSource;
-        private qlchtanDataSetTableAdapters.NhanvienTableAdapter nhanvienTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mANVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;

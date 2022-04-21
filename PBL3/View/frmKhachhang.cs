@@ -19,8 +19,7 @@ namespace PBL3.View
 
         private void frmKhachhang_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qlchtanDataSet2.Khachhang' table. You can move, or remove it, as needed.
-            this.khachhangTableAdapter.Fill(this.qlchtanDataSet2.Khachhang);
+            dgvDSKhachHang.DataSource = QLCH.GetAllKhachhang();
             dgvDSKhachHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDSKhachHang.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }

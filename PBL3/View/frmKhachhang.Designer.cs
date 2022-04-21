@@ -58,14 +58,11 @@
             this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khachhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qlchtanDataSet2 = new PBL3.qlchtanDataSet2();
-            this.khachhangTableAdapter = new PBL3.qlchtanDataSet2TableAdapters.KhachhangTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -231,7 +228,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(669, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 22);
+            this.label7.Size = new System.Drawing.Size(67, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "Địa chỉ";
             // 
@@ -242,7 +239,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(669, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 22);
+            this.label6.Size = new System.Drawing.Size(94, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh";
             // 
@@ -253,7 +250,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(334, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 22);
+            this.label5.Size = new System.Drawing.Size(121, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Số điện thoại";
             // 
@@ -264,7 +261,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(18, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(78, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giới tính";
             // 
@@ -275,7 +272,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(334, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 22);
+            this.label3.Size = new System.Drawing.Size(148, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên khách hàng";
             // 
@@ -286,7 +283,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(18, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 22);
+            this.label2.Size = new System.Drawing.Size(140, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã khách hàng";
             // 
@@ -387,21 +384,18 @@
             // khachhangBindingSource
             // 
             this.khachhangBindingSource.DataMember = "Khachhang";
-            this.khachhangBindingSource.DataSource = this.qlchtanDataSet2;
             // 
             // qlchtanDataSet2
             // 
-            this.qlchtanDataSet2.DataSetName = "qlchtanDataSet2";
-            this.qlchtanDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // khachhangTableAdapter
             // 
-            this.khachhangTableAdapter.ClearBeforeFill = true;
             // 
             // frmKhachhang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(971, 504);
             this.Controls.Add(this.groupBox1);
@@ -416,7 +410,6 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,9 +437,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThem;
-        private qlchtanDataSet2 qlchtanDataSet2;
         private System.Windows.Forms.BindingSource khachhangBindingSource;
-        private qlchtanDataSet2TableAdapters.KhachhangTableAdapter khachhangTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAKHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENKHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;

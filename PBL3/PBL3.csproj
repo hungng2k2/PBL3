@@ -62,21 +62,6 @@
     <Compile Include="ConnectSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qlchtanDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtanDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="qlchtanDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtanDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="qlchtanDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtanDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\QLCH.cs" />
     <Compile Include="View\frmDangnhap.cs">
       <SubType>Form</SubType>
@@ -192,39 +177,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="qlchtanDataSet.xsc">
-      <DependentUpon>qlchtanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="qlchtanDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qlchtanDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="qlchtanDataSet.xss">
-      <DependentUpon>qlchtanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="qlchtanDataSet1.xsc">
-      <DependentUpon>qlchtanDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="qlchtanDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qlchtanDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="qlchtanDataSet1.xss">
-      <DependentUpon>qlchtanDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="qlchtanDataSet2.xsc">
-      <DependentUpon>qlchtanDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="qlchtanDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qlchtanDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="qlchtanDataSet2.xss">
-      <DependentUpon>qlchtanDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

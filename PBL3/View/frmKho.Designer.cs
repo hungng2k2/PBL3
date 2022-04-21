@@ -128,7 +128,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(157, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 22);
+            this.label2.Size = new System.Drawing.Size(87, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món";
             // 
@@ -195,7 +195,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(525, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 22);
+            this.label5.Size = new System.Drawing.Size(55, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng";
             // 
@@ -206,7 +206,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(525, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 22);
+            this.label3.Size = new System.Drawing.Size(75, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Đơn giá";
             // 
@@ -217,7 +217,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(157, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 22);
+            this.label4.Size = new System.Drawing.Size(86, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số lượng";
             // 
@@ -237,8 +237,8 @@
             // 
             // frmKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(971, 504);
             this.Controls.Add(this.groupBox1);

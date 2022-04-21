@@ -49,14 +49,11 @@
             this.tENMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gIATIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qlchtanDataSet1 = new PBL3.qlchtanDataSet1();
-            this.monanTableAdapter = new PBL3.qlchtanDataSet1TableAdapters.MonanTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucdon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -187,7 +184,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(663, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 22);
+            this.label6.Size = new System.Drawing.Size(73, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Giá tiền";
             // 
@@ -198,7 +195,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(357, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên món";
             // 
@@ -209,7 +206,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(38, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
+            this.label2.Size = new System.Drawing.Size(105, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã món ăn";
             // 
@@ -281,21 +278,18 @@
             // monanBindingSource
             // 
             this.monanBindingSource.DataMember = "Monan";
-            this.monanBindingSource.DataSource = this.qlchtanDataSet1;
             // 
             // qlchtanDataSet1
             // 
-            this.qlchtanDataSet1.DataSetName = "qlchtanDataSet1";
-            this.qlchtanDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // monanTableAdapter
             // 
-            this.monanTableAdapter.ClearBeforeFill = true;
             // 
             // frmThucdon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(971, 504);
             this.Controls.Add(this.groupBox1);
@@ -310,7 +304,6 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucdon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,9 +326,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvThucdon;
-        private qlchtanDataSet1 qlchtanDataSet1;
         private System.Windows.Forms.BindingSource monanBindingSource;
-        private qlchtanDataSet1TableAdapters.MonanTableAdapter monanTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAMADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENMADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gIATIENDataGridViewTextBoxColumn;
