@@ -16,5 +16,13 @@ namespace PBL3.View
         {
             InitializeComponent();
         }
+
+        private void frmThucdon_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qlchtanDataSet1.Monan' table. You can move, or remove it, as needed.
+            this.monanTableAdapter.Fill(this.qlchtanDataSet1.Monan);
+            dgvThucdon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
     }
 }

@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
+            this.mANVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYSINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIOITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qlchtanDataSet = new PBL3.qlchtanDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -50,7 +59,10 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nhanvienTableAdapter = new PBL3.qlchtanDataSetTableAdapters.NhanvienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,7 +70,16 @@
             // 
             // dgvDSNhanVien
             // 
+            this.dgvDSNhanVien.AutoGenerateColumns = false;
             this.dgvDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mANVDataGridViewTextBoxColumn,
+            this.tENNVDataGridViewTextBoxColumn,
+            this.nGAYSINHDataGridViewTextBoxColumn,
+            this.gIOITINHDataGridViewTextBoxColumn,
+            this.sDTDataGridViewTextBoxColumn,
+            this.dIACHIDataGridViewTextBoxColumn});
+            this.dgvDSNhanVien.DataSource = this.nhanvienBindingSource;
             this.dgvDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSNhanVien.Location = new System.Drawing.Point(3, 18);
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
@@ -66,6 +87,64 @@
             this.dgvDSNhanVien.RowTemplate.Height = 24;
             this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
             this.dgvDSNhanVien.TabIndex = 0;
+            // 
+            // mANVDataGridViewTextBoxColumn
+            // 
+            this.mANVDataGridViewTextBoxColumn.DataPropertyName = "MANV";
+            this.mANVDataGridViewTextBoxColumn.HeaderText = "MANV";
+            this.mANVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mANVDataGridViewTextBoxColumn.Name = "mANVDataGridViewTextBoxColumn";
+            this.mANVDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tENNVDataGridViewTextBoxColumn
+            // 
+            this.tENNVDataGridViewTextBoxColumn.DataPropertyName = "TENNV";
+            this.tENNVDataGridViewTextBoxColumn.HeaderText = "TENNV";
+            this.tENNVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tENNVDataGridViewTextBoxColumn.Name = "tENNVDataGridViewTextBoxColumn";
+            this.tENNVDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nGAYSINHDataGridViewTextBoxColumn
+            // 
+            this.nGAYSINHDataGridViewTextBoxColumn.DataPropertyName = "NGAYSINH";
+            this.nGAYSINHDataGridViewTextBoxColumn.HeaderText = "NGAYSINH";
+            this.nGAYSINHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nGAYSINHDataGridViewTextBoxColumn.Name = "nGAYSINHDataGridViewTextBoxColumn";
+            this.nGAYSINHDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gIOITINHDataGridViewTextBoxColumn
+            // 
+            this.gIOITINHDataGridViewTextBoxColumn.DataPropertyName = "GIOITINH";
+            this.gIOITINHDataGridViewTextBoxColumn.HeaderText = "GIOITINH";
+            this.gIOITINHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gIOITINHDataGridViewTextBoxColumn.Name = "gIOITINHDataGridViewTextBoxColumn";
+            this.gIOITINHDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            this.sDTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
+            this.sDTDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dIACHIDataGridViewTextBoxColumn
+            // 
+            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIACHI";
+            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "DIACHI";
+            this.dIACHIDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
+            this.dIACHIDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nhanvienBindingSource
+            // 
+            this.nhanvienBindingSource.DataMember = "Nhanvien";
+            this.nhanvienBindingSource.DataSource = this.qlchtanDataSet;
+            // 
+            // qlchtanDataSet
+            // 
+            this.qlchtanDataSet.DataSetName = "qlchtanDataSet";
+            this.qlchtanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -83,7 +162,7 @@
             // 
             this.groupBox1.Controls.Add(this.dgvDSNhanVien);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(971, 178);
@@ -134,9 +213,9 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(439, 208);
+            this.btnSua.Location = new System.Drawing.Point(435, 226);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(85, 85);
+            this.btnSua.Size = new System.Drawing.Size(100, 60);
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -147,9 +226,9 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(327, 208);
+            this.btnXoa.Location = new System.Drawing.Point(323, 226);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(85, 85);
+            this.btnXoa.Size = new System.Drawing.Size(100, 60);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -161,9 +240,9 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLuu.Location = new System.Drawing.Point(551, 208);
+            this.btnLuu.Location = new System.Drawing.Point(547, 226);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(85, 85);
+            this.btnLuu.Size = new System.Drawing.Size(100, 60);
             this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -174,9 +253,9 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThem.Location = new System.Drawing.Point(209, 208);
+            this.btnThem.Location = new System.Drawing.Point(205, 226);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(85, 85);
+            this.btnThem.Size = new System.Drawing.Size(100, 60);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -204,7 +283,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(669, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 24);
+            this.label7.Size = new System.Drawing.Size(65, 22);
             this.label7.TabIndex = 0;
             this.label7.Text = "Địa chỉ";
             // 
@@ -215,7 +294,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(669, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 24);
+            this.label6.Size = new System.Drawing.Size(90, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày sinh";
             // 
@@ -226,7 +305,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(334, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 24);
+            this.label5.Size = new System.Drawing.Size(115, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Số điện thoại";
             // 
@@ -237,7 +316,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(18, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 24);
+            this.label4.Size = new System.Drawing.Size(76, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giới tính";
             // 
@@ -248,7 +327,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(334, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 24);
+            this.label3.Size = new System.Drawing.Size(125, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên nhân viên";
             // 
@@ -259,7 +338,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(18, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 24);
+            this.label2.Size = new System.Drawing.Size(117, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -270,9 +349,9 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHuy.Location = new System.Drawing.Point(663, 208);
+            this.btnHuy.Location = new System.Drawing.Point(659, 226);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(85, 85);
+            this.btnHuy.Size = new System.Drawing.Size(100, 60);
             this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -313,6 +392,10 @@
             this.panel1.Size = new System.Drawing.Size(971, 326);
             this.panel1.TabIndex = 3;
             // 
+            // nhanvienTableAdapter
+            // 
+            this.nhanvienTableAdapter.ClearBeforeFill = true;
+            // 
             // frmQLNhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,7 +406,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmQLNhanvien";
             this.Text = "frmNhanvien";
+            this.Load += new System.EventHandler(this.frmQLNhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qlchtanDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -357,5 +443,14 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private qlchtanDataSet qlchtanDataSet;
+        private System.Windows.Forms.BindingSource nhanvienBindingSource;
+        private qlchtanDataSetTableAdapters.NhanvienTableAdapter nhanvienTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mANVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIOITINHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dIACHIDataGridViewTextBoxColumn;
     }
 }

@@ -10,7 +10,7 @@ namespace PBL3.View
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLG_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "1234")
             {
@@ -35,5 +35,7 @@ namespace PBL3.View
         {
             Application.Exit();
         }
+
+
     }
 }

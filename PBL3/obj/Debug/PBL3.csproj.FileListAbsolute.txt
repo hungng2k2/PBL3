@@ -41,3 +41,4 @@ C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmKho.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmQLNhanvien.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThucdon.resources
+C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\Guna.UI2.dll
