@@ -47,6 +47,26 @@ namespace PBL3
             return data;
         }
 
+        public static string checkLogin(string username, string password)
+        {
+            string quyen = "";
+            DataTable data = new DataTable();
+            string query = $"select quyen from Login\n" +
+                           $"where username = '{username}' and password = '{password}'";
+            using (SqlConnection connection = new SqlConnection(ConnectSQL.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(data);
+                connection.Close();
+            }
+            if(data.Rows.Count == 1)
+            {
+                quyen = data.Rows[0][0].ToString();
+            }
+            return quyen;
+        }
+
 
 
     }

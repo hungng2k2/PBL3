@@ -12,12 +12,14 @@ namespace PBL3.View
 
         private void buttonLG_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "1234")
+         
+            if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "admin")
             {
-                new frmQuanly().Show();
+                frmQuanly f = new frmQuanly();
+                f.Show();
                 this.Hide();
             }
-            else if (txtUsername.Text == "user" && txtPassword.Text == "1234")
+            else if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "user")
             {
                 new frmNhanvien().Show();
                 this.Hide();
