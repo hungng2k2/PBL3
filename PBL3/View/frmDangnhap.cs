@@ -10,7 +10,7 @@ namespace PBL3.View
             InitializeComponent();
         }
 
-        private void buttonLG_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
          
             if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "admin")
@@ -38,6 +38,12 @@ namespace PBL3.View
             Application.Exit();
         }
 
-
+        private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnLogin_Click(sender,e);
+            }
+        }
     }
 }

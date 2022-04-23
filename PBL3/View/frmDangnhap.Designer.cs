@@ -38,9 +38,9 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +99,8 @@
             this.txtUsername.Location = new System.Drawing.Point(151, 238);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(301, 22);
-            this.txtUsername.TabIndex = 6;
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
             // 
             // txtPassword
             // 
@@ -107,7 +108,8 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(301, 22);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
             // 
             // pictureBox1
             // 
@@ -131,35 +133,6 @@
             this.panel3.Size = new System.Drawing.Size(549, 143);
             this.panel3.TabIndex = 7;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(187, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 38);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "FASTFOOD";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 25;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(192, 372);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Đăng nhập";
-            this.guna2Button1.Click += new System.EventHandler(this.buttonLG_Click);
-            // 
             // iconButton1
             // 
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -176,12 +149,41 @@
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(187, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 38);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "FASTFOOD";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BorderRadius = 25;
+            this.btnLogin.CheckedState.Parent = this.btnLogin;
+            this.btnLogin.CustomImages.Parent = this.btnLogin;
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.HoverState.Parent = this.btnLogin;
+            this.btnLogin.Location = new System.Drawing.Point(192, 372);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
+            this.btnLogin.Size = new System.Drawing.Size(180, 45);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // frmDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 464);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -194,6 +196,7 @@
             this.Name = "frmDangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -216,7 +219,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
