@@ -10,6 +10,8 @@ namespace PBL3.BLL
     {
         List<T> GetAll();
 
+        T GetById(string id);
+
         void checkAddUpdate(string id);
 
         void ExecuteAddUpdate(T t);

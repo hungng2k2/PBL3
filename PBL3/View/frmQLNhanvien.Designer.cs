@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
-            this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -53,7 +51,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,10 +66,7 @@
             this.dgvDSNhanVien.RowTemplate.Height = 24;
             this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
             this.dgvDSNhanVien.TabIndex = 0;
-            // 
-            // nhanvienBindingSource
-            // 
-            this.nhanvienBindingSource.DataMember = "Nhanvien";
+            this.dgvDSNhanVien.SelectionChanged += new System.EventHandler(this.dgvDSNhanVien_SelectionChanged);
             // 
             // label1
             // 
@@ -332,7 +326,6 @@
             this.Text = "frmNhanvien";
             this.Load += new System.EventHandler(this.frmQLNhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -366,7 +359,6 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.BindingSource nhanvienBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn mANVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGAYSINHDataGridViewTextBoxColumn;

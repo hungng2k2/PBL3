@@ -37,7 +37,7 @@ namespace PBL3.BLL
 
         public void Delete(string id)
         {
-            throw new NotImplementedException();
+            DALNhanVien.Instance.Delete(id);
         }
 
         public void ExecuteAddUpdate(NhanVien t)
@@ -48,6 +48,19 @@ namespace PBL3.BLL
         public List<NhanVien> GetAll()
         {
             return DALNhanVien.Instance.GetAll();
+        }
+
+        public NhanVien GetById(string id)
+        {
+            NhanVien nv = null;
+            foreach(NhanVien i in DALNhanVien.Instance.GetAll())
+            {
+                if(i.Id == id)
+                {
+                    nv = i;
+                }
+            }
+            return nv;
         }
     }
 }
