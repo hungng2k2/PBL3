@@ -27,11 +27,6 @@ namespace PBL3.DAL
             throw new NotImplementedException();
         }
 
-        public MonAn GetById(string id)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update(MonAn t)
         {
             throw new NotImplementedException();

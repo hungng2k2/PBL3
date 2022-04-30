@@ -65,20 +65,6 @@ namespace PBL3.DAL
             };
         }
 
-        public NhanVien GetById(string id)
-        {
-            NhanVien o = null;
-            foreach(NhanVien i in GetAll())
-            {
-                if (i.Id == id)
-                {
-                    o = i;
-                    break;
-                }
-            }
-            return o;
-        }
-
         public void Update(NhanVien t)
         {
             string query = $"update Nhanvien\n" +

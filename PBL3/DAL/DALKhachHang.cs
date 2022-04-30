@@ -27,11 +27,6 @@ namespace PBL3.DAL
             throw new NotImplementedException();
         }
 
-        public KhachHang GetById(string id)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update(KhachHang t)
         {
             throw new NotImplementedException();

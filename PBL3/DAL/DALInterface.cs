@@ -9,8 +9,6 @@ namespace PBL3.DAL
 
         T GetByDataRow(DataRow i);
 
-        T GetById(string id);
-
         void Add(T t);
 
         void Update(T t);
