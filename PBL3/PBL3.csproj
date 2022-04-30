@@ -59,6 +59,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLInterface.cs" />
+    <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="ConnectSQL.cs" />
     <Compile Include="DAL\DALInterface.cs" />
     <Compile Include="DAL\DALKhachHang.cs" />
@@ -196,8 +198,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
