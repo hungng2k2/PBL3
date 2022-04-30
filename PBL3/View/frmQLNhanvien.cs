@@ -16,6 +16,7 @@ namespace PBL3.View
             dgvDSNhanVien.DataSource = BLLNhanVien.Instance.GetAll();
             dgvDSNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDSNhanVien.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
         }
 
         private void dgvDSNhanVien_SelectionChanged(object sender, EventArgs e)
@@ -31,6 +32,16 @@ namespace PBL3.View
                 cbGioiTinh.Text = nv.GioiTinh;
                 dpNgaySinh.Value = nv.NgaySinh;
             }
+        }
+
+        private void dgvDSNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvDSNhanVien.Columns["Id"].HeaderText = "Mã nhân viên";
+            dgvDSNhanVien.Columns["Ten"].HeaderText = "Tên nhân viên";
+            dgvDSNhanVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvDSNhanVien.Columns["GioiTinh"].HeaderText = "Giới tính";
+            dgvDSNhanVien.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+            dgvDSNhanVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
         }
     }
 }

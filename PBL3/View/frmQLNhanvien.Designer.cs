@@ -66,6 +66,7 @@
             this.dgvDSNhanVien.RowTemplate.Height = 24;
             this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
             this.dgvDSNhanVien.TabIndex = 0;
+            this.dgvDSNhanVien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSNhanVien_DataBindingComplete);
             this.dgvDSNhanVien.SelectionChanged += new System.EventHandler(this.dgvDSNhanVien_SelectionChanged);
             // 
             // label1
