@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PBL3.DAL;
+using System;
 using System.Windows.Forms;
 
 namespace PBL3.View
@@ -19,7 +12,7 @@ namespace PBL3.View
         }
         private void frmQLNhanvien_Load(object sender, EventArgs e)
         {
-            dgvDSNhanVien.DataSource = QLCH.GetAllNhanvien();
+            dgvDSNhanVien.DataSource = DALNhanVien.Instance.GetAll();
             dgvDSNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDSNhanVien.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }

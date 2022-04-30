@@ -60,6 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectSQL.cs" />
+    <Compile Include="DAL\DALInterface.cs" />
+    <Compile Include="DAL\DALKhachHang.cs" />
+    <Compile Include="DAL\DALMonAn.cs" />
+    <Compile Include="DAL\DALNhanVien.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\MonAn.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\QLCH.cs" />
@@ -185,6 +195,9 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

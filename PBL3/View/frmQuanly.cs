@@ -118,5 +118,10 @@ namespace PBL3.View
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
             OpenChildForm(new frmDoanhthu());
         }
+
+        private void frmQuanly_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new frmDangnhap().Show();
+        }
     }
 }

@@ -95,5 +95,7 @@ namespace PBL3.View
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
             Application.Exit();
         }
+
+        
     }
 }

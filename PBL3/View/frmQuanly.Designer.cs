@@ -308,6 +308,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmQuanly";
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanly_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

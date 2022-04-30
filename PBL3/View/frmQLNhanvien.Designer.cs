@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvDSNhanVien = new System.Windows.Forms.DataGridView();
-            this.mANVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nGAYSINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIOITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,16 +61,7 @@
             // 
             // dgvDSNhanVien
             // 
-            this.dgvDSNhanVien.AutoGenerateColumns = false;
             this.dgvDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mANVDataGridViewTextBoxColumn,
-            this.tENNVDataGridViewTextBoxColumn,
-            this.nGAYSINHDataGridViewTextBoxColumn,
-            this.gIOITINHDataGridViewTextBoxColumn,
-            this.sDTDataGridViewTextBoxColumn,
-            this.dIACHIDataGridViewTextBoxColumn});
-            this.dgvDSNhanVien.DataSource = this.nhanvienBindingSource;
             this.dgvDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSNhanVien.Location = new System.Drawing.Point(3, 18);
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
@@ -85,60 +70,9 @@
             this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
             this.dgvDSNhanVien.TabIndex = 0;
             // 
-            // mANVDataGridViewTextBoxColumn
-            // 
-            this.mANVDataGridViewTextBoxColumn.DataPropertyName = "MANV";
-            this.mANVDataGridViewTextBoxColumn.HeaderText = "MANV";
-            this.mANVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mANVDataGridViewTextBoxColumn.Name = "mANVDataGridViewTextBoxColumn";
-            this.mANVDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tENNVDataGridViewTextBoxColumn
-            // 
-            this.tENNVDataGridViewTextBoxColumn.DataPropertyName = "TENNV";
-            this.tENNVDataGridViewTextBoxColumn.HeaderText = "TENNV";
-            this.tENNVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tENNVDataGridViewTextBoxColumn.Name = "tENNVDataGridViewTextBoxColumn";
-            this.tENNVDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nGAYSINHDataGridViewTextBoxColumn
-            // 
-            this.nGAYSINHDataGridViewTextBoxColumn.DataPropertyName = "NGAYSINH";
-            this.nGAYSINHDataGridViewTextBoxColumn.HeaderText = "NGAYSINH";
-            this.nGAYSINHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nGAYSINHDataGridViewTextBoxColumn.Name = "nGAYSINHDataGridViewTextBoxColumn";
-            this.nGAYSINHDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gIOITINHDataGridViewTextBoxColumn
-            // 
-            this.gIOITINHDataGridViewTextBoxColumn.DataPropertyName = "GIOITINH";
-            this.gIOITINHDataGridViewTextBoxColumn.HeaderText = "GIOITINH";
-            this.gIOITINHDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gIOITINHDataGridViewTextBoxColumn.Name = "gIOITINHDataGridViewTextBoxColumn";
-            this.gIOITINHDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sDTDataGridViewTextBoxColumn
-            // 
-            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
-            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
-            this.sDTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
-            this.sDTDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dIACHIDataGridViewTextBoxColumn
-            // 
-            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIACHI";
-            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "DIACHI";
-            this.dIACHIDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
-            this.dIACHIDataGridViewTextBoxColumn.Width = 125;
-            // 
             // nhanvienBindingSource
             // 
             this.nhanvienBindingSource.DataMember = "Nhanvien";
-            // 
-            // qlchtanDataSet
-            //
             // 
             // label1
             // 
@@ -385,9 +319,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(971, 326);
             this.panel1.TabIndex = 3;
-            // 
-            // nhanvienTableAdapter
-            // 
             // 
             // frmQLNhanvien
             // 
