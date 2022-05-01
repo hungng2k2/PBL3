@@ -30,9 +30,9 @@ namespace PBL3.BLL
 
         }
 
-        public void checkAddUpdate(string id)
+        public bool checkAddUpdate(string id)
         {
-            throw new NotImplementedException();
+            return id == "";
         }
 
         public void Delete(string id)
@@ -42,7 +42,14 @@ namespace PBL3.BLL
 
         public void ExecuteAddUpdate(NhanVien t)
         {
-            throw new NotImplementedException();
+            if (checkAddUpdate(t.Id))
+            {
+                DALNhanVien.Instance.Add(t);
+            }
+            else
+            {
+                DALNhanVien.Instance.Update(t);
+            }
         }
 
         public List<NhanVien> GetAll()

@@ -12,7 +12,7 @@ namespace PBL3.BLL
 
         T GetById(string id);
 
-        void checkAddUpdate(string id);
+        bool checkAddUpdate(string id);
 
         void ExecuteAddUpdate(T t);
 

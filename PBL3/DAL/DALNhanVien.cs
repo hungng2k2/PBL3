@@ -29,8 +29,12 @@ namespace PBL3.DAL
 
         public void Add(NhanVien t)
         {
-            string query = $"insert into Nhanvien (manv,tennv,ngaysinh,gioitinh,sdt,diachi)\n" +
-                            $"values ('{t.Id}','{t.Ten}','{t.NgaySinh.ToString("yyyyMMdd")}',{t.GioiTinh},'{t.SoDienThoai}','{t.DiaChi}')";
+            string query = $"exec InsertNhanVien\n"+
+                                $"@TenNV = '{t.Ten}',\n"+
+		                        $"@NgaySinh = '{t.NgaySinh.ToString("yyyyMMdd")}',\n"+
+		                        $"@GioiTinh = '{t.GioiTinh}',\n"+
+		                        $"@SDT = '{t.SoDienThoai}',\n"+
+		                        $"@DiaChi = '{t.DiaChi}'";
             DBHelper.Instance.ExcuteDB(query);
         }
 
@@ -70,9 +74,9 @@ namespace PBL3.DAL
             string query = $"update Nhanvien\n" +
                             $"set\n" +
                             $"tennv='{t.Ten}'\n" +
-                            $"ngaysinh='{t.NgaySinh.ToString("yyyyMMdd")}'\n" +
-                            $"gioitinh='{t.GioiTinh}'\n" +
-                            $"sdt='{t.SoDienThoai}'\n" +
+                            $",ngaysinh='{t.NgaySinh.ToString("yyyyMMdd")}'\n" +
+                            $",gioitinh='{t.GioiTinh}'\n" +
+                            $",sdt='{t.SoDienThoai}'\n" +
                             $"where manv='{t.Id}'";
             DBHelper.Instance.ExcuteDB(query);
         }
