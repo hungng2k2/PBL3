@@ -18,7 +18,6 @@ namespace PBL3.View
             Reload();
             dgvDSNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDSNhanVien.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
         }
 
         private void Reload()
@@ -28,11 +27,11 @@ namespace PBL3.View
 
         public void EditorEnable(bool b)
         {
-            txtTenNhanVien.Enabled=b;
-            txtSoDienThoai.Enabled=b;
+            txtTenNhanVien.Enabled = b;
+            txtSoDienThoai.Enabled = b;
             txtDiaChi.Enabled = b;
-            dpNgaySinh.Enabled=b;
-            cbGioiTinh.Enabled=b;
+            dpNgaySinh.Enabled = b;
+            cbGioiTinh.Enabled = b;
             btnLuu.Enabled = b;
             btnHuy.Enabled = b;
             btnThem.Enabled = !b;
@@ -83,7 +82,7 @@ namespace PBL3.View
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(dgvDSNhanVien.SelectedRows.Count == 1)
+            if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
                 EditorEnable(true);
             }
@@ -109,8 +108,12 @@ namespace PBL3.View
             if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
                 string id = dgvDSNhanVien.SelectedRows[0].Cells["Id"].Value.ToString();
-                BLLNhanVien.Instance.Delete(id);
-                Reload();
+                DialogResult dr = MessageBox.Show("Bạn muốn xóa nhân viên có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    BLLNhanVien.Instance.Delete(id);
+                    Reload();
+                }
             }
         }
 
@@ -120,6 +123,6 @@ namespace PBL3.View
             EditorEnable(false);
         }
 
-        
+
     }
 }

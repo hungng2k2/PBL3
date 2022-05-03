@@ -64,6 +64,7 @@
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
             this.dgvDSNhanVien.RowHeadersWidth = 51;
             this.dgvDSNhanVien.RowTemplate.Height = 24;
+            this.dgvDSNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSNhanVien.Size = new System.Drawing.Size(965, 157);
             this.dgvDSNhanVien.TabIndex = 0;
             this.dgvDSNhanVien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSNhanVien_DataBindingComplete);

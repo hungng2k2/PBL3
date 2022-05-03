@@ -10,8 +10,8 @@ GO
 
 
 CREATE PROCEDURE [dbo].[InsertNhanVien]
- @TenNV VARCHAR(MAX),
- @NgaySinh DATE,
+ @TenNV nvarchar(MAX),
+ @NgaySinh date,
  @GioiTinh nvarchar(10),
  @SDT nchar(10),
  @DiaChi nvarchar(MAX)
