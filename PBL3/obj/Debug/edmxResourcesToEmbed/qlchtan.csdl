@@ -130,5 +130,12 @@
       <End Role="Monan" EntitySet="Monan" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
+    <FunctionImport Name="InsertNhanVien">
+      <Parameter Name="TenNV" Mode="In" Type="String" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="GioiTinh" Mode="In" Type="Boolean" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

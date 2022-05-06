@@ -1,4 +1,4 @@
-USE [qlchtan]
+USE [QLTAN]
 GO
 
 /****** Object:  StoredProcedure [dbo].[InsertNhanVien]    Script Date: 01/05/2022 3:17:14 CH ******/
@@ -12,7 +12,7 @@ GO
 CREATE PROCEDURE [dbo].[InsertNhanVien]
  @TenNV nvarchar(MAX),
  @NgaySinh date,
- @GioiTinh nvarchar(10),
+ @GioiTinh bit,
  @SDT nchar(10),
  @DiaChi nvarchar(MAX)
 AS
@@ -28,7 +28,7 @@ BEGIN
 		set @max=@max+1
 		set @id_next='NV' +RIGHT('000'+ CAST (@max as varchar (8)), 3)
 	end
-INSERT INTO Nhanvien VALUES (@id_next,@TenNV,@NgaySinh,@GioiTinh,@SDT,@DiaChi)
+INSERT INTO Nhanvien VALUES (@id_next,@TenNV,@NgaySinh,@GioiTinh,@SDT,@DiaChi,@id_next,'123456','NhanVien')
 END
 GO
 

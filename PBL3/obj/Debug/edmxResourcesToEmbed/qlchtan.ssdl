@@ -100,6 +100,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="InsertNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenNV" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NgaySinh" Type="date" Mode="In" />
+    <Parameter Name="GioiTinh" Type="bit" Mode="In" />
+    <Parameter Name="SDT" Type="nchar" Mode="In" />
+    <Parameter Name="DiaChi" Type="nvarchar(max)" Mode="In" />
+  </Function>
   <EntityContainer Name="QLTANModelStoreContainer">
     <EntitySet Name="Hoadon" EntityType="Self.Hoadon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Khachhang" EntityType="Self.Khachhang" Schema="dbo" store:Type="Tables" />

@@ -58,5 +58,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="InsertNhanVien" FunctionName="QLTANModel.Store.InsertNhanVien" />
   </EntityContainerMapping>
 </Mapping>

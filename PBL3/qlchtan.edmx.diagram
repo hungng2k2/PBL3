@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="QLTANModel.Hoadon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTANModel.Khachhang" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTANModel.Monan" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTANModel.Nhanvien" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTANModel.Nhanvien" Width="1.5" PointX="3.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTANModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="QLTANModel.FK_Hoadon_Nhanvien" ManuallyRouted="false" />
         <AssociationConnector Association="QLTANModel.FK_Hoadon_Order" ManuallyRouted="false" />

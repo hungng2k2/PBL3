@@ -51,7 +51,7 @@ namespace PBL3.BLL
         {
             if (checkAddUpdate(t.MANV))
             {
-                db.Nhanvien.Add(t);
+                db.InsertNhanVien(t.TENNV,t.NGAYSINH,t.GIOITINH,t.SDT,t.DIACHI);
                 db.SaveChanges();
             }
             else
