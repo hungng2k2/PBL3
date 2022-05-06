@@ -57,5 +57,30 @@ namespace PBL3
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertNhanVien", tenNVParameter, ngaySinhParameter, gioiTinhParameter, sDTParameter, diaChiParameter);
         }
+    
+        public virtual int InsertKhachHang(string tenKH, Nullable<System.DateTime> ngaySinh, Nullable<bool> gioiTinh, string sDT, string diaChi)
+        {
+            var tenKHParameter = tenKH != null ?
+                new ObjectParameter("TenKH", tenKH) :
+                new ObjectParameter("TenKH", typeof(string));
+    
+            var ngaySinhParameter = ngaySinh.HasValue ?
+                new ObjectParameter("NgaySinh", ngaySinh) :
+                new ObjectParameter("NgaySinh", typeof(System.DateTime));
+    
+            var gioiTinhParameter = gioiTinh.HasValue ?
+                new ObjectParameter("GioiTinh", gioiTinh) :
+                new ObjectParameter("GioiTinh", typeof(bool));
+    
+            var sDTParameter = sDT != null ?
+                new ObjectParameter("SDT", sDT) :
+                new ObjectParameter("SDT", typeof(string));
+    
+            var diaChiParameter = diaChi != null ?
+                new ObjectParameter("DiaChi", diaChi) :
+                new ObjectParameter("DiaChi", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertKhachHang", tenKHParameter, ngaySinhParameter, gioiTinhParameter, sDTParameter, diaChiParameter);
+        }
     }
 }

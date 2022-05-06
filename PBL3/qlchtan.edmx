@@ -105,6 +105,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="InsertKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TenKH" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="NgaySinh" Type="date" Mode="In" />
+          <Parameter Name="GioiTinh" Type="bit" Mode="In" />
+          <Parameter Name="SDT" Type="nchar" Mode="In" />
+          <Parameter Name="DiaChi" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="InsertNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TenNV" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="NgaySinh" Type="date" Mode="In" />
@@ -276,6 +283,13 @@
             <Parameter Name="SDT" Mode="In" Type="String" />
             <Parameter Name="DiaChi" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="InsertKhachHang">
+            <Parameter Name="TenKH" Mode="In" Type="String" />
+            <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+            <Parameter Name="GioiTinh" Mode="In" Type="Boolean" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+            <Parameter Name="DiaChi" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -341,6 +355,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="InsertNhanVien" FunctionName="QLTANModel.Store.InsertNhanVien" />
+          <FunctionImportMapping FunctionImportName="InsertKhachHang" FunctionName="QLTANModel.Store.InsertKhachHang" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

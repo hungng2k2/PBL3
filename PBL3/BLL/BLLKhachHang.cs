@@ -49,7 +49,7 @@ namespace PBL3.BLL
         {
             if (checkAddUpdate(t.MAKH))
             {
-                db.Khachhang.Add(t);
+                db.InsertKhachHang(t.TENKH,t.NGAYSINH,t.GIOITINH,t.SDT,t.DIACHI);
                 db.SaveChanges();
             }
             else
