@@ -12,14 +12,14 @@ namespace PBL3.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         
-            if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "admin")
+
+            if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "QuanLy")
             {
                 frmQuanly f = new frmQuanly();
                 f.Show();
                 this.Hide();
             }
-            else if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "user")
+            else if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "NhanVien")
             {
                 new frmNhanvien().Show();
                 this.Hide();

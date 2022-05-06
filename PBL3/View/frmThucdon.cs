@@ -19,8 +19,6 @@ namespace PBL3.View
 
         private void frmThucdon_Load(object sender, EventArgs e)
         {
-            dgvThucdon.DataSource = QLCH.GetAllMonan();
-            dgvThucdon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

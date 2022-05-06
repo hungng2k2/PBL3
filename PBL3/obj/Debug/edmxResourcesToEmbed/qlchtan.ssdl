@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Hoadon">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAOD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MANV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NGAYLAP" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Khachhang">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="GIOITINH" Type="bit" />
+    <Property Name="SDT" Type="nchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Monan">
+    <Key>
+      <PropertyRef Name="MAMA" />
+    </Key>
+    <Property Name="MAMA" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENMA" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIA" Type="float" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="Nhanvien">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="GIOITINH" Type="bit" />
+    <Property Name="SDT" Type="nchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="nvarchar(max)" />
+    <Property Name="Username" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Chucvu" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="MAOD" />
+    </Key>
+    <Property Name="MAOD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAMA" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <Association Name="FK_Hoadon_Nhanvien">
+    <End Role="Nhanvien" Type="Self.Nhanvien" Multiplicity="1" />
+    <End Role="Hoadon" Type="Self.Hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nhanvien">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="Hoadon">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoadon_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Hoadon" Type="Self.Hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="MAOD" />
+      </Principal>
+      <Dependent Role="Hoadon">
+        <PropertyRef Name="MAOD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Khachhang">
+    <End Role="Khachhang" Type="Self.Khachhang" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khachhang">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Monan">
+    <End Role="Monan" Type="Self.Monan" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monan">
+        <PropertyRef Name="MAMA" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="MAMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLTANModelStoreContainer">
+    <EntitySet Name="Hoadon" EntityType="Self.Hoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Khachhang" EntityType="Self.Khachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monan" EntityType="Self.Monan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nhanvien" EntityType="Self.Nhanvien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Hoadon_Nhanvien" Association="Self.FK_Hoadon_Nhanvien">
+      <End Role="Nhanvien" EntitySet="Nhanvien" />
+      <End Role="Hoadon" EntitySet="Hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoadon_Order" Association="Self.FK_Hoadon_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Hoadon" EntitySet="Hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Khachhang" Association="Self.FK_Order_Khachhang">
+      <End Role="Khachhang" EntitySet="Khachhang" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Monan" Association="Self.FK_Order_Monan">
+      <End Role="Monan" EntitySet="Monan" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

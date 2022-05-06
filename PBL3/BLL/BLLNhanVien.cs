@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PBL3.DTO;
-using PBL3.DAL;
 
 namespace PBL3.BLL
 {
-    class BLLNhanVien : BLLInterface<NhanVien>
+    class BLLNhanVien
     {
+        qlchtan1 db = new qlchtan1();
         private static BLLNhanVien _Instance;
 
         public static BLLNhanVien Instance
@@ -32,42 +32,47 @@ namespace PBL3.BLL
 
         public bool checkAddUpdate(string id)
         {
-            return id == "";
+            bool Add = true;
+            foreach (Nhanvien i in db.Nhanvien)
+            {
+                if (i.MANV == id)
+                    Add = false;
+            }
+            return Add;
         }
 
         public void Delete(string id)
         {
-            DALNhanVien.Instance.Delete(id);
+            db.Nhanvien.Remove(db.Nhanvien.Find(id));
+            db.SaveChanges();
         }
 
-        public void ExecuteAddUpdate(NhanVien t)
+        public void ExecuteAddUpdate(Nhanvien t)
         {
-            if (checkAddUpdate(t.Id))
+            if (checkAddUpdate(t.MANV))
             {
-                DALNhanVien.Instance.Add(t);
+                db.Nhanvien.Add(t);
+                db.SaveChanges();
             }
             else
             {
-                DALNhanVien.Instance.Update(t);
+                db.Nhanvien.Find(t.MANV).TENNV = t.TENNV;
+                db.Nhanvien.Find(t.MANV).DIACHI = t.DIACHI;
+                db.Nhanvien.Find(t.MANV).GIOITINH = t.GIOITINH;
+                db.Nhanvien.Find(t.MANV).SDT = t.SDT;
+                db.Nhanvien.Find(t.MANV).NGAYSINH = t.NGAYSINH;
+                db.SaveChanges();
             }
         }
 
-        public List<NhanVien> GetAll()
+        public dynamic GetAll()
         {
-            return DALNhanVien.Instance.GetAll();
+            return db.Nhanvien.ToList();
         }
 
-        public NhanVien GetById(string id)
+        public dynamic GetById(string id)
         {
-            NhanVien nv = null;
-            foreach(NhanVien i in DALNhanVien.Instance.GetAll())
-            {
-                if(i.Id == id)
-                {
-                    nv = i;
-                }
-            }
-            return nv;
+            return db.Nhanvien.Find(id);
         }
     }
 }

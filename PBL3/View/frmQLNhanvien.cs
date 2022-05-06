@@ -31,7 +31,7 @@ namespace PBL3.View
             txtSoDienThoai.Enabled = b;
             txtDiaChi.Enabled = b;
             dpNgaySinh.Enabled = b;
-            cbGioiTinh.Enabled = b;
+            //cbGioiTinh.Enabled = b;
             btnLuu.Enabled = b;
             btnHuy.Enabled = b;
             btnThem.Enabled = !b;
@@ -46,7 +46,8 @@ namespace PBL3.View
             txtDiaChi.Text = "";
             txtSoDienThoai.Text = "";
             txtTenNhanVien.Text = "";
-            cbGioiTinh.Text = "";
+            rbMale.Checked = false;
+            rbFemale.Checked = false;
             dpNgaySinh.Value = DateTime.Now;
         }
 
@@ -54,25 +55,32 @@ namespace PBL3.View
         {
             if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
-                string id = dgvDSNhanVien.SelectedRows[0].Cells["Id"].Value.ToString();
-                NhanVien nv = BLLNhanVien.Instance.GetById(id);
-                txtMaNhanVien.Text = nv.Id;
-                txtTenNhanVien.Text = nv.Ten;
-                txtSoDienThoai.Text = nv.SoDienThoai;
-                txtDiaChi.Text = nv.DiaChi;
-                cbGioiTinh.Text = nv.GioiTinh;
-                dpNgaySinh.Value = nv.NgaySinh;
+                string id = dgvDSNhanVien.SelectedRows[0].Cells["MANV"].Value.ToString();
+                Nhanvien nv = BLLNhanVien.Instance.GetById(id);
+                txtMaNhanVien.Text = nv.MANV;
+                txtTenNhanVien.Text = nv.TENNV;
+                txtSoDienThoai.Text = nv.SDT;
+                txtDiaChi.Text = nv.DIACHI;
+                if ((bool)nv.GIOITINH)
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                {
+                    rbFemale.Checked = true;
+                }
+                dpNgaySinh.Value = nv.NGAYSINH.Value;
             }
         }
 
         private void dgvDSNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvDSNhanVien.Columns["Id"].HeaderText = "Mã nhân viên";
-            dgvDSNhanVien.Columns["Ten"].HeaderText = "Tên nhân viên";
-            dgvDSNhanVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
-            dgvDSNhanVien.Columns["GioiTinh"].HeaderText = "Giới tính";
-            dgvDSNhanVien.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
-            dgvDSNhanVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dgvDSNhanVien.Columns["MANV"].HeaderText = "Mã nhân viên";
+            dgvDSNhanVien.Columns["TENNV"].HeaderText = "Tên nhân viên";
+            dgvDSNhanVien.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
+            dgvDSNhanVien.Columns["GIOITINH"].HeaderText = "Giới tính";
+            dgvDSNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
+            dgvDSNhanVien.Columns["DIACHI"].HeaderText = "Địa chỉ";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -89,14 +97,14 @@ namespace PBL3.View
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
+            BLLNhanVien.Instance.ExecuteAddUpdate(new Nhanvien
             {
-                Id = txtMaNhanVien.Text,
-                Ten = txtTenNhanVien.Text,
-                NgaySinh = dpNgaySinh.Value,
-                GioiTinh = cbGioiTinh.SelectedItem.ToString(),
-                SoDienThoai = txtSoDienThoai.Text,
-                DiaChi = txtDiaChi.Text
+                MANV = txtMaNhanVien.Text,
+                TENNV = txtTenNhanVien.Text,
+                NGAYSINH = dpNgaySinh.Value,
+                GIOITINH = rbMale.Checked,
+                SDT = txtSoDienThoai.Text,
+                DIACHI = txtDiaChi.Text
             });
             EditorReset();
             EditorEnable(false);
@@ -107,7 +115,7 @@ namespace PBL3.View
         {
             if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
-                string id = dgvDSNhanVien.SelectedRows[0].Cells["Id"].Value.ToString();
+                string id = dgvDSNhanVien.SelectedRows[0].Cells["MANV"].Value.ToString();
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa nhân viên có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {

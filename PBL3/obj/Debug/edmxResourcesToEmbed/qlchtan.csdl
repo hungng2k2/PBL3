@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hoadon">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MAOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MANV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NGAYLAP" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Nhanvien" Relationship="Self.FK_Hoadon_Nhanvien" FromRole="Hoadon" ToRole="Nhanvien" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Hoadon_Order" FromRole="Hoadon" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Khachhang">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TENKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="GIOITINH" Type="Boolean" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Khachhang" FromRole="Khachhang" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Monan">
+    <Key>
+      <PropertyRef Name="MAMA" />
+    </Key>
+    <Property Name="MAMA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TENMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIA" Type="Double" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Monan" FromRole="Monan" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Nhanvien">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TENNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="GIOITINH" Type="Boolean" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Chucvu" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Hoadon" Relationship="Self.FK_Hoadon_Nhanvien" FromRole="Nhanvien" ToRole="Hoadon" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="MAOD" />
+    </Key>
+    <Property Name="MAOD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MAMA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="Hoadon" Relationship="Self.FK_Hoadon_Order" FromRole="Order" ToRole="Hoadon" />
+    <NavigationProperty Name="Khachhang" Relationship="Self.FK_Order_Khachhang" FromRole="Order" ToRole="Khachhang" />
+    <NavigationProperty Name="Monan" Relationship="Self.FK_Order_Monan" FromRole="Order" ToRole="Monan" />
+  </EntityType>
+  <Association Name="FK_Hoadon_Nhanvien">
+    <End Role="Nhanvien" Type="Self.Nhanvien" Multiplicity="1" />
+    <End Role="Hoadon" Type="Self.Hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nhanvien">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="Hoadon">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoadon_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Hoadon" Type="Self.Hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="MAOD" />
+      </Principal>
+      <Dependent Role="Hoadon">
+        <PropertyRef Name="MAOD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Khachhang">
+    <End Role="Khachhang" Type="Self.Khachhang" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khachhang">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Monan">
+    <End Role="Monan" Type="Self.Monan" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monan">
+        <PropertyRef Name="MAMA" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="MAMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="qlchtan1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hoadon" EntityType="Self.Hoadon" />
+    <EntitySet Name="Khachhang" EntityType="Self.Khachhang" />
+    <EntitySet Name="Monan" EntityType="Self.Monan" />
+    <EntitySet Name="Nhanvien" EntityType="Self.Nhanvien" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
+    <AssociationSet Name="FK_Hoadon_Nhanvien" Association="Self.FK_Hoadon_Nhanvien">
+      <End Role="Nhanvien" EntitySet="Nhanvien" />
+      <End Role="Hoadon" EntitySet="Hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoadon_Order" Association="Self.FK_Hoadon_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Hoadon" EntitySet="Hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Khachhang" Association="Self.FK_Order_Khachhang">
+      <End Role="Khachhang" EntitySet="Khachhang" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Monan" Association="Self.FK_Order_Monan">
+      <End Role="Monan" EntitySet="Monan" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
