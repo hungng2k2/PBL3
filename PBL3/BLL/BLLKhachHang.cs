@@ -89,7 +89,9 @@ namespace PBL3.BLL
 
         public dynamic GetAll()
         {
-            return db.KhachHang.ToList();
+            return db.KhachHang
+                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, p.GioiTinh, p.SoDienThoai, p.DiaChi })
+                .ToList();
         }
 
         public dynamic GetById(string id)
