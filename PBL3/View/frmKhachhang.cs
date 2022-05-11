@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3.BLL;
+using PBL3.DTO;
 
 namespace PBL3.View
 {
@@ -53,13 +54,13 @@ namespace PBL3.View
         {
             if (dgvDSKhachHang.SelectedRows.Count == 1)
             {
-                string id = dgvDSKhachHang.SelectedRows[0].Cells["MAKH"].Value.ToString();
-                Khachhang nv = BLLKhachHang.Instance.GetById(id);
-                txtMaKhachHang.Text = nv.MAKH;
-                txtTenKhachHang.Text = nv.TENKH;
-                txtSoDienThoai.Text = nv.SDT;
-                txtDiaChi.Text = nv.DIACHI;
-                if ((bool)nv.GIOITINH)
+                string id = dgvDSKhachHang.SelectedRows[0].Cells["id_KhachHang"].Value.ToString();
+                KhachHang kh = BLLKhachHang.Instance.GetById(id);
+                txtMaKhachHang.Text = kh.id_KhachHang;
+                txtTenKhachHang.Text = kh.TenKhachHang;
+                txtSoDienThoai.Text = kh.SoDienThoai;
+                txtDiaChi.Text = kh.DiaChi;
+                if (kh.GioiTinh)
                 {
                     rbMale.Checked = true;
                 }
@@ -67,17 +68,17 @@ namespace PBL3.View
                 {
                     rbFemale.Checked = true;
                 }
-                dpNgaySinh.Value = nv.NGAYSINH.Value;
+                dpNgaySinh.Value = kh.NgaySinh;
             }
         }
         private void dgvDSKhachHang_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvDSKhachHang.Columns["MAKH"].HeaderText = "Mã khách hàng";
-            dgvDSKhachHang.Columns["TENKH"].HeaderText = "Tên khách hàng";
-            dgvDSKhachHang.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
-            dgvDSKhachHang.Columns["GIOITINH"].HeaderText = "Giới tính";
-            dgvDSKhachHang.Columns["SDT"].HeaderText = "Số điện thoại";
-            dgvDSKhachHang.Columns["DIACHI"].HeaderText = "Địa chỉ";
+            dgvDSKhachHang.Columns["id_KhachHang"].HeaderText = "Mã khách hàng";
+            dgvDSKhachHang.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
+            dgvDSKhachHang.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvDSKhachHang.Columns["GioiTinh"].HeaderText = "Giới tính";
+            dgvDSKhachHang.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+            dgvDSKhachHang.Columns["DiaChi"].HeaderText = "Địa chỉ";
         }
         private void Reload()
         {
@@ -93,7 +94,7 @@ namespace PBL3.View
         {
             if (dgvDSKhachHang.SelectedRows.Count == 1)
             {
-                string id = dgvDSKhachHang.SelectedRows[0].Cells["MAKH"].Value.ToString();
+                string id = dgvDSKhachHang.SelectedRows[0].Cells["id_KhachHang"].Value.ToString();
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa khách hàng có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
@@ -113,14 +114,14 @@ namespace PBL3.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            BLLKhachHang.Instance.ExecuteAddUpdate(new Khachhang
+            BLLKhachHang.Instance.ExecuteAddUpdate(new KhachHang
             {
-                MAKH = txtMaKhachHang.Text,
-                TENKH = txtTenKhachHang.Text,
-                NGAYSINH = dpNgaySinh.Value,
-                GIOITINH = rbMale.Checked,
-                SDT = txtSoDienThoai.Text,
-                DIACHI = txtDiaChi.Text
+                id_KhachHang = txtMaKhachHang.Text,
+                TenKhachHang = txtTenKhachHang.Text,
+                NgaySinh = dpNgaySinh.Value,
+                GioiTinh = rbMale.Checked,
+                SoDienThoai = txtSoDienThoai.Text,
+                DiaChi = txtDiaChi.Text
             });
             EditorReset();
             EditorEnable(false);

@@ -46,3 +46,8 @@ C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\EntityFramework.dll
 C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\EntityFramework.xml
 C:\Users\admin\Documents\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\PBL3\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+D:\PBL3\PBL3\bin\Debug\EntityFramework.dll
+D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\PBL3\PBL3\bin\Debug\EntityFramework.xml
+D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml

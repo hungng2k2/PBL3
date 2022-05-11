@@ -1,9 +1,21 @@
-﻿namespace PBL3.DTO
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace PBL3.DTO
 {
-    class MonAn
+    public class MonAn
     {
-        public string Id { get; set; }
-        public string Ten { get; set; }
-        public double GiaTien { get; set; }
+        public MonAn()
+        {
+            this.Order = new HashSet<Order>();
+        }
+        [Key]
+        [StringLength(10)]
+        [Required]
+        public string id_MonAn { get; set; }
+        public string TenMonAn { get; set; }
+        public double Gia { get; set; }
+        public int SoLuong { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

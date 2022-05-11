@@ -55,13 +55,13 @@ namespace PBL3.View
         {
             if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
-                string id = dgvDSNhanVien.SelectedRows[0].Cells["MANV"].Value.ToString();
-                Nhanvien nv = BLLNhanVien.Instance.GetById(id);
-                txtMaNhanVien.Text = nv.MANV;
-                txtTenNhanVien.Text = nv.TENNV;
-                txtSoDienThoai.Text = nv.SDT;
-                txtDiaChi.Text = nv.DIACHI;
-                if ((bool)nv.GIOITINH)
+                string id = dgvDSNhanVien.SelectedRows[0].Cells["id_NhanVien"].Value.ToString();
+                NhanVien nv = BLLNhanVien.Instance.GetById(id);
+                txtMaNhanVien.Text = nv.id_NhanVien;
+                txtTenNhanVien.Text = nv.TenNhanVien;
+                txtSoDienThoai.Text = nv.SoDienThoai;
+                txtDiaChi.Text = nv.DiaChi;
+                if ((bool)nv.GioiTinh)
                 {
                     rbMale.Checked = true;
                 }
@@ -69,18 +69,18 @@ namespace PBL3.View
                 {
                     rbFemale.Checked = true;
                 }
-                dpNgaySinh.Value = nv.NGAYSINH.Value;
+                dpNgaySinh.Value = nv.NgaySinh;
             }
         }
 
         private void dgvDSNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvDSNhanVien.Columns["MANV"].HeaderText = "Mã nhân viên";
-            dgvDSNhanVien.Columns["TENNV"].HeaderText = "Tên nhân viên";
-            dgvDSNhanVien.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
-            dgvDSNhanVien.Columns["GIOITINH"].HeaderText = "Giới tính";
-            dgvDSNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
-            dgvDSNhanVien.Columns["DIACHI"].HeaderText = "Địa chỉ";
+            dgvDSNhanVien.Columns["id_NhanVien"].HeaderText = "Mã nhân viên";
+            dgvDSNhanVien.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
+            dgvDSNhanVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvDSNhanVien.Columns["GioiTinh"].HeaderText = "Giới tính";
+            dgvDSNhanVien.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+            dgvDSNhanVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -97,14 +97,14 @@ namespace PBL3.View
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            BLLNhanVien.Instance.ExecuteAddUpdate(new Nhanvien
+            BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
             {
-                MANV = txtMaNhanVien.Text,
-                TENNV = txtTenNhanVien.Text,
-                NGAYSINH = dpNgaySinh.Value,
-                GIOITINH = rbMale.Checked,
-                SDT = txtSoDienThoai.Text,
-                DIACHI = txtDiaChi.Text
+                id_NhanVien = txtMaNhanVien.Text,
+                TenNhanVien = txtTenNhanVien.Text,
+                NgaySinh = dpNgaySinh.Value,
+                GioiTinh = rbMale.Checked,
+                SoDienThoai = txtSoDienThoai.Text,
+                DiaChi = txtDiaChi.Text
             });
             EditorReset();
             EditorEnable(false);
@@ -115,7 +115,7 @@ namespace PBL3.View
         {
             if (dgvDSNhanVien.SelectedRows.Count == 1)
             {
-                string id = dgvDSNhanVien.SelectedRows[0].Cells["MANV"].Value.ToString();
+                string id = dgvDSNhanVien.SelectedRows[0].Cells["id_NhanVien"].Value.ToString();
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa nhân viên có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {

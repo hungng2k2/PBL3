@@ -71,41 +71,16 @@
     <Compile Include="BLL\BLLInterface.cs" />
     <Compile Include="BLL\BLLKhachHang.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />
+    <Compile Include="CreateDB.cs" />
     <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\MonAn.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\Person.cs" />
-    <Compile Include="Hoadon.cs">
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Khachhang.cs">
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Monan.cs">
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Nhanvien.cs">
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order.cs">
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qlchtan.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtan.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="qlchtan.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="qlchtan.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qlchtan.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="QLCHTAN.cs" />
     <Compile Include="View\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,16 +142,6 @@
       <DependentUpon>frmThucdon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\QLCH.cs" />
-    <Content Include="qlchtan.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>qlchtan.edmx</DependentUpon>
-      <LastGenOutput>qlchtan.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="qlchtan.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>qlchtan.edmx</DependentUpon>
-      <LastGenOutput>qlchtan.cs</LastGenOutput>
-    </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -231,13 +196,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="qlchtan.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>qlchtan.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="qlchtan.edmx.diagram">
-      <DependentUpon>qlchtan.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

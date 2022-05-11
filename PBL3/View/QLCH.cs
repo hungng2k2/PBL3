@@ -11,11 +11,11 @@ namespace PBL3.View
         public static string checkLogin(string username, string password)
         {
             string quyen = "";
-            qlchtan1 db = new qlchtan1();
-            var query = db.Nhanvien.Where(p => p.Username == username && p.Password == password).FirstOrDefault();
+            QLCHTAN db = new QLCHTAN();
+            var query = db.NhanVien.Where(p => p.Username == username && p.Password == password).FirstOrDefault();
             if (query != null)
             {
-                quyen = query.Chucvu;
+                quyen = query.ChucVu;
             }
             return quyen.Trim();
         }
