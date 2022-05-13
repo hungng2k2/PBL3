@@ -149,7 +149,7 @@
             this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnChonAnh_Click);
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // openFileDialog1
             // 

@@ -18,7 +18,7 @@ namespace PBL3.View
         public ChiTietMonAnDel chiTietMonAnDel;
         private string id_MonAn;
         private string imageSourceFile = "";
-        private string defaultImage = @".\image\default.jpg";
+        private string defaultImage = @"..\image\default.jpg";
         public frmChiTietMonAn(string id_MonAn)
         {
             InitializeComponent();
@@ -35,7 +35,12 @@ namespace PBL3.View
                 txtTenMon.Text = ma.TenMonAn;
                 txtGiaTien.Text = ma.Gia.ToString();
                 imageSourceFile = ma.imagePath;
-                AnhMinhHoa.Image = Image.FromFile(imageSourceFile);
+                Image img;
+                using (var bmpTemp = new Bitmap(ma.imagePath))
+                {
+                    img = new Bitmap(bmpTemp);
+                }
+                AnhMinhHoa.Image = img;
             }
         }
 
@@ -56,14 +61,16 @@ namespace PBL3.View
             {
                 imageSourceFile = defaultImage;
             }
-            BLLMonAn.Instance.ExecuteAddUpdate(new MonAn {
+            MonAn ma = new MonAn
+            {
                 id_MonAn = txtMaMonAn.Text,
                 TenMonAn = txtTenMon.Text,
                 Gia = Convert.ToInt32(txtGiaTien.Text),
                 imagePath = imageSourceFile,
-            });
-            chiTietMonAnDel();
+            };
             this.Dispose();
+            BLLMonAn.Instance.ExecuteAddUpdate(ma);
+            chiTietMonAnDel();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
