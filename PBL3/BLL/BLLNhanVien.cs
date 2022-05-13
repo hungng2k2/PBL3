@@ -30,10 +30,9 @@ namespace PBL3.BLL
         public bool checkAddUpdate(string id)
         {
             bool Add = true;
-            foreach (NhanVien i in db.NhanVien)
+            if (db.NhanVien.Find(id) != null)
             {
-                if (i.id_NhanVien == id)
-                    Add = false;
+                Add = false;
             }
             return Add;
         }

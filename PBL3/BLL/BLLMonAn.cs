@@ -35,7 +35,9 @@ namespace PBL3.BLL
         {
             bool Add = true;
             if (db.MonAn.Find(id) != null)
+            {
                 Add = false;
+            }
             return Add;
         }
 

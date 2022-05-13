@@ -51,7 +51,6 @@ namespace PBL3.View
             {
                 AnhMinhHoa.Image = Image.FromFile(openFileDialog1.FileName);
                 imageSourceFile = openFileDialog1.FileName;
-                MessageBox.Show(imageSourceFile);
             }
         }
 
@@ -67,10 +66,10 @@ namespace PBL3.View
                 TenMonAn = txtTenMon.Text,
                 Gia = Convert.ToInt32(txtGiaTien.Text),
                 imagePath = imageSourceFile,
-            };
-            this.Dispose();
+            };            
             BLLMonAn.Instance.ExecuteAddUpdate(ma);
             chiTietMonAnDel();
+            this.Dispose();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
