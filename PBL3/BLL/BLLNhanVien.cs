@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PBL3.BLL
 {
-    class BLLNhanVien
+    class BLLNhanVien : BLLInterface<NhanVien>
     {
         QLCHTAN db = new QLCHTAN();
         private static BLLNhanVien _Instance;
@@ -98,7 +98,7 @@ namespace PBL3.BLL
                 .ToList();
         }
 
-        public dynamic GetById(string id)
+        public NhanVien GetById(string id)
         {
             return db.NhanVien.Find(id);
         }

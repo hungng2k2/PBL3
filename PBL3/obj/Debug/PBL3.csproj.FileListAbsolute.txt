@@ -51,3 +51,4 @@ D:\PBL3\PBL3\bin\Debug\EntityFramework.dll
 D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 D:\PBL3\PBL3\bin\Debug\EntityFramework.xml
 D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources

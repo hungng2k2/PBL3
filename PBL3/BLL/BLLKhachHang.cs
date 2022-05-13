@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PBL3.BLL
 {
-    class BLLKhachHang
+    class BLLKhachHang : BLLInterface<KhachHang>
     {
         QLCHTAN db = new QLCHTAN();
         private static BLLKhachHang _Instance;
@@ -94,7 +94,7 @@ namespace PBL3.BLL
                 .ToList();
         }
 
-        public dynamic GetById(string id)
+        public KhachHang GetById(string id)
         {
             return db.KhachHang.Find(id);
         }

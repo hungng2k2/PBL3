@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -45,15 +44,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvThucdon = new System.Windows.Forms.DataGridView();
-            this.mAMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIATIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucdon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,6 +92,7 @@
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -111,6 +106,7 @@
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -138,6 +134,7 @@
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel2
             // 
@@ -184,7 +181,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(663, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 24);
+            this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Giá tiền";
             // 
@@ -195,7 +192,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(357, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Size = new System.Drawing.Size(81, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên món";
             // 
@@ -206,7 +203,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(38, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 24);
+            this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã món ăn";
             // 
@@ -232,59 +229,19 @@
             this.groupBox1.Size = new System.Drawing.Size(971, 178);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách nhân viên";
+            this.groupBox1.Text = "Danh sách món ăn";
             // 
             // dgvThucdon
             // 
-            this.dgvThucdon.AutoGenerateColumns = false;
             this.dgvThucdon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucdon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mAMADataGridViewTextBoxColumn,
-            this.tENMADataGridViewTextBoxColumn,
-            this.gIATIENDataGridViewTextBoxColumn});
-            this.dgvThucdon.DataSource = this.monanBindingSource;
             this.dgvThucdon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThucdon.Location = new System.Drawing.Point(3, 18);
             this.dgvThucdon.Name = "dgvThucdon";
             this.dgvThucdon.RowHeadersWidth = 51;
             this.dgvThucdon.RowTemplate.Height = 24;
+            this.dgvThucdon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
             this.dgvThucdon.TabIndex = 1;
-            // 
-            // mAMADataGridViewTextBoxColumn
-            // 
-            this.mAMADataGridViewTextBoxColumn.DataPropertyName = "MAMA";
-            this.mAMADataGridViewTextBoxColumn.HeaderText = "MAMA";
-            this.mAMADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mAMADataGridViewTextBoxColumn.Name = "mAMADataGridViewTextBoxColumn";
-            this.mAMADataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tENMADataGridViewTextBoxColumn
-            // 
-            this.tENMADataGridViewTextBoxColumn.DataPropertyName = "TENMA";
-            this.tENMADataGridViewTextBoxColumn.HeaderText = "TENMA";
-            this.tENMADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tENMADataGridViewTextBoxColumn.Name = "tENMADataGridViewTextBoxColumn";
-            this.tENMADataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gIATIENDataGridViewTextBoxColumn
-            // 
-            this.gIATIENDataGridViewTextBoxColumn.DataPropertyName = "GIATIEN";
-            this.gIATIENDataGridViewTextBoxColumn.HeaderText = "GIATIEN";
-            this.gIATIENDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gIATIENDataGridViewTextBoxColumn.Name = "gIATIENDataGridViewTextBoxColumn";
-            this.gIATIENDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // monanBindingSource
-            // 
-            this.monanBindingSource.DataMember = "Monan";
-            // 
-            // qlchtanDataSet1
-            // 
-            
-            // 
-            // monanTableAdapter
-            // 
             // 
             // frmThucdon
             // 
@@ -303,7 +260,6 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucdon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monanBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,7 +282,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvThucdon;
-        private System.Windows.Forms.BindingSource monanBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAMADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tENMADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gIATIENDataGridViewTextBoxColumn;

@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace PBL3
 {
-    internal class CreateDB : DropCreateDatabaseAlways<QLCHTAN>
+    internal class CreateDB : DropCreateDatabaseIfModelChanges<QLCHTAN>
     {
         protected override void Seed(QLCHTAN context)
         {

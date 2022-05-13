@@ -8,7 +8,7 @@ namespace PBL3.BLL
 {
     interface BLLInterface<T>
     {
-        List<T> GetAll();
+        dynamic GetAll();
 
         T GetById(string id);
 
