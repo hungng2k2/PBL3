@@ -12,19 +12,19 @@ namespace PBL3.DTO
     {
         public Order()
         {
-            this.HoaDon = new HashSet<HoaDon>();
+            this.ChiTietOrder = new HashSet<ChiTietOrder>();
         }
         [Key]
         [StringLength(10)]
         [Required]
         public string id_Order { get; set; }
         public string id_KhachHang { get; set; }
-        public string id_MonAn { get; set; }
-        public int SoLuong { get; set; }
-        public virtual ICollection<HoaDon> HoaDon { get; set; }
+        public string id_NhanVien { get; set; }
         [ForeignKey("id_KhachHang")]
         public virtual KhachHang KhachHang { get; set; }
-        [ForeignKey("id_MonAn")]
-        public virtual MonAn MonAn { get; set; }
+        [ForeignKey("id_NhanVien")]
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual ICollection<ChiTietOrder> ChiTietOrder { get; set; }
+        
     }
 }

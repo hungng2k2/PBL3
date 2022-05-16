@@ -73,6 +73,7 @@
     <Compile Include="BLL\BLLMonAn.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\ChiTietOrder.cs" />
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\MonAn.cs" />
@@ -160,7 +161,6 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QLCH.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

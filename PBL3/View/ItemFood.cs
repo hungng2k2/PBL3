@@ -21,6 +21,7 @@ namespace PBL3.View
             LoadImage();
             lbl_name.Text = this.monAn.TenMonAn;
             lbl_price.Text = "₫" + this.monAn.Gia.ToString("#,#");
+            checkOutOfStock();
         }
         public int count = 0;
         public event ItemValueChangedEventHandler itemValueChanged;
@@ -55,12 +56,27 @@ namespace PBL3.View
             pic_food.Image = image;
         }
    
+        public void checkOutOfStock()
+        {
+            if(this.monAn.SoLuong > 0)
+            {
+                lblOutOfStock.Visible = false;
+                btnAdd.Visible = true;
+            }
+            else
+            {
+                lblOutOfStock.Visible = true;
+                btnAdd.Visible = false;
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.CountAdded += 1;
+            this.monAn.SoLuong -= 1;
             ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, true, this.CountAdded);
             this.itemValueChanged(sender, myArgs);
+            checkOutOfStock();
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -68,8 +84,10 @@ namespace PBL3.View
             if (this.CountAdded > 0)
             {
                 this.CountAdded -= 1;
+                this.monAn.SoLuong += 1;
                 ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, false, this.CountAdded);
                 this.itemValueChanged(sender, myArgs);
+                checkOutOfStock();
             }
         }
 

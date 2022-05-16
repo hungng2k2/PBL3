@@ -93,6 +93,7 @@ namespace PBL3.BLL
                     id_MonAn = id,
                     TenMonAn = t.TenMonAn,
                     Gia = t.Gia,
+                    SoLuong = 0,
                     imagePath = CopyImageFile(t.imagePath, id),
                 });
                 db.SaveChanges();
@@ -102,6 +103,7 @@ namespace PBL3.BLL
                 MonAn ma = db.MonAn.Find(t.id_MonAn);
                 ma.TenMonAn = t.TenMonAn;
                 ma.Gia = t.Gia;
+                ma.SoLuong = t.SoLuong;
                 ma.imagePath = CopyImageFile(t.imagePath, t.id_MonAn);
                 db.SaveChanges();
             }

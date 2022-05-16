@@ -34,6 +34,7 @@
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.pic_food = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.lblOutOfStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_food)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,11 +124,24 @@
             this.lbl_name.TabIndex = 13;
             this.lbl_name.Text = "Bánh mỳ tuấn mập\r\n";
             // 
+            // lblOutOfStock
+            // 
+            this.lblOutOfStock.AutoSize = true;
+            this.lblOutOfStock.BackColor = System.Drawing.Color.Transparent;
+            this.lblOutOfStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutOfStock.ForeColor = System.Drawing.Color.Red;
+            this.lblOutOfStock.Location = new System.Drawing.Point(49, 77);
+            this.lblOutOfStock.Name = "lblOutOfStock";
+            this.lblOutOfStock.Size = new System.Drawing.Size(137, 32);
+            this.lblOutOfStock.TabIndex = 14;
+            this.lblOutOfStock.Text = "Hết hàng";
+            // 
             // ItemFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Controls.Add(this.lblOutOfStock);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.pic_food);
             this.Controls.Add(this.lblSelected);
@@ -150,5 +164,6 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.PictureBox pic_food;
         private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lblOutOfStock;
     }
 }

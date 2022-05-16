@@ -8,7 +8,7 @@ namespace PBL3.DTO
     {
         public NhanVien()
         {
-            this.HoaDon = new HashSet<HoaDon>();
+            this.Order = new HashSet<Order>();
         }
         [Key]
         [StringLength(10)]
@@ -27,6 +27,6 @@ namespace PBL3.DTO
         [StringLength(20)]
         public string Password { get; set; }
         public string ChucVu { get; set; }
-        public virtual ICollection<HoaDon> HoaDon { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

@@ -23,6 +23,7 @@ namespace PBL3
         public virtual DbSet<MonAn> MonAn { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<HoaDon> HoaDon { get; set; }
+        public virtual DbSet<ChiTietOrder> ChiTietOrder { get; set; }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.

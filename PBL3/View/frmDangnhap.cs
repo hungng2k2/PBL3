@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using PBL3.BLL;
 
 namespace PBL3.View
 {
@@ -13,13 +14,13 @@ namespace PBL3.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "QuanLy")
+            if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "QuanLy")
             {
                 frmQuanly f = new frmQuanly();
                 f.Show();
                 this.Hide();
             }
-            else if (QLCH.checkLogin(txtUsername.Text, txtPassword.Text) == "NhanVien")
+            else if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "NhanVien")
             {
                 new frmNhanvien().Show();
                 this.Hide();

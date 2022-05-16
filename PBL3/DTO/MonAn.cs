@@ -7,7 +7,7 @@ namespace PBL3.DTO
     {
         public MonAn()
         {
-            this.Order = new HashSet<Order>();
+            this.ChiTietOrder = new HashSet<ChiTietOrder>();
         }
         [Key]
         [StringLength(10)]
@@ -17,6 +17,6 @@ namespace PBL3.DTO
         public double Gia { get; set; }
         public int SoLuong { get; set; }
         public string imagePath { get; set; } 
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<ChiTietOrder> ChiTietOrder { get; set; }
     }
 }
