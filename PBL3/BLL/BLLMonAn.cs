@@ -9,7 +9,7 @@ namespace PBL3.BLL
     {
         QLCHTAN db = new QLCHTAN();
 
-        private string imageFilePath = @"..\image\";
+        private string imageFilePath = @".\image\";
 
         private static BLLMonAn _Instance;
 
@@ -110,6 +110,11 @@ namespace PBL3.BLL
         public dynamic GetAll()
         {
             return db.MonAn.Select(p => new { p.id_MonAn, p.TenMonAn, p.Gia }).ToList();
+        }
+
+        public dynamic GetAll2()
+        {
+            return db.MonAn.Select(p => p).ToList();
         }
 
         public MonAn GetById(string id)

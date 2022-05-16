@@ -210,6 +210,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmNhanvien";
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNhanvien_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -17,11 +17,13 @@ namespace PBL3.View
         public frmThucdon()
         {
             InitializeComponent();
-            Reload();
         }
 
         private void frmThucdon_Load(object sender, EventArgs e)
         {
+            Reload();
+            dgvThucdon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvThucdon.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         public void Reload()
@@ -55,6 +57,13 @@ namespace PBL3.View
                 frmChiTiet.chiTietMonAnDel = new frmChiTietMonAn.ChiTietMonAnDel(Reload);
                 frmChiTiet.Show();
             }           
+        }
+
+        private void dgvThucdon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvThucdon.Columns["id_MonAn"].HeaderText = "Mã món ăn";
+            dgvThucdon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
+            dgvThucdon.Columns["Gia"].HeaderText = "Giá";
         }
     }
 }

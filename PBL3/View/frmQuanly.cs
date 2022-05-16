@@ -98,7 +98,8 @@ namespace PBL3.View
         private void btnQuit_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
-            Application.Exit();
+            new frmDangnhap().Show();
+            this.Dispose();
         }
 
         private void btnHD_Click(object sender, EventArgs e)
@@ -121,7 +122,7 @@ namespace PBL3.View
 
         private void frmQuanly_FormClosed(object sender, FormClosedEventArgs e)
         {
-            new frmDangnhap().Show();
+            Application.Exit();
         }
     }
 }

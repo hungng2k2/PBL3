@@ -87,15 +87,19 @@ namespace PBL3.View
         private void btnDM_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
-            OpenChildForm(new frmDatmon());
+            OpenChildForm(new frmMenu());
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
-            Application.Exit();
+            new frmDangnhap().Show();
+            this.Dispose();
         }
 
-        
+        private void frmNhanvien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

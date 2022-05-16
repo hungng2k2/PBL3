@@ -18,7 +18,7 @@ namespace PBL3.View
         public ChiTietMonAnDel chiTietMonAnDel;
         private string id_MonAn;
         private string imageSourceFile = "";
-        private string defaultImage = @"..\image\default.jpg";
+        private string defaultImage = @".\image\default.jpg";
         public frmChiTietMonAn(string id_MonAn)
         {
             InitializeComponent();

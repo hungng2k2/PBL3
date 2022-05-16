@@ -148,6 +148,18 @@
     <Compile Include="View\frmThucdon.Designer.cs">
       <DependentUpon>frmThucdon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ItemFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ItemFood.Designer.cs">
+      <DependentUpon>ItemFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QLCH.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,6 +207,12 @@
     <Content Include="fonts\FontAwesome.otf" />
     <EmbeddedResource Include="View\frmThucdon.resx">
       <DependentUpon>frmThucdon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ItemFood.resx">
+      <DependentUpon>ItemFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

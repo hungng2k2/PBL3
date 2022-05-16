@@ -242,6 +242,7 @@
             this.dgvThucdon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
             this.dgvThucdon.TabIndex = 1;
+            this.dgvThucdon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThucdon_DataBindingComplete);
             // 
             // frmThucdon
             // 
