@@ -24,7 +24,11 @@ namespace PBL3.View
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            var data = BLLMonAn.Instance.GetAll2() ;
+            Reload();
+        }
+        private void Reload()
+        {
+            var data = BLLMonAn.Instance.GetAll2();
             var list = new ItemFood[data.Count];
             int i = 0;
             itemFoods = new List<ItemFood>();
@@ -35,7 +39,10 @@ namespace PBL3.View
                 itemFoods.Add(list[i]);
                 i++;
             }
+            flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.AddRange(list);
+            lbl_Tongtien.Text = "₫0";
+            lbl_numOrder.Text = "0";
         }
 
         private void frmMenu_itemValueChanged(object sender, ItemFood.ItemValueChangedEventArgs e)
@@ -62,6 +69,5 @@ namespace PBL3.View
                 lbl_Tongtien.Text = "₫" + total.ToString("#,#");
             }
         }
-        
     }
 }

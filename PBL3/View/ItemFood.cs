@@ -16,7 +16,14 @@ namespace PBL3.View
         public MonAn monAn { get; set; }
         public ItemFood(MonAn monAn)
         {
-            this.monAn = monAn;
+            this.monAn = new MonAn
+            {
+                id_MonAn = monAn.id_MonAn,
+                TenMonAn = monAn.TenMonAn,
+                Gia = monAn.Gia,
+                SoLuong = monAn.SoLuong,
+                imagePath = monAn.imagePath,
+            };
             InitializeComponent();
             LoadImage();
             lbl_name.Text = this.monAn.TenMonAn;
