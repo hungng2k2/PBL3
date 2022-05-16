@@ -38,6 +38,7 @@ namespace PBL3.View
             btnThem.Enabled = !b;
             btnSua.Enabled = !b;
             btnXoa.Enabled = !b;
+            groupBox2.Enabled = b;
             dgvDSKhachHang.Enabled = !b;
         }
         public void EditorReset()

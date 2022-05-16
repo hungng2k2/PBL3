@@ -54,3 +54,4 @@ D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.ItemFood.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmMenu.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmOrder.resources

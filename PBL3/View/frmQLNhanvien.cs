@@ -31,7 +31,7 @@ namespace PBL3.View
             txtSoDienThoai.Enabled = b;
             txtDiaChi.Enabled = b;
             dpNgaySinh.Enabled = b;
-            //cbGioiTinh.Enabled = b;
+            groupBox2.Enabled = b;
             btnLuu.Enabled = b;
             btnHuy.Enabled = b;
             btnThem.Enabled = !b;

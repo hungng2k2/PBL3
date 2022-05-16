@@ -89,7 +89,7 @@ namespace PBL3.BLL
         public dynamic GetAll()
         {
             return db.KhachHang
-                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, p.GioiTinh, p.SoDienThoai, p.DiaChi })
+                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
                 .ToList();
         }
 

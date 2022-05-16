@@ -131,6 +131,12 @@
     <Compile Include="View\frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmQuanly.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQLNhanvien.resx">
       <DependentUpon>frmQLNhanvien.cs</DependentUpon>

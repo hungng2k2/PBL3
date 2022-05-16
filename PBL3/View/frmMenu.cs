@@ -69,5 +69,35 @@ namespace PBL3.View
                 lbl_Tongtien.Text = "₫" + total.ToString("#,#");
             }
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(lbl_numOrder.Text) > 0)
+            {
+                var list_order = new List<MonAn>();
+                int i = 1;
+                foreach (ItemFood item in flowLayoutPanel1.Controls)
+                {
+                    if (item.count > 0)
+                    {
+                        list_order.Add(new MonAn() {
+                            id_MonAn = item.monAn.id_MonAn,
+                            TenMonAn = item.monAn.TenMonAn,
+                            Gia = item.monAn.Gia,
+                            imagePath = item.monAn.imagePath,
+                            SoLuong = item.count,
+                        });
+                        i++;
+                    }
+                }
+
+                var frm = new frmOrder(list_order);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn món ăn.");
+            }
+        }
     }
 }

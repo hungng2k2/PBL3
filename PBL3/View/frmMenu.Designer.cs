@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lbl_numOrder);
@@ -110,6 +112,16 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(971, 421);
             this.flowLayoutPanel1.TabIndex = 19;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(531, 24);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(75, 45);
+            this.btnOrder.TabIndex = 17;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // frmMenu
             // 
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnOrder;
     }
 }
