@@ -65,7 +65,7 @@ namespace PBL3.View
    
         public void checkOutOfStock()
         {
-            if(this.monAn.SoLuong > 0)
+            if(count < this.monAn.SoLuong)
             {
                 lblOutOfStock.Visible = false;
                 btnAdd.Visible = true;
@@ -80,7 +80,6 @@ namespace PBL3.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.CountAdded += 1;
-            this.monAn.SoLuong -= 1;
             ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, true, this.CountAdded);
             this.itemValueChanged(sender, myArgs);
             checkOutOfStock();
@@ -91,7 +90,6 @@ namespace PBL3.View
             if (this.CountAdded > 0)
             {
                 this.CountAdded -= 1;
-                this.monAn.SoLuong += 1;
                 ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, false, this.CountAdded);
                 this.itemValueChanged(sender, myArgs);
                 checkOutOfStock();
