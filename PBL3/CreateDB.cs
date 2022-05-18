@@ -55,6 +55,12 @@ namespace PBL3
                 new MonAn { id_MonAn = "MA015", TenMonAn = "Pizza thanh cua & xúc xích", Gia = 89000, SoLuong = 10, imagePath = @".\image\MA015.jpg" }
             });
 
+            context.KhachHang.AddRange(new KhachHang[]
+            {
+                new KhachHang {id_KhachHang = "KH001", TenKhachHang = "Nguyễn Văn A", NgaySinh = new DateTime(2002,2,2), GioiTinh = true, SoDienThoai = "0123456789", DiaChi = "Huế"},
+                new KhachHang {id_KhachHang = "KH002", TenKhachHang = "Bùi Thành Nhân", NgaySinh = new DateTime(2001,3,9), GioiTinh = true, SoDienThoai = "0123456792", DiaChi = "Đà Nẵng"},
+                new KhachHang {id_KhachHang = "KH003", TenKhachHang = "Trần Thế Anh", NgaySinh = new DateTime(1992,5,23), GioiTinh = true, SoDienThoai = "0123454292", DiaChi = "Quảng Nam"},
+            });
         }
     }
 }

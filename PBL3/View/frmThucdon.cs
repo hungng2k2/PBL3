@@ -65,5 +65,17 @@ namespace PBL3.View
             dgvThucdon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvThucdon.Columns["Gia"].HeaderText = "Giá";
         }
+
+        private void dgvThucdon_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvThucdon.SelectedRows.Count == 1)
+            {
+                string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
+                MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
+                txtTenMon.Text = monAn.TenMonAn;
+                txtGiaTien.Text = monAn.Gia.ToString();
+                txtMaMonAn.Text = monAn.id_MonAn;
+            }
+        }
     }
 }

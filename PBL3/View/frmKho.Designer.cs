@@ -58,8 +58,11 @@
             this.dgvDSMonAn.Name = "dgvDSMonAn";
             this.dgvDSMonAn.RowHeadersWidth = 51;
             this.dgvDSMonAn.RowTemplate.Height = 24;
+            this.dgvDSMonAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSMonAn.Size = new System.Drawing.Size(965, 157);
             this.dgvDSMonAn.TabIndex = 0;
+            this.dgvDSMonAn.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSMonAn_DataBindingComplete);
+            this.dgvDSMonAn.SelectionChanged += new System.EventHandler(this.dgvDSMonAn_SelectionChanged);
             // 
             // label1
             // 
@@ -77,7 +80,7 @@
             // 
             this.groupBox1.Controls.Add(this.dgvDSMonAn);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(971, 178);
@@ -98,6 +101,7 @@
             this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -111,6 +115,7 @@
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTenMon
             // 
@@ -128,7 +133,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(157, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.Size = new System.Drawing.Size(81, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món";
             // 
@@ -145,6 +150,7 @@
             this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // panel2
             // 
@@ -164,6 +170,7 @@
             // 
             // txtSoLuong
             // 
+            this.txtSoLuong.Enabled = false;
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(263, 84);
             this.txtSoLuong.Name = "txtSoLuong";
@@ -195,7 +202,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(525, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 24);
+            this.label5.Size = new System.Drawing.Size(52, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng";
             // 
@@ -206,7 +213,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(525, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 24);
+            this.label3.Size = new System.Drawing.Size(72, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Đơn giá";
             // 
@@ -217,7 +224,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(157, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 24);
+            this.label4.Size = new System.Drawing.Size(81, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số lượng";
             // 
@@ -245,6 +252,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmKho";
             this.Text = "frmKho";
+            this.Load += new System.EventHandler(this.frmKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonAn)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

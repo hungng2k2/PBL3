@@ -152,6 +152,7 @@
             // 
             // txtGiaTien
             // 
+            this.txtGiaTien.Enabled = false;
             this.txtGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTien.Location = new System.Drawing.Point(742, 61);
             this.txtGiaTien.Name = "txtGiaTien";
@@ -160,6 +161,7 @@
             // 
             // txtTenMon
             // 
+            this.txtTenMon.Enabled = false;
             this.txtTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenMon.Location = new System.Drawing.Point(450, 61);
             this.txtTenMon.Name = "txtTenMon";
@@ -168,6 +170,7 @@
             // 
             // txtMaMonAn
             // 
+            this.txtMaMonAn.Enabled = false;
             this.txtMaMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaMonAn.Location = new System.Drawing.Point(149, 61);
             this.txtMaMonAn.Name = "txtMaMonAn";
@@ -243,6 +246,7 @@
             this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
             this.dgvThucdon.TabIndex = 1;
             this.dgvThucdon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThucdon_DataBindingComplete);
+            this.dgvThucdon.SelectionChanged += new System.EventHandler(this.dgvThucdon_SelectionChanged);
             // 
             // frmThucdon
             // 

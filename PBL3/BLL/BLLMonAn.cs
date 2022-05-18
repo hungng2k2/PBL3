@@ -123,5 +123,13 @@ namespace PBL3.BLL
         {
             return db.MonAn.Find(id);
         }
+        public dynamic GetMonAn()
+        {
+            return db.MonAn.Select(p => new { p.TenMonAn, p.SoLuong, p.Gia }).ToList();
+        }
+        public MonAn GetmonByten(string ten)
+        {
+            return db.MonAn.Where(p => p.TenMonAn == ten).FirstOrDefault();
+        }
     }
 }
