@@ -53,6 +53,7 @@
             // 
             this.btnKH.FlatAppearance.BorderSize = 0;
             this.btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKH.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKH.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             this.btnKH.IconColor = System.Drawing.Color.White;
@@ -62,7 +63,7 @@
             this.btnKH.Location = new System.Drawing.Point(0, 74);
             this.btnKH.Name = "btnKH";
             this.btnKH.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnKH.Size = new System.Drawing.Size(143, 60);
+            this.btnKH.Size = new System.Drawing.Size(200, 60);
             this.btnKH.TabIndex = 1;
             this.btnKH.Text = "Khách hàng";
             this.btnKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,6 +75,7 @@
             // 
             this.btnDM.FlatAppearance.BorderSize = 0;
             this.btnDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDM.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDM.IconChar = FontAwesome.Sharp.IconChar.Marker;
             this.btnDM.IconColor = System.Drawing.Color.White;
@@ -83,7 +85,7 @@
             this.btnDM.Location = new System.Drawing.Point(0, 140);
             this.btnDM.Name = "btnDM";
             this.btnDM.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnDM.Size = new System.Drawing.Size(143, 60);
+            this.btnDM.Size = new System.Drawing.Size(200, 60);
             this.btnDM.TabIndex = 1;
             this.btnDM.Text = "Đặt món";
             this.btnDM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,7 +103,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(141, 625);
+            this.panelMenu.Size = new System.Drawing.Size(200, 625);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
@@ -111,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(141, 74);
+            this.panel2.Size = new System.Drawing.Size(200, 74);
             this.panel2.TabIndex = 2;
             // 
             // panel1
@@ -121,7 +123,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 74);
+            this.panel1.Size = new System.Drawing.Size(200, 74);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -129,7 +131,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -138,6 +140,7 @@
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconButton1.IconColor = System.Drawing.Color.White;
@@ -147,7 +150,7 @@
             this.iconButton1.Location = new System.Drawing.Point(0, 206);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.iconButton1.Size = new System.Drawing.Size(143, 60);
+            this.iconButton1.Size = new System.Drawing.Size(200, 60);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "Thoát";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,19 +164,19 @@
             this.panelTl.Controls.Add(this.label1);
             this.panelTl.Controls.Add(this.iconPictureBox1);
             this.panelTl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTl.Location = new System.Drawing.Point(141, 0);
+            this.panelTl.Location = new System.Drawing.Point(200, 0);
             this.panelTl.Name = "panelTl";
-            this.panelTl.Size = new System.Drawing.Size(989, 74);
+            this.panelTl.Size = new System.Drawing.Size(930, 74);
             this.panelTl.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(66, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.Size = new System.Drawing.Size(142, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên";
             // 
@@ -195,9 +198,9 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(141, 74);
+            this.panelDesktop.Location = new System.Drawing.Point(200, 74);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(989, 551);
+            this.panelDesktop.Size = new System.Drawing.Size(930, 551);
             this.panelDesktop.TabIndex = 2;
             // 
             // frmNhanvien

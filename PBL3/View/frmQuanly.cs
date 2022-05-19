@@ -23,6 +23,9 @@ namespace PBL3.View
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            // open full-screen mode
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
         }
 
         private void ActivateButton(object senderBtn, Color color)

@@ -63,6 +63,7 @@
             // 
             btnNV.FlatAppearance.BorderSize = 0;
             btnNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnNV.ForeColor = System.Drawing.SystemColors.Control;
             btnNV.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             btnNV.IconColor = System.Drawing.Color.White;
@@ -72,7 +73,7 @@
             btnNV.Location = new System.Drawing.Point(-3, 74);
             btnNV.Name = "btnNV";
             btnNV.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnNV.Size = new System.Drawing.Size(143, 60);
+            btnNV.Size = new System.Drawing.Size(200, 60);
             btnNV.TabIndex = 1;
             btnNV.Text = "Nhân viên";
             btnNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,6 +85,7 @@
             // 
             btnKH.FlatAppearance.BorderSize = 0;
             btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnKH.ForeColor = System.Drawing.SystemColors.Control;
             btnKH.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             btnKH.IconColor = System.Drawing.Color.White;
@@ -93,7 +95,7 @@
             btnKH.Location = new System.Drawing.Point(-3, 140);
             btnKH.Name = "btnKH";
             btnKH.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnKH.Size = new System.Drawing.Size(143, 60);
+            btnKH.Size = new System.Drawing.Size(200, 60);
             btnKH.TabIndex = 1;
             btnKH.Text = "Khách hàng";
             btnKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,6 +107,7 @@
             // 
             btnTD.FlatAppearance.BorderSize = 0;
             btnTD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnTD.ForeColor = System.Drawing.SystemColors.Control;
             btnTD.IconChar = FontAwesome.Sharp.IconChar.List;
             btnTD.IconColor = System.Drawing.Color.White;
@@ -114,7 +117,7 @@
             btnTD.Location = new System.Drawing.Point(-3, 212);
             btnTD.Name = "btnTD";
             btnTD.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnTD.Size = new System.Drawing.Size(143, 60);
+            btnTD.Size = new System.Drawing.Size(200, 60);
             btnTD.TabIndex = 1;
             btnTD.Text = "Thực đơn";
             btnTD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,6 +129,7 @@
             // 
             bthQuit.FlatAppearance.BorderSize = 0;
             bthQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            bthQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             bthQuit.ForeColor = System.Drawing.SystemColors.Control;
             bthQuit.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             bthQuit.IconColor = System.Drawing.Color.White;
@@ -135,7 +139,7 @@
             bthQuit.Location = new System.Drawing.Point(-3, 476);
             bthQuit.Name = "bthQuit";
             bthQuit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            bthQuit.Size = new System.Drawing.Size(143, 60);
+            bthQuit.Size = new System.Drawing.Size(200, 60);
             bthQuit.TabIndex = 1;
             bthQuit.Text = "Thoát";
             bthQuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,6 +151,7 @@
             // 
             btnHD.FlatAppearance.BorderSize = 0;
             btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnHD.ForeColor = System.Drawing.SystemColors.Control;
             btnHD.IconChar = FontAwesome.Sharp.IconChar.Receipt;
             btnHD.IconColor = System.Drawing.Color.White;
@@ -156,7 +161,7 @@
             btnHD.Location = new System.Drawing.Point(-3, 277);
             btnHD.Name = "btnHD";
             btnHD.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnHD.Size = new System.Drawing.Size(143, 60);
+            btnHD.Size = new System.Drawing.Size(200, 60);
             btnHD.TabIndex = 1;
             btnHD.Text = "Hóa đơn";
             btnHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,6 +173,7 @@
             // 
             btnKHO.FlatAppearance.BorderSize = 0;
             btnKHO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnKHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnKHO.ForeColor = System.Drawing.SystemColors.Control;
             btnKHO.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
             btnKHO.IconColor = System.Drawing.Color.White;
@@ -177,7 +183,7 @@
             btnKHO.Location = new System.Drawing.Point(-3, 343);
             btnKHO.Name = "btnKHO";
             btnKHO.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnKHO.Size = new System.Drawing.Size(143, 60);
+            btnKHO.Size = new System.Drawing.Size(200, 60);
             btnKHO.TabIndex = 1;
             btnKHO.Text = "Kho";
             btnKHO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,6 +195,7 @@
             // 
             btnDT.FlatAppearance.BorderSize = 0;
             btnDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnDT.ForeColor = System.Drawing.SystemColors.Control;
             btnDT.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
             btnDT.IconColor = System.Drawing.Color.White;
@@ -198,7 +205,7 @@
             btnDT.Location = new System.Drawing.Point(-3, 410);
             btnDT.Name = "btnDT";
             btnDT.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnDT.Size = new System.Drawing.Size(143, 60);
+            btnDT.Size = new System.Drawing.Size(200, 60);
             btnDT.TabIndex = 1;
             btnDT.Text = "Doanh thu";
             btnDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +227,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(141, 625);
+            this.panelMenu.Size = new System.Drawing.Size(200, 625);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
@@ -230,7 +237,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(141, 74);
+            this.panel2.Size = new System.Drawing.Size(200, 74);
             this.panel2.TabIndex = 2;
             // 
             // panel1
@@ -240,7 +247,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 74);
+            this.panel1.Size = new System.Drawing.Size(200, 74);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -259,21 +266,21 @@
             this.panelTl.Controls.Add(this.label1);
             this.panelTl.Controls.Add(this.iconPictureBox1);
             this.panelTl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTl.Location = new System.Drawing.Point(141, 0);
+            this.panelTl.Location = new System.Drawing.Point(200, 0);
             this.panelTl.Name = "panelTl";
-            this.panelTl.Size = new System.Drawing.Size(989, 74);
+            this.panelTl.Size = new System.Drawing.Size(930, 74);
             this.panelTl.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(66, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 25);
+            this.label1.Size = new System.Drawing.Size(112, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Quản Lý";
+            this.label1.Text = "Quản lý";
             // 
             // iconPictureBox1
             // 
@@ -293,9 +300,9 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(141, 74);
+            this.panelDesktop.Location = new System.Drawing.Point(200, 74);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(989, 551);
+            this.panelDesktop.Size = new System.Drawing.Size(930, 551);
             this.panelDesktop.TabIndex = 2;
             // 
             // frmQuanly
