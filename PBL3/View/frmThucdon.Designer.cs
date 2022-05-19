@@ -76,7 +76,8 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHuy.Location = new System.Drawing.Point(533, 3);
+            this.btnHuy.Location = new System.Drawing.Point(610, 3);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 60);
             this.btnHuy.TabIndex = 10;
@@ -90,7 +91,8 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSua.Location = new System.Drawing.Point(215, 3);
+            this.btnSua.Location = new System.Drawing.Point(250, 3);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 60);
             this.btnSua.TabIndex = 11;
@@ -104,7 +106,8 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnXoa.Location = new System.Drawing.Point(109, 3);
+            this.btnXoa.Location = new System.Drawing.Point(130, 3);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 60);
             this.btnXoa.TabIndex = 12;
@@ -119,7 +122,8 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLuu.Location = new System.Drawing.Point(427, 3);
+            this.btnLuu.Location = new System.Drawing.Point(490, 3);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 60);
             this.btnLuu.TabIndex = 13;
@@ -133,7 +137,8 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnThem.Location = new System.Drawing.Point(3, 3);
+            this.btnThem.Location = new System.Drawing.Point(10, 3);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 60);
             this.btnThem.TabIndex = 9;
@@ -280,7 +285,8 @@
             this.btnChonAnh.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnChonAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChonAnh.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnChonAnh.Location = new System.Drawing.Point(321, 3);
+            this.btnChonAnh.Location = new System.Drawing.Point(370, 3);
+            this.btnChonAnh.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnChonAnh.Name = "btnChonAnh";
             this.btnChonAnh.Size = new System.Drawing.Size(100, 60);
             this.btnChonAnh.TabIndex = 13;
@@ -301,9 +307,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnChonAnh);
             this.flowLayoutPanel1.Controls.Add(this.btnLuu);
             this.flowLayoutPanel1.Controls.Add(this.btnHuy);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(167, 251);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(128, 255);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(646, 65);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(723, 65);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // frmThucdon
