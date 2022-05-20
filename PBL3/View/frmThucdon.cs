@@ -78,8 +78,12 @@ namespace PBL3.View
             if(dgvThucdon.SelectedRows.Count == 1)
             {
                 string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
-                BLLMonAn.Instance.Delete(id_MonAn);
-                Reload();
+                DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '"+id_MonAn+"'?","Xác nhận xóa",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if(dr == DialogResult.OK)
+                {
+                    BLLMonAn.Instance.Delete(id_MonAn);
+                    Reload();
+                }
             }
         }
 
@@ -107,7 +111,8 @@ namespace PBL3.View
                 txtTenMon.Text = monAn.TenMonAn;
                 txtGiaTien.Text = monAn.Gia.ToString();
                 txtMaMonAn.Text = monAn.id_MonAn;
-                LoadImage(monAn.imagePath);
+                imageSourceFile = monAn.imagePath;
+                LoadImage(imageSourceFile);
             }
         }
 
