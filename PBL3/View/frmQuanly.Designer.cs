@@ -35,8 +35,8 @@
             FontAwesome.Sharp.IconButton btnHD;
             FontAwesome.Sharp.IconButton btnKHO;
             FontAwesome.Sharp.IconButton btnDT;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanly));
             FontAwesome.Sharp.IconButton iconButton1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanly));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -215,6 +215,28 @@
             btnDT.UseVisualStyleBackColor = true;
             btnDT.Click += new System.EventHandler(this.btnDT_Click);
             // 
+            // iconButton1
+            // 
+            iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iconButton1.ForeColor = System.Drawing.SystemColors.Control;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            iconButton1.IconColor = System.Drawing.Color.White;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 36;
+            iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            iconButton1.Location = new System.Drawing.Point(863, 0);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            iconButton1.Size = new System.Drawing.Size(67, 74);
+            iconButton1.TabIndex = 3;
+            iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -307,28 +329,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(930, 551);
             this.panelDesktop.TabIndex = 2;
-            // 
-            // iconButton1
-            // 
-            iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton1.ForeColor = System.Drawing.SystemColors.Control;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            iconButton1.IconColor = System.Drawing.Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 36;
-            iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton1.Location = new System.Drawing.Point(863, 0);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            iconButton1.Size = new System.Drawing.Size(67, 74);
-            iconButton1.TabIndex = 3;
-            iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            iconButton1.UseVisualStyleBackColor = true;
-            //iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frmQuanly
             // 

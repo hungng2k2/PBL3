@@ -112,7 +112,7 @@ namespace PBL3.BLL
             }
             return quyen.Trim();
         }
-        public string GetID(string username)
+        public string GetIDByUsername(string username)
         {
             string id = "";
             QLCHTAN db = new QLCHTAN();

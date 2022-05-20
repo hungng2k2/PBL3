@@ -129,9 +129,10 @@ namespace PBL3.View
             Application.Exit();
         }
 
-        //private void iconButton1_Click(object sender, EventArgs e)
-        //{
-        //    OpenChildForm(new frmThongtintk(idnv));
-        //}
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(idnv);
+            OpenChildForm(new frmThongtintk(idnv));
+        }
     }
 }

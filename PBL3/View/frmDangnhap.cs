@@ -16,15 +16,15 @@ namespace PBL3.View
             string id = "";
             if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "QuanLy")
             {
-                id = BLLNhanVien.Instance.GetID(txtUsername.Text);
-                frmQuanly f = new frmQuanly(txtUsername.Text);
+                id = BLLNhanVien.Instance.GetIDByUsername(txtUsername.Text);
+                frmQuanly f = new frmQuanly(id);
                 f.Show();
                 this.Hide();
             }
             else if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "NhanVien")
             {
-                id = BLLNhanVien.Instance.GetID(txtUsername.Text);
-                new frmNhanvien(txtUsername.Text).Show();
+                id = BLLNhanVien.Instance.GetIDByUsername(txtUsername.Text);
+                new frmNhanvien(id).Show();
                 this.Hide();
             }
             else
