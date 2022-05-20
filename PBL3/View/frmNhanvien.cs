@@ -16,9 +16,10 @@ namespace PBL3.View
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm = null;
-
-        public frmNhanvien()
+        string idnv = "";
+        public frmNhanvien(string id)
         {
+            idnv = id;
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
@@ -27,7 +28,6 @@ namespace PBL3.View
             this.FormBorderStyle = FormBorderStyle.None;
             this.Bounds = Screen.PrimaryScreen.Bounds;
         }
-
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -103,6 +103,12 @@ namespace PBL3.View
         private void frmNhanvien_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void iconInfo_Click(object sender, EventArgs e)
+        {
+            
+            OpenChildForm(new frmThongtintk(idnv));
         }
     }
 }

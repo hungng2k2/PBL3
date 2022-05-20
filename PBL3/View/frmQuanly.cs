@@ -16,9 +16,10 @@ namespace PBL3.View
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm = null;
-
-        public frmQuanly()
+        string idnv = "";
+        public frmQuanly(string id)
         {
+            idnv = id;
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
@@ -127,5 +128,10 @@ namespace PBL3.View
         {
             Application.Exit();
         }
+
+        //private void iconButton1_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new frmThongtintk(idnv));
+        //}
     }
 }

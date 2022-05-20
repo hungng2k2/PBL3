@@ -112,5 +112,16 @@ namespace PBL3.BLL
             }
             return quyen.Trim();
         }
+        public string GetID(string username)
+        {
+            string id = "";
+            QLCHTAN db = new QLCHTAN();
+            var query = db.NhanVien.Where(p => p.Username == username).FirstOrDefault();
+            if (query != null)
+            {
+                id = query.id_NhanVien;
+            }
+            return id.Trim();
+        }
     }
 }

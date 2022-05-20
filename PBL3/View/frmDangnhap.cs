@@ -11,18 +11,20 @@ namespace PBL3.View
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void btnLogin_Click(object sender, EventArgs e)
         {
-
+            string id = "";
             if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "QuanLy")
             {
-                frmQuanly f = new frmQuanly();
+                id = BLLNhanVien.Instance.GetID(txtUsername.Text);
+                frmQuanly f = new frmQuanly(txtUsername.Text);
                 f.Show();
                 this.Hide();
             }
             else if (BLLNhanVien.Instance.checkLogin(txtUsername.Text, txtPassword.Text) == "NhanVien")
             {
-                new frmNhanvien().Show();
+                id = BLLNhanVien.Instance.GetID(txtUsername.Text);
+                new frmNhanvien(txtUsername.Text).Show();
                 this.Hide();
             }
             else

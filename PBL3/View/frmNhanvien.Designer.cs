@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconInfo = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -161,6 +162,7 @@
             // panelTl
             // 
             this.panelTl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelTl.Controls.Add(this.iconInfo);
             this.panelTl.Controls.Add(this.label1);
             this.panelTl.Controls.Add(this.iconPictureBox1);
             this.panelTl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -203,6 +205,26 @@
             this.panelDesktop.Size = new System.Drawing.Size(930, 551);
             this.panelDesktop.TabIndex = 2;
             // 
+            // iconInfo
+            // 
+            this.iconInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconInfo.FlatAppearance.BorderSize = 0;
+            this.iconInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconInfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconInfo.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.iconInfo.IconColor = System.Drawing.Color.White;
+            this.iconInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconInfo.IconSize = 36;
+            this.iconInfo.Location = new System.Drawing.Point(854, 0);
+            this.iconInfo.Name = "iconInfo";
+            this.iconInfo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.iconInfo.Size = new System.Drawing.Size(76, 74);
+            this.iconInfo.TabIndex = 3;
+            this.iconInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.iconInfo.UseVisualStyleBackColor = true;
+            this.iconInfo.Click += new System.EventHandler(this.iconInfo_Click);
+            // 
             // frmNhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -238,5 +260,6 @@
         private FontAwesome.Sharp.IconButton btnDM;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton iconInfo;
     }
 }

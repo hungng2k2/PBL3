@@ -33,6 +33,18 @@ namespace PBL3
                     Username = "NV001",
                     Password = "123456",
                     ChucVu = "NhanVien"
+                },
+                new NhanVien
+                {
+                    id_NhanVien = "NV002",
+                    TenNhanVien = "Nguyễn Văn B",
+                    NgaySinh = new DateTime(2002,2,9),
+                    GioiTinh = true,
+                    SoDienThoai = "0123456879",
+                    DiaChi = "Đà Nẵng",
+                    Username = "NV002",
+                    Password = "123456",
+                    ChucVu = "NhanVien"
                 }
             });
 

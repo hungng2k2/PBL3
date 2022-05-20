@@ -358,7 +358,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmQLNhanvien";
-            this.Text = "frmNhanvien";
+            this.Text = "Nhanvien";
             this.Load += new System.EventHandler(this.frmQLNhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
