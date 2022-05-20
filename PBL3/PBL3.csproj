@@ -83,12 +83,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCHTAN.cs" />
-    <Compile Include="View\frmChiTietMonAn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmChiTietMonAn.Designer.cs">
-      <DependentUpon>frmChiTietMonAn.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +100,12 @@
     </Compile>
     <Compile Include="View\frmDoanhthu.Designer.cs">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDoiMK.Designer.cs">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmHoadon.cs">
       <SubType>Form</SubType>
@@ -149,6 +149,12 @@
     <Compile Include="View\frmQLNhanvien.Designer.cs">
       <DependentUpon>frmQLNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmThongtintk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmThongtintk.Designer.cs">
+      <DependentUpon>frmThongtintk.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmThucdon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +182,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmChiTietMonAn.resx">
-      <DependentUpon>frmChiTietMonAn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmDoanhthu.resx">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDoiMK.resx">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
@@ -214,6 +220,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="View\frmThongtintk.resx">
+      <DependentUpon>frmThongtintk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmThucdon.resx">
       <DependentUpon>frmThucdon.cs</DependentUpon>
     </EmbeddedResource>
