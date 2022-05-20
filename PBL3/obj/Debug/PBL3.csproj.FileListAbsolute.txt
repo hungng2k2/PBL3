@@ -55,7 +55,6 @@ D:\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.ItemFood.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmMenu.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmOrder.resources
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmOrder.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.ItemFood.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmMenu.resources
@@ -89,3 +88,5 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csp
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.exe
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.pdb
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongtintk.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMK.resources
