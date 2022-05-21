@@ -1,14 +1,7 @@
-﻿using System;
+﻿using PBL3.DTO;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using PBL3.DTO;
-using PBL3.BLL;
 
 namespace PBL3.View
 {
@@ -16,19 +9,24 @@ namespace PBL3.View
     {
         double sum = 0;
         List<MonAn> _list_orders;
+        List<CBBItem> listItem;
+        List<CBBItem> listItemFilter;
         public frmOrder(List<MonAn> list_orders)
         {
             QLCHTAN db = new QLCHTAN();
             InitializeComponent();
             this._list_orders = list_orders;
+            this.listItem = new List<CBBItem>();
+            this.listItemFilter = new List<CBBItem>();
             foreach (KhachHang i in db.KhachHang)
             {
-                cbbKhachhang.Items.Add(new CBBItem
+                listItem.Add(new CBBItem
                 {
-                    Text = i.TenKhachHang,
+                    Text = i.SoDienThoai + ", " + i.TenKhachHang,
                     Value = i.id_KhachHang
                 });
             }
+            cbbKhachhang.Items.AddRange(listItem.ToArray());
         }
 
         protected override void OnShown(EventArgs e)
@@ -48,6 +46,27 @@ namespace PBL3.View
         private void butThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbbKhachhang_TextUpdate(object sender, EventArgs e)
+        {
+            cbbKhachhang.Items.Clear();
+            listItemFilter.Clear();
+            string filter_param = cbbKhachhang.Text;
+            foreach (CBBItem item in listItem)
+            {
+                if (item.Text.ToLower().Contains(filter_param.ToLower()))
+                {
+                    listItemFilter.Add(item);
+                }
+            }
+            cbbKhachhang.Items.AddRange(listItemFilter.ToArray());
+            cbbKhachhang.DroppedDown = true;
+            cbbKhachhang.IntegralHeight = true;
+            cbbKhachhang.SelectedIndex = -1;
+            cbbKhachhang.Text = filter_param;
+            cbbKhachhang.SelectionStart = filter_param.Length;
+            cbbKhachhang.SelectionLength = 0;
         }
     }
 }

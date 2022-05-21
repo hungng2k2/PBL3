@@ -100,6 +100,7 @@
             this.cbbKhachhang.FormattingEnabled = true;
             resources.ApplyResources(this.cbbKhachhang, "cbbKhachhang");
             this.cbbKhachhang.Name = "cbbKhachhang";
+            this.cbbKhachhang.TextUpdate += new System.EventHandler(this.cbbKhachhang_TextUpdate);
             // 
             // label2
             // 
