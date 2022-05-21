@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrder));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.butIn = new System.Windows.Forms.Button();
+            this.butThoat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbKhachhang = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -45,49 +52,80 @@
             this.columnHeader4,
             this.columnHeader5});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(917, 435);
-            this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "STT";
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Tên món ăn";
-            this.columnHeader2.Width = 200;
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Số lượng";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 80;
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Đơn giá";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 120;
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Thành tiền";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 200;
+            resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            // 
+            // butIn
+            // 
+            resources.ApplyResources(this.butIn, "butIn");
+            this.butIn.Name = "butIn";
+            this.butIn.UseVisualStyleBackColor = true;
+            // 
+            // butThoat
+            // 
+            resources.ApplyResources(this.butThoat, "butThoat");
+            this.butThoat.Name = "butThoat";
+            this.butThoat.UseVisualStyleBackColor = true;
+            this.butThoat.Click += new System.EventHandler(this.butThoat_Click);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // cbbKhachhang
+            // 
+            this.cbbKhachhang.FormattingEnabled = true;
+            resources.ApplyResources(this.cbbKhachhang, "cbbKhachhang");
+            this.cbbKhachhang.Name = "cbbKhachhang";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // frmOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(941, 527);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbbKhachhang);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.butThoat);
+            this.Controls.Add(this.butIn);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrder";
-            this.Text = "frmOrder";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,5 +137,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button butIn;
+        private System.Windows.Forms.Button butThoat;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbKhachhang;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

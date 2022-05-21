@@ -73,6 +73,7 @@
     <Compile Include="BLL\BLLMonAn.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\ChiTietOrder.cs" />
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />

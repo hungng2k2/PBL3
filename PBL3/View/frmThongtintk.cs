@@ -24,6 +24,7 @@ namespace PBL3.View
         private void frmThongtintk_Load(object sender, EventArgs e)
         {
             // get id from login form and show information of user
+            //MessageBox.Show(id);
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             txtTen.Text = nv.TenNhanVien;
             txtChucvu.Text = nv.ChucVu;
