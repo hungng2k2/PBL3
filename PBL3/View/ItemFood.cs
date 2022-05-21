@@ -28,6 +28,7 @@ namespace PBL3.View
             LoadImage();
             lbl_name.Text = this.monAn.TenMonAn;
             lbl_price.Text = "₫" + this.monAn.Gia.ToString("#,#");
+            lblAmount.Text = this.monAn.SoLuong.ToString();
             checkOutOfStock();
         }
         public int count = 0;
@@ -115,6 +116,5 @@ namespace PBL3.View
             public bool IsAdd { get { return this.isAdd; } }
 
         }
-
     }
 }

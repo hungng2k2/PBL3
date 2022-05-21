@@ -75,6 +75,12 @@
     <Compile Include="BLL\BLLMonAn.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
+    <Compile Include="View\frmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChiTietHoaDon.Designer.cs">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDB.cs" />
     <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\ChiTietOrder.cs" />
@@ -183,6 +189,9 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmChiTietHoaDon.resx">
+      <DependentUpon>frmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

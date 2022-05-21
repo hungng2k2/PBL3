@@ -35,6 +35,8 @@
             this.pic_food = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.lblOutOfStock = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_food)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             this.lblSelected.BackColor = System.Drawing.Color.Gray;
             this.lblSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelected.ForeColor = System.Drawing.Color.White;
-            this.lblSelected.Location = new System.Drawing.Point(189, 235);
+            this.lblSelected.Location = new System.Drawing.Point(116, 235);
             this.lblSelected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelected.Name = "lblSelected";
             this.lblSelected.Size = new System.Drawing.Size(43, 28);
@@ -136,14 +138,39 @@
             this.lblOutOfStock.TabIndex = 14;
             this.lblOutOfStock.Text = "Hết hàng";
             // 
+            // lblAmount
+            // 
+            this.lblAmount.BackColor = System.Drawing.Color.Gray;
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
+            this.lblAmount.Location = new System.Drawing.Point(188, 235);
+            this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(43, 28);
+            this.lblAmount.TabIndex = 9;
+            this.lblAmount.Text = "0";
+            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(166, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 29);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "/";
+            // 
             // ItemFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblOutOfStock);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.pic_food);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lblSelected);
             this.Controls.Add(this.lbl_price);
             this.Controls.Add(this.btnMinus);
@@ -165,5 +192,7 @@
         private System.Windows.Forms.PictureBox pic_food;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label lblOutOfStock;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.Label label2;
     }
 }

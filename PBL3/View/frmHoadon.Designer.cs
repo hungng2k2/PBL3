@@ -44,10 +44,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDSHoaDon = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -95,6 +95,7 @@
             this.butDetail.TabIndex = 12;
             this.butDetail.Text = "Chi tiết";
             this.butDetail.UseVisualStyleBackColor = true;
+            this.butDetail.Click += new System.EventHandler(this.butDetail_Click);
             // 
             // butSave
             // 
@@ -232,10 +233,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvDSHoaDon);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(971, 178);
@@ -243,16 +244,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
             // 
-            // dataGridView1
+            // dgvDSHoaDon
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(965, 155);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHoaDon.Location = new System.Drawing.Point(3, 20);
+            this.dgvDSHoaDon.Name = "dgvDSHoaDon";
+            this.dgvDSHoaDon.RowHeadersWidth = 51;
+            this.dgvDSHoaDon.RowTemplate.Height = 24;
+            this.dgvDSHoaDon.Size = new System.Drawing.Size(965, 155);
+            this.dgvDSHoaDon.TabIndex = 0;
+            this.dgvDSHoaDon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHoaDon_DataBindingComplete);
             // 
             // frmHoadon
             // 
@@ -265,10 +267,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmHoadon";
             this.Text = "frmHoadon";
+            this.Load += new System.EventHandler(this.frmHoadon_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,6 +293,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDSHoaDon;
     }
 }

@@ -82,7 +82,7 @@ namespace PBL3.BLL
 
         public dynamic GetAll()
         {
-            return db.HoaDon.Select(p => p);
+            return db.HoaDon.Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, p.Order.TongTien}).ToList();
         }
 
         public HoaDon GetById(string id)
