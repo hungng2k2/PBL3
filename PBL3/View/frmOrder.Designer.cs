@@ -82,6 +82,7 @@
             resources.ApplyResources(this.butIn, "butIn");
             this.butIn.Name = "butIn";
             this.butIn.UseVisualStyleBackColor = true;
+            this.butIn.Click += new System.EventHandler(this.butIn_Click);
             // 
             // butThoat
             // 

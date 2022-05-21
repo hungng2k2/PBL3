@@ -25,7 +25,7 @@ namespace PBL3.View
             {
                 cbbKhachhang.Items.Add(new CBBItem
                 {
-                    Text = i.TenKhachHang,
+                    Text = i.id_KhachHang + ", " + i.TenKhachHang,
                     Value = i.id_KhachHang
                 });
             }
@@ -48,6 +48,17 @@ namespace PBL3.View
         private void butThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void butIn_Click(object sender, EventArgs e)
+        {
+            if (cbbKhachhang.Text == "")
+                MessageBox.Show("Vui lòng chọn khách hàng!");
+            else
+            {
+                MessageBox.Show("In hóa đơn thành công!");
+                this.Close();
+            }
         }
     }
 }
