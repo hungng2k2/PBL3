@@ -92,7 +92,11 @@ namespace PBL3.View
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
             OpenChildForm(new frmMenu());
         }
-
+        private void btnHD_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(255, 163, 26));
+            OpenChildForm(new frmHoadon());
+        }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
@@ -110,5 +114,7 @@ namespace PBL3.View
             
             OpenChildForm(new frmThongtintk(idnv));
         }
+
+        
     }
 }
