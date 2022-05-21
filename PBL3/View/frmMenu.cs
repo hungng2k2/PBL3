@@ -14,11 +14,13 @@ namespace PBL3.View
 {
     public partial class frmMenu : Form
     {
+        private string id_NhanVien = "";
         public double total = 0;
         public int totalNumOrder = 0;
         public List<ItemFood> itemFoods;
-        public frmMenu()
+        public frmMenu(string id_NhanVien)
         {
+            this.id_NhanVien = id_NhanVien;
             InitializeComponent();
         }
 
@@ -43,6 +45,8 @@ namespace PBL3.View
             flowLayoutPanel1.Controls.AddRange(list);
             lbl_Tongtien.Text = "₫0";
             lbl_numOrder.Text = "0";
+            totalNumOrder = 0;
+            total = 0;
         }
 
         private void frmMenu_itemValueChanged(object sender, ItemFood.ItemValueChangedEventArgs e)
@@ -74,7 +78,7 @@ namespace PBL3.View
         {
             if (Convert.ToInt32(lbl_numOrder.Text) > 0)
             {
-                var list_order = new List<MonAn>();
+                List<MonAn> list_order = new List<MonAn>();
                 int i = 1;
                 foreach (ItemFood item in flowLayoutPanel1.Controls)
                 {
@@ -90,8 +94,8 @@ namespace PBL3.View
                         i++;
                     }
                 }
-
-                var frm = new frmOrder(list_order);
+                frmOrder frm = new frmOrder(list_order, id_NhanVien);
+                frm.reloadForm += Reload;
                 frm.ShowDialog();
             }
             else

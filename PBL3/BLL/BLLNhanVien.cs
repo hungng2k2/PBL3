@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PBL3.BLL
 {
-    class BLLNhanVien : BLLInterface<NhanVien>
+    public class BLLNhanVien : BLLInterface<NhanVien>
     {        
         QLCHTAN db = new QLCHTAN();
         private static BLLNhanVien _Instance;
