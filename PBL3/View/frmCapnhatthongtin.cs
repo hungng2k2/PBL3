@@ -20,12 +20,6 @@ namespace PBL3.View
             InitializeComponent();
             id = _id;
         }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void frmCapnhatthongtin_Load(object sender, EventArgs e)
         {
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
@@ -46,7 +40,7 @@ namespace PBL3.View
             txtUsername.Text = nv.Username;
         }
 
-        private void butCapnhat_Click(object sender, EventArgs e)
+        private void iconButtonCapnhat_Click(object sender, EventArgs e)
         {
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
@@ -62,6 +56,11 @@ namespace PBL3.View
                 Password = nv.Password,
             });
             MessageBox.Show("Cập nhật thông tin thành công");
+            this.Close();
+        }
+
+        private void iconButtonHuy_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -47,7 +47,7 @@ namespace PBL3.View
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
             frmDoiMK frm = new frmDoiMK(id);
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void butCapnhat_Click(object sender, EventArgs e)
