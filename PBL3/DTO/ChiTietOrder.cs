@@ -10,12 +10,12 @@ namespace PBL3.DTO
 {
     public class ChiTietOrder
     {
-        [Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Required]
-        public int id_ChiTietOrder { get; set; }
+        [Key][Required]
+        public string id_ChiTietOrder { get; set; }
         public string id_Order { get; set; }
         public string id_MonAn { get; set; }
         public int SoLuong { get; set; }
-        [ForeignKey("id_MonAn")]
+        [ForeignKey("id_Order")]
         public virtual Order Order { get; set; }
         [ForeignKey("id_MonAn")]
         public virtual MonAn MonAn { get; set; }

@@ -131,5 +131,16 @@ namespace PBL3.BLL
         {
             return db.MonAn.Where(p => p.TenMonAn == ten).FirstOrDefault();
         }
+        public void Sell(string id, int soLuong)
+        {
+            MonAn monAn = GetById(id);
+            ExecuteAddUpdate(new MonAn {
+                id_MonAn = monAn.id_MonAn,
+                TenMonAn = monAn.TenMonAn,
+                Gia = monAn.Gia,
+                SoLuong = monAn.SoLuong - soLuong,
+                imagePath = monAn.imagePath,
+            });
+        }
     }
 }

@@ -16,10 +16,10 @@ namespace PBL3.View
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm = null;
-        string idnv = "";
+        string id_NhanVien = "";
         public frmNhanvien(string id)
         {
-            idnv = id;
+            id_NhanVien = id;
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
@@ -90,7 +90,7 @@ namespace PBL3.View
         private void btnDM_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
-            OpenChildForm(new frmMenu());
+            OpenChildForm(new frmMenu(id_NhanVien));
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace PBL3.View
         private void iconInfo_Click(object sender, EventArgs e)
         {
             
-            OpenChildForm(new frmThongtintk(idnv));
+            OpenChildForm(new frmThongtintk(id_NhanVien));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PBL3.DTO;
+using PBL3.BLL;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -7,15 +8,20 @@ namespace PBL3.View
 {
     public partial class frmOrder : Form
     {
+        public delegate void ReloadForm();
+        public ReloadForm reloadForm;
+
+        private string id_NhanVien = "";
         double sum = 0;
-        List<MonAn> _list_orders;
+        List<MonAn> list_orders;
         List<CBBItem> listItem;
         List<CBBItem> listItemFilter;
-        public frmOrder(List<MonAn> list_orders)
+        public frmOrder(List<MonAn> list_orders, string id_NhanVien)
         {
             QLCHTAN db = new QLCHTAN();
             InitializeComponent();
-            this._list_orders = list_orders;
+            this.id_NhanVien = id_NhanVien;
+            this.list_orders = list_orders;
             this.listItem = new List<CBBItem>();
             this.listItemFilter = new List<CBBItem>();
             foreach (KhachHang i in db.KhachHang)
@@ -33,14 +39,14 @@ namespace PBL3.View
         {
             base.OnShown(e);
             int i = 1;
-            foreach (MonAn monAn in _list_orders)
+            foreach (MonAn monAn in list_orders)
             {
                 var listviewItem = new ListViewItem(new string[] { i + ".", monAn.TenMonAn, monAn.SoLuong.ToString(), monAn.Gia.ToString("n0"), (monAn.SoLuong * monAn.Gia).ToString("n0") });
                 i++;
                 listView1.Items.Add(listviewItem);
                 sum = sum + monAn.SoLuong * monAn.Gia;
             }
-            label3.Text = sum.ToString();
+            label3.Text = "₫" + sum.ToString("#,#");
         }
 
         private void butThoat_Click(object sender, EventArgs e)
@@ -71,11 +77,14 @@ namespace PBL3.View
 
         private void butIn_Click(object sender, EventArgs e)
         {
-            if (cbbKhachhang.Text == "")
+            if (cbbKhachhang.SelectedIndex < 0)
                 MessageBox.Show("Vui lòng chọn khách hàng!");
             else
             {
+                string id_KhachHang = ((CBBItem)cbbKhachhang.SelectedItem).Value;
+                BLLHoaDon.Instance.LapHoaDon(list_orders, id_NhanVien, id_KhachHang);
                 MessageBox.Show("In hóa đơn thành công!");
+                reloadForm();
                 this.Close();
             }
         }
