@@ -69,7 +69,6 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\bin\Debug\EntityFr
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.Properties.Resources.resources
-E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDangnhap.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDatmon.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDoanhthu.resources
@@ -90,3 +89,6 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.exe
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.pdb
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongtintk.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMK.resources
+E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDoiMK.resources
+E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmThongtintk.resources
+E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmCapnhatthongtin.resources

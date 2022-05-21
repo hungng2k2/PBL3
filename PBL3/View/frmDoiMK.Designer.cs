@@ -32,16 +32,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNhaplai = new System.Windows.Forms.TextBox();
+            this.txtMKcu = new System.Windows.Forms.TextBox();
             this.txtMKmoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMKcu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -86,6 +87,13 @@
             this.txtNhaplai.Size = new System.Drawing.Size(163, 22);
             this.txtNhaplai.TabIndex = 1;
             // 
+            // txtMKcu
+            // 
+            this.txtMKcu.Location = new System.Drawing.Point(242, 39);
+            this.txtMKcu.Name = "txtMKcu";
+            this.txtMKcu.Size = new System.Drawing.Size(163, 22);
+            this.txtMKcu.TabIndex = 1;
+            // 
             // txtMKmoi
             // 
             this.txtMKmoi.Location = new System.Drawing.Point(242, 81);
@@ -126,13 +134,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu mới:";
             // 
-            // txtMKcu
-            // 
-            this.txtMKcu.Location = new System.Drawing.Point(242, 39);
-            this.txtMKcu.Name = "txtMKcu";
-            this.txtMKcu.Size = new System.Drawing.Size(163, 22);
-            this.txtMKcu.TabIndex = 1;
-            // 
             // frmDoiMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,6 +147,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

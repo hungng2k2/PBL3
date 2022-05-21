@@ -52,7 +52,9 @@ namespace PBL3.View
 
         private void butCapnhat_Click(object sender, EventArgs e)
         {
-
+            frmCapnhatthongtin frm = new frmCapnhatthongtin(id);
+            frm.ShowDialog();
         }
+        
     }
 }
