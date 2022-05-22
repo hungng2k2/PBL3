@@ -20,8 +20,7 @@ namespace PBL3.View
             InitializeComponent();
             id = a;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void iconButtonCapnhat_Click(object sender, EventArgs e)
         {
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             if (txtMKcu.Text == "" || txtMKmoi.Text == "" || txtNhaplai.Text == "")
@@ -50,7 +49,7 @@ namespace PBL3.View
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iconButtonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }

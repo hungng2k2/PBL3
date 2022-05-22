@@ -140,7 +140,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(29, 215);
+            this.label8.Location = new System.Drawing.Point(25, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(145, 22);
             this.label8.TabIndex = 31;
@@ -173,7 +173,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(29, 274);
+            this.label5.Location = new System.Drawing.Point(25, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 22);
             this.label5.TabIndex = 34;
@@ -259,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(900, 460);
+            this.ClientSize = new System.Drawing.Size(898, 458);
             this.ControlBox = false;
             this.Controls.Add(this.iconButtonHuy);
             this.Controls.Add(this.iconButtonCapnhat);
