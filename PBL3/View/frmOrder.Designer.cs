@@ -47,18 +47,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtThoigian = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.txtGiamgia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtThoigian = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +165,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.txtGiamgia);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtSDT);
@@ -181,45 +185,16 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // label8
+            // btnAdd
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // txtMaHD
-            // 
-            resources.ApplyResources(this.txtMaHD, "txtMaHD");
-            this.txtMaHD.Name = "txtMaHD";
-            // 
-            // txtMaNV
-            // 
-            resources.ApplyResources(this.txtMaNV, "txtMaNV");
-            this.txtMaNV.Name = "txtMaNV";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // txtTenKH
-            // 
-            resources.ApplyResources(this.txtTenKH, "txtTenKH");
-            this.txtTenKH.Name = "txtTenKH";
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // txtThoigian
-            // 
-            resources.ApplyResources(this.txtThoigian, "txtThoigian");
-            this.txtThoigian.Name = "txtThoigian";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAdd.IconColor = System.Drawing.Color.Lime;
+            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdd.IconSize = 22;
+            resources.ApplyResources(this.btnAdd, "btnAdd");
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtGiamgia
             // 
@@ -240,6 +215,54 @@
             // 
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
+            // 
+            // txtThoigian
+            // 
+            resources.ApplyResources(this.txtThoigian, "txtThoigian");
+            this.txtThoigian.Name = "txtThoigian";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // txtTenKH
+            // 
+            resources.ApplyResources(this.txtTenKH, "txtTenKH");
+            this.txtTenKH.Name = "txtTenKH";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // txtMaNV
+            // 
+            resources.ApplyResources(this.txtMaNV, "txtMaNV");
+            this.txtMaNV.Name = "txtMaNV";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // txtMaHD
+            // 
+            resources.ApplyResources(this.txtMaHD, "txtMaHD");
+            this.txtMaHD.Name = "txtMaHD";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // btnCancel
+            // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmOrder
             // 
@@ -298,5 +321,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconButton btnAdd;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

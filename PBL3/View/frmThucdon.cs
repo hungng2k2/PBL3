@@ -99,7 +99,7 @@ namespace PBL3.View
         {
             dgvThucdon.Columns["id_MonAn"].HeaderText = "Mã món ăn";
             dgvThucdon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
-            dgvThucdon.Columns["Gia"].HeaderText = "Giá";
+            dgvThucdon.Columns["GiaBan"].HeaderText = "Giá Bán";
         }
 
         private void dgvThucdon_SelectionChanged(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace PBL3.View
                 string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
                 MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
                 txtTenMon.Text = monAn.TenMonAn;
-                txtGiaTien.Text = monAn.Gia.ToString();
+                txtGiaTien.Text = monAn.GiaBan.ToString();
                 txtMaMonAn.Text = monAn.id_MonAn;
                 imageSourceFile = monAn.imagePath;
                 LoadImage(imageSourceFile);
@@ -132,14 +132,23 @@ namespace PBL3.View
             {
                 imageSourceFile = defaultImage;
             }
-            MonAn ma = new MonAn
+            if(txtTenMon.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên món ăn!");
+                return;
+            }
+            if(txtGiaTien.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền");
+                return;
+            }
+            BLLMonAn.Instance.ExecuteAddUpdate(new MonAn
             {
                 id_MonAn = txtMaMonAn.Text,
                 TenMonAn = txtTenMon.Text,
-                Gia = Convert.ToInt32(txtGiaTien.Text),
+                GiaBan = Convert.ToInt32(txtGiaTien.Text),
                 imagePath = imageSourceFile,
-            };
-            BLLMonAn.Instance.ExecuteAddUpdate(ma);
+            });
             EditorEnable(false);
             Reload();
         }

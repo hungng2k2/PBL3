@@ -37,8 +37,8 @@ namespace PBL3.View
                 MonAn monAn = BLLMonAn.Instance.GetmonByten(tenmon);
                 txtTenMon.Text = monAn.TenMonAn.ToString();
                 txtSoLuong.Text = monAn.SoLuong.ToString();
-                txtDonGia.Text = monAn.Gia.ToString();
-                txtTong.Text = (monAn.SoLuong * monAn.Gia).ToString();
+                txtDonGia.Text = monAn.GiaBan.ToString();
+                txtTong.Text = (monAn.SoLuong * monAn.GiaBan).ToString();
             }
         }
 
@@ -88,7 +88,7 @@ namespace PBL3.View
         {
             dgvDSMonAn.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvDSMonAn.Columns["SoLuong"].HeaderText = "Số lượng";
-            dgvDSMonAn.Columns["Gia"].HeaderText = "Giá";
+            dgvDSMonAn.Columns["GiaBan"].HeaderText = "Giá Bán";
         }
     }
 }

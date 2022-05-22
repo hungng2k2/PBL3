@@ -9,7 +9,7 @@ namespace PBL3.BLL
 {
     public class BLLChiTietOrder : BLLInterface<ChiTietOrder>
     {
-        QLCHTAN db = new QLCHTAN();
+        QLCHTAN db;
         private static BLLChiTietOrder _Instance;
 
         public static BLLChiTietOrder Instance
@@ -26,7 +26,7 @@ namespace PBL3.BLL
         }
         private BLLChiTietOrder()
         {
-
+            db = new QLCHTAN();
         }
         public bool checkAddUpdate(string id)
         {
@@ -69,7 +69,7 @@ namespace PBL3.BLL
                     id_Order = t.id_Order,
                     id_MonAn = t.id_MonAn,
                     SoLuong = t.SoLuong,
-                    ThanhTien = t.ThanhTien,
+                    DonGia = t.DonGia,
                 });
                 db.SaveChanges();
             }
@@ -79,7 +79,7 @@ namespace PBL3.BLL
                 ct.id_Order = t.id_Order;
                 ct.id_MonAn = t.id_MonAn;
                 ct.SoLuong = t.SoLuong;
-                ct.ThanhTien = t.ThanhTien;
+                ct.DonGia = t.DonGia;
                 db.SaveChanges();
             }
         }
@@ -96,7 +96,7 @@ namespace PBL3.BLL
         public dynamic GetByIdOrder(string id_Order)
         {
             return db.ChiTietOrder.Where(p => p.id_Order == id_Order)
-                .Select(p => new { p.id_ChiTietOrder, p.MonAn.TenMonAn, p.SoLuong, p.ThanhTien })
+                .Select(p => new { p.MonAn.TenMonAn, p.SoLuong, p.DonGia, ThanhTien = p.DonGia * p.SoLuong })
                 .ToList();
         }
         public void ExcuteListMonAn(string id_Order, List<MonAn> monAns)
@@ -108,7 +108,7 @@ namespace PBL3.BLL
                     id_Order = id_Order,
                     id_MonAn = monAn.id_MonAn,
                     SoLuong = monAn.SoLuong,
-                    ThanhTien = monAn.SoLuong * monAn.Gia
+                    DonGia = monAn.GiaBan
                 });
             }
         }

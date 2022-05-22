@@ -87,7 +87,7 @@ namespace PBL3.View
                         list_order.Add(new MonAn() {
                             id_MonAn = item.monAn.id_MonAn,
                             TenMonAn = item.monAn.TenMonAn,
-                            Gia = item.monAn.Gia,
+                            GiaBan = item.monAn.GiaBan,
                             imagePath = item.monAn.imagePath,
                             SoLuong = item.count,
                         });

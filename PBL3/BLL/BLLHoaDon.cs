@@ -95,7 +95,7 @@ namespace PBL3.BLL
             double TongTien = 0;
             foreach(MonAn monAn in monAns)
             {
-                TongTien += monAn.SoLuong * monAn.Gia;
+                TongTien += monAn.SoLuong * monAn.GiaBan;
             }   
             BLLOrder.Instance.ExecuteAddUpdate(new Order
             {

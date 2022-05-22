@@ -20,14 +20,14 @@ namespace PBL3.View
             {
                 id_MonAn = monAn.id_MonAn,
                 TenMonAn = monAn.TenMonAn,
-                Gia = monAn.Gia,
+                GiaBan = monAn.GiaBan,
                 SoLuong = monAn.SoLuong,
                 imagePath = monAn.imagePath,
             };
             InitializeComponent();
             LoadImage();
             lbl_name.Text = this.monAn.TenMonAn;
-            lbl_price.Text = "₫" + this.monAn.Gia.ToString("#,#");
+            lbl_price.Text = "₫" + this.monAn.GiaBan.ToString("#,#");
             lblAmount.Text = this.monAn.SoLuong.ToString();
             checkOutOfStock();
         }
@@ -81,7 +81,7 @@ namespace PBL3.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.CountAdded += 1;
-            ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, true, this.CountAdded);
+            ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.GiaBan, true, this.CountAdded);
             this.itemValueChanged(sender, myArgs);
             checkOutOfStock();
         }
@@ -91,7 +91,7 @@ namespace PBL3.View
             if (this.CountAdded > 0)
             {
                 this.CountAdded -= 1;
-                ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.Gia, false, this.CountAdded);
+                ItemValueChangedEventArgs myArgs = new ItemValueChangedEventArgs(this.monAn.GiaBan, false, this.CountAdded);
                 this.itemValueChanged(sender, myArgs);
                 checkOutOfStock();
             }
