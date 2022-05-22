@@ -188,6 +188,7 @@
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienThoai.Location = new System.Drawing.Point(488, 72);
+            this.txtSoDienThoai.MaxLength = 10;
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(161, 30);
             this.txtSoDienThoai.TabIndex = 5;
