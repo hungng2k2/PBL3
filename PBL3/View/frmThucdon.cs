@@ -8,7 +8,7 @@ namespace PBL3.View
 {
     public partial class frmThucDon : Form
     {
-        private string _imageSourceFile;
+        private string _imageSourceFile = "";
         public string ImageSourceFile
         {
             get
