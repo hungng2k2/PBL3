@@ -9,7 +9,16 @@ namespace PBL3.BLL
     {
         QLCHTAN db = new QLCHTAN();
 
-        private string imageFilePath = @".\image\";
+        private string _imageFilePath = @".\image\";
+
+        public string DefaultImage
+        {
+            get
+            {
+                return @".\image\default.jpg";
+            }
+            private set { }
+        }
 
         private static BLLMonAn _Instance;
 
@@ -45,7 +54,7 @@ namespace PBL3.BLL
         {
             db.MonAn.Remove(db.MonAn.Find(id));
             db.SaveChanges();
-            string[] files = Directory.GetFiles(imageFilePath, id + ".*");
+            string[] files = Directory.GetFiles(_imageFilePath, id + ".*");
             foreach (string f in files)
             {
                 File.Delete(f);
@@ -72,8 +81,8 @@ namespace PBL3.BLL
         public string CopyImageFile(string sourceFile, string newFileName)
         {
             string extension = ".jpg";
-            string newFilePath = Path.Combine(imageFilePath, newFileName + extension);
-            Directory.CreateDirectory(imageFilePath);
+            string newFilePath = Path.Combine(_imageFilePath, newFileName + extension);
+            Directory.CreateDirectory(_imageFilePath);
             if (String.Compare(Path.GetFullPath(sourceFile).TrimEnd('\\'), Path.GetFullPath(newFilePath).TrimEnd('\\')) == 0)
             {
                 return newFilePath;

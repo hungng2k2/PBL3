@@ -1,6 +1,6 @@
 ﻿namespace PBL3.View
 {
-    partial class frmThucdon
+    partial class frmThucDon
     {
         /// <summary>
         /// Required designer variable.
@@ -376,9 +376,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvThucdon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mAMADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENMADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gIATIENDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox AnhMinhHoa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnChonAnh;

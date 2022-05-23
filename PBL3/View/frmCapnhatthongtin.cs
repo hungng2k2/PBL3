@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace PBL3.View
 {
-    public partial class frmCapnhatthongtin : Form
+    public partial class frmCapNhatThongTin : Form
     {
-        string id = "";
-        public frmCapnhatthongtin(string _id)
+        public string id { get; set; }
+        public frmCapNhatThongTin(string _id)
         {
             InitializeComponent();
             id = _id;

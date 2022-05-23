@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PBL3.BLL;
+﻿using PBL3.BLL;
 using PBL3.DTO;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PBL3.View
 {
     public partial class frmMenu : Form
     {
-        private string id_NhanVien = "";
-        public double total = 0;
-        public int totalNumOrder = 0;
+        public string id_NhanVien { get; set; }
+        private double total = 0;
+        private int totalNumOrder = 0;
         public List<ItemFood> itemFoods;
         public frmMenu(string id_NhanVien)
         {
@@ -84,7 +78,8 @@ namespace PBL3.View
                 {
                     if (item.count > 0)
                     {
-                        list_order.Add(new MonAn() {
+                        list_order.Add(new MonAn()
+                        {
                             id_MonAn = item.monAn.id_MonAn,
                             TenMonAn = item.monAn.TenMonAn,
                             GiaBan = item.monAn.GiaBan,

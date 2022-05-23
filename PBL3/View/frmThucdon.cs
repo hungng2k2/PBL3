@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using PBL3.BLL;
 using PBL3.DTO;
-using PBL3.BLL;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace PBL3.View
 {
-    public partial class frmThucdon : Form
+    public partial class frmThucDon : Form
     {
-        private string imageSourceFile = "";
-        private string defaultImage = @".\image\default.jpg";
-        public frmThucdon()
+        private string _imageSourceFile;
+        public string ImageSourceFile
+        {
+            get
+            {
+                return _imageSourceFile;
+            }
+            set
+            {
+                _imageSourceFile = value;
+                LoadImage(value);
+            }
+        }
+
+
+        public frmThucDon()
         {
             InitializeComponent();
         }
@@ -50,7 +57,7 @@ namespace PBL3.View
             txtTenMon.Text = "";
             txtGiaBan.Text = "";
             txtGiaNhap.Text = "";
-            LoadImage(defaultImage);
+            ImageSourceFile = BLLMonAn.Instance.DefaultImage;
         }
 
         public void LoadImage(string path)
@@ -77,11 +84,11 @@ namespace PBL3.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(dgvThucdon.SelectedRows.Count == 1)
+            if (dgvThucdon.SelectedRows.Count == 1)
             {
                 string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
-                DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '"+id_MonAn+"'?","Xác nhận xóa",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-                if(dr == DialogResult.OK)
+                DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '" + id_MonAn + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
                 {
                     BLLMonAn.Instance.Delete(id_MonAn);
                     Reload();
@@ -91,10 +98,10 @@ namespace PBL3.View
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(dgvThucdon.SelectedRows.Count == 1)
+            if (dgvThucdon.SelectedRows.Count == 1)
             {
                 EditorEnable(true);
-            }           
+            }
         }
 
         private void dgvThucdon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -115,8 +122,7 @@ namespace PBL3.View
                 txtGiaNhap.Text = monAn.GiaNhap.ToString();
                 txtGiaBan.Text = monAn.GiaBan.ToString();
                 txtMaMonAn.Text = monAn.id_MonAn;
-                imageSourceFile = monAn.imagePath;
-                LoadImage(imageSourceFile);
+                ImageSourceFile = monAn.imagePath;
             }
         }
 
@@ -125,8 +131,7 @@ namespace PBL3.View
             openFileDialog1.Filter = "Select image(*.jpg; *.png; *.gif) | *.jpg; *.png; *.gif";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                imageSourceFile = openFileDialog1.FileName;
-                LoadImage(imageSourceFile);
+                ImageSourceFile = openFileDialog1.FileName;
             }
         }
 
@@ -134,10 +139,6 @@ namespace PBL3.View
         {
             try
             {
-                if (imageSourceFile == "")
-                {
-                    imageSourceFile = defaultImage;
-                }
                 if (txtTenMon.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập tên món ăn!");
@@ -150,20 +151,26 @@ namespace PBL3.View
                 }
                 if (txtGiaNhap.Text == "")
                 {
-                    MessageBox.Show("Vui lòng nhập giá nhập");
+                    MessageBox.Show("Vui lòng nhập giá nhập!");
+                    return;
+                }
+                if (Convert.ToDouble(txtGiaBan.Text) < Convert.ToDouble(txtGiaNhap.Text))
+                {
+                    MessageBox.Show("Giá bán không thể bé hơn giá nhập!");
                     return;
                 }
                 BLLMonAn.Instance.ExecuteAddUpdate(new MonAn
                 {
                     id_MonAn = txtMaMonAn.Text,
                     TenMonAn = txtTenMon.Text,
-                    GiaNhap = Convert.ToInt32(txtGiaNhap.Text),
-                    GiaBan = Convert.ToInt32(txtGiaBan.Text),
-                    imagePath = imageSourceFile,
+                    GiaNhap = Convert.ToDouble(txtGiaNhap.Text),
+                    GiaBan = Convert.ToDouble(txtGiaBan.Text),
+                    imagePath = ImageSourceFile,
                 });
                 EditorEnable(false);
                 Reload();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

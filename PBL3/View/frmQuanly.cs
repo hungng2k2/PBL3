@@ -96,7 +96,7 @@ namespace PBL3.View
         private void btnTD_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 163, 26));
-            OpenChildForm(new frmThucdon());
+            OpenChildForm(new frmThucDon());
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace PBL3.View
         private void iconButton1_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(idnv);
-            OpenChildForm(new frmThongtintk(idnv));
+            OpenChildForm(new frmThongTinTaiKhoan(idnv));
         }
     }
 }

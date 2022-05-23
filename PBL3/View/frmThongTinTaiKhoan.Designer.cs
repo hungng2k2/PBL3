@@ -1,6 +1,6 @@
 ﻿namespace PBL3.View
 {
-    partial class frmThongtintk
+    partial class frmThongTinTaiKhoan
     {
         /// <summary>
         /// Required designer variable.
@@ -284,7 +284,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmThongtintk";
             this.Text = "frmThongtintk";
-            this.Load += new System.EventHandler(this.frmThongtintk_Load);
+            this.Load += new System.EventHandler(this.frmThongTinTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

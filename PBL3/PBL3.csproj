@@ -93,11 +93,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCHTAN.cs" />
-    <Compile Include="View\frmCapnhatthongtin.cs">
+    <Compile Include="View\frmCapNhatThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmCapnhatthongtin.Designer.cs">
-      <DependentUpon>frmCapnhatthongtin.cs</DependentUpon>
+    <Compile Include="View\frmCapNhatThongTin.Designer.cs">
+      <DependentUpon>frmCapNhatThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmDangnhap.cs">
       <SubType>Form</SubType>
@@ -117,11 +117,11 @@
     <Compile Include="View\frmDoanhthu.Designer.cs">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmDoiMK.cs">
+    <Compile Include="View\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmDoiMK.Designer.cs">
-      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    <Compile Include="View\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmHoadon.cs">
       <SubType>Form</SubType>
@@ -165,17 +165,17 @@
     <Compile Include="View\frmQLNhanvien.Designer.cs">
       <DependentUpon>frmQLNhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmThongtintk.cs">
+    <Compile Include="View\frmThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmThongtintk.Designer.cs">
-      <DependentUpon>frmThongtintk.cs</DependentUpon>
+    <Compile Include="View\frmThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmThucdon.cs">
+    <Compile Include="View\frmThucDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmThucdon.Designer.cs">
-      <DependentUpon>frmThucdon.cs</DependentUpon>
+    <Compile Include="View\frmThucDon.Designer.cs">
+      <DependentUpon>frmThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ItemFood.cs">
       <SubType>UserControl</SubType>
@@ -201,8 +201,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmCapnhatthongtin.resx">
-      <DependentUpon>frmCapnhatthongtin.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmCapNhatThongTin.resx">
+      <DependentUpon>frmCapNhatThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="View\frmDoanhthu.resx">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmDoiMK.resx">
-      <DependentUpon>frmDoiMK.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
@@ -242,11 +242,11 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <EmbeddedResource Include="View\frmThongtintk.resx">
-      <DependentUpon>frmThongtintk.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmThongTinTaiKhoan.resx">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmThucdon.resx">
-      <DependentUpon>frmThucdon.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmThucDon.resx">
+      <DependentUpon>frmThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ItemFood.resx">
       <DependentUpon>ItemFood.cs</DependentUpon>

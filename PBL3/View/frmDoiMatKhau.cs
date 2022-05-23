@@ -12,10 +12,10 @@ using PBL3.BLL;
 
 namespace PBL3.View
 {
-    public partial class frmDoiMK : Form
+    public partial class frmDoiMatKhau : Form
     {
         string id = "";
-        public frmDoiMK(string a)
+        public frmDoiMatKhau(string a)
         {
             InitializeComponent();
             id = a;
