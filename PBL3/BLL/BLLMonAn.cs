@@ -136,7 +136,7 @@ namespace PBL3.BLL
         }
         public dynamic GetMonAn()
         {
-            return db.MonAn.Select(p => new { p.TenMonAn, p.SoLuong, p.GiaNhap ,p.GiaBan }).ToList();
+            return db.MonAn.Select(p => new { p.TenMonAn, p.SoLuong, p.GiaNhap ,p.GiaBan }).OrderBy(p => p.SoLuong).ToList();
         }
         public MonAn GetmonByten(string ten)
         {

@@ -20,7 +20,6 @@ D:\PBL3\PBL3\bin\Debug\FontAwesome.Sharp.dll
 D:\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
 D:\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDangnhap.resources
-D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDatmon.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmNhanvien.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmQLNhanvien.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmQuanly.resources
@@ -51,7 +50,6 @@ D:\PBL3\PBL3\bin\Debug\EntityFramework.dll
 D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 D:\PBL3\PBL3\bin\Debug\EntityFramework.xml
 D:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
-D:\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietMonAn.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.ItemFood.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmMenu.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmOrder.resources
@@ -95,3 +93,7 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.Vie
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmChiTietHoaDon.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietHoaDon.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmCapnhatthongtin.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietHoaDon.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmCapNhatThongTin.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMatKhau.resources
+D:\PBL3\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resources
