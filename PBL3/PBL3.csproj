@@ -69,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLChiTietOrder.cs" />
-    <Compile Include="BLL\BLLDoanhThu.cs" />
     <Compile Include="BLL\BLLHoaDon.cs" />
     <Compile Include="BLL\BLLInterface.cs" />
     <Compile Include="BLL\BLLKhachHang.cs" />
@@ -105,12 +104,6 @@
     </Compile>
     <Compile Include="View\frmDangnhap.Designer.cs">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmDatmon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmDatmon.Designer.cs">
-      <DependentUpon>frmDatmon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmDoanhthu.cs">
       <SubType>Form</SubType>
@@ -207,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmDatmon.resx">
-      <DependentUpon>frmDatmon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmDoanhthu.resx">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>

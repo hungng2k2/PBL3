@@ -25,7 +25,7 @@ namespace PBL3.View
 
         private void butThongke_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = BLLDoanhThu.Instance.ThongKe(dtbTungay.Value,dtbDenngay.Value);
+            dataGridView1.DataSource = BLLHoaDon.Instance.ThongKe(dtbTungay.Value,dtbDenngay.Value);
 
         }
     }
