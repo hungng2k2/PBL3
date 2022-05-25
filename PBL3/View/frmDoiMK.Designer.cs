@@ -63,6 +63,7 @@
             this.txtMKmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMKmoi.Location = new System.Drawing.Point(415, 159);
             this.txtMKmoi.Name = "txtMKmoi";
+            this.txtMKmoi.PasswordChar = '*';
             this.txtMKmoi.Size = new System.Drawing.Size(253, 28);
             this.txtMKmoi.TabIndex = 2;
             this.txtMKmoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
