@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -132,6 +133,29 @@ namespace PBL3.BLL
                     TienLoi = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)) - gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)),
                 });
             return q.ToList();
+        }
+        public DataSet ThongKeChart(DateTime start, DateTime end)
+        {
+            start = start.Date;
+            end = end.Date;
+            DataSet ds = new DataSet();
+            var q = db.HoaDon
+                .Where(hd => hd.NgayLap >= start && hd.NgayLap <= end)
+                .GroupBy(hd => hd.NgayLap)
+                .Select(gr => new
+                {
+                    Ngay = gr.Key,
+                    TienLoi = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)) - gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)),
+                });
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Ngày");
+            dt.Columns.Add("Tiền lời");
+            foreach (var item in q)
+            {
+                dt.Rows.Add(item.Ngay, item.TienLoi);
+            }
+            ds.Tables.Add(dt);
+            return ds;
         }
     }
 }
