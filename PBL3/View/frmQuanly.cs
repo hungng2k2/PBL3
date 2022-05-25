@@ -132,6 +132,7 @@ namespace PBL3.View
         private void iconButton1_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(idnv);
+            ActivateButton(sender, Color.FromArgb(255, 163, 26));
             OpenChildForm(new frmThongTinTaiKhoan(idnv));
         }
     }
