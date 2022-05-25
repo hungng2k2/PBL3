@@ -129,7 +129,7 @@ namespace PBL3.BLL
                     SoLuongHoaDon = gr.Count(),
                     TongNhap = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)),
                     TongBan = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)),
-                    TienLoi = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)) - gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)),
+                    TienLoi = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)) - gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)),
                 });
             return q.ToList();
         }
