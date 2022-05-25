@@ -98,6 +98,31 @@ namespace PBL3.View
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if(txtTenNhanVien.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên!");
+                return;
+            }
+            if((DateTime.Now.Year - dpNgaySinh.Value.Year) < 16)
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ!");
+                return;
+            }
+            if(rbMale.Checked == false && rbFemale.Checked == false)
+            {
+                MessageBox.Show("Vui lòng chọn giới tính!");
+                return;
+            }
+            if (txtSoDienThoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại!");
+                return;
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ!");
+                return;
+            }
             BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
             {
                 id_NhanVien = txtMaNhanVien.Text,

@@ -1,6 +1,6 @@
 ﻿namespace PBL3.View
 {
-    partial class frmCapnhatthongtin
+    partial class frmCapNhatThongTin
     {
         /// <summary>
         /// Required designer variable.

@@ -15,7 +15,7 @@ namespace PBL3.DTO
         public string id_Order { get; set; }
         public string id_MonAn { get; set; }
         public int SoLuong { get; set; }
-        public double ThanhTien { get; set; }
+        public double DonGia { get; set; }
         [ForeignKey("id_Order")]
         public virtual Order Order { get; set; }
         [ForeignKey("id_MonAn")]

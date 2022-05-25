@@ -1,6 +1,6 @@
 ﻿namespace PBL3.View
 {
-    partial class frmDoiMK
+    partial class frmDoiMatKhau
     {
         /// <summary>
         /// Required designer variable.

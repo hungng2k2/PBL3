@@ -14,7 +14,8 @@ namespace PBL3.DTO
         [Required]
         public string id_MonAn { get; set; }
         public string TenMonAn { get; set; }
-        public double Gia { get; set; }
+        public double GiaNhap { get; set; }
+        public double GiaBan { get; set; }
         public int SoLuong { get; set; }
         public string imagePath { get; set; } 
         public virtual ICollection<ChiTietOrder> ChiTietOrder { get; set; }

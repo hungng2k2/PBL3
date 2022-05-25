@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using PBL3.BLL;
 using PBL3.DTO;
-using PBL3.BLL;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace PBL3.View
 {
-    public partial class frmThucdon : Form
+    public partial class frmThucDon : Form
     {
-        private string imageSourceFile = "";
-        private string defaultImage = @".\image\default.jpg";
-        public frmThucdon()
+        private string _imageSourceFile = "";
+        public string ImageSourceFile
+        {
+            get
+            {
+                return _imageSourceFile;
+            }
+            set
+            {
+                _imageSourceFile = value;
+                LoadImage(value);
+            }
+        }
+
+
+        public frmThucDon()
         {
             InitializeComponent();
         }
@@ -33,7 +40,8 @@ namespace PBL3.View
         public void EditorEnable(bool b)
         {
             txtTenMon.Enabled = b;
-            txtGiaTien.Enabled = b;
+            txtGiaBan.Enabled = b;
+            txtGiaNhap.Enabled = b;
             btnLuu.Enabled = b;
             btnHuy.Enabled = b;
             btnChonAnh.Enabled = b;
@@ -47,8 +55,9 @@ namespace PBL3.View
         {
             txtMaMonAn.Text = "";
             txtTenMon.Text = "";
-            txtGiaTien.Text = "";
-            LoadImage(defaultImage);
+            txtGiaBan.Text = "";
+            txtGiaNhap.Text = "";
+            ImageSourceFile = BLLMonAn.Instance.DefaultImage;
         }
 
         public void LoadImage(string path)
@@ -75,11 +84,11 @@ namespace PBL3.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(dgvThucdon.SelectedRows.Count == 1)
+            if (dgvThucdon.SelectedRows.Count == 1)
             {
                 string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
-                DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '"+id_MonAn+"'?","Xác nhận xóa",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-                if(dr == DialogResult.OK)
+                DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '" + id_MonAn + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
                 {
                     BLLMonAn.Instance.Delete(id_MonAn);
                     Reload();
@@ -89,17 +98,18 @@ namespace PBL3.View
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(dgvThucdon.SelectedRows.Count == 1)
+            if (dgvThucdon.SelectedRows.Count == 1)
             {
                 EditorEnable(true);
-            }           
+            }
         }
 
         private void dgvThucdon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvThucdon.Columns["id_MonAn"].HeaderText = "Mã món ăn";
             dgvThucdon.Columns["TenMonAn"].HeaderText = "Tên món ăn";
-            dgvThucdon.Columns["Gia"].HeaderText = "Giá";
+            dgvThucdon.Columns["GiaBan"].HeaderText = "Giá bán";
+            dgvThucdon.Columns["GiaNhap"].HeaderText = "Giá nhập";
         }
 
         private void dgvThucdon_SelectionChanged(object sender, EventArgs e)
@@ -109,10 +119,10 @@ namespace PBL3.View
                 string id_MonAn = dgvThucdon.SelectedRows[0].Cells["id_MonAn"].Value.ToString();
                 MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
                 txtTenMon.Text = monAn.TenMonAn;
-                txtGiaTien.Text = monAn.Gia.ToString();
+                txtGiaNhap.Text = monAn.GiaNhap.ToString();
+                txtGiaBan.Text = monAn.GiaBan.ToString();
                 txtMaMonAn.Text = monAn.id_MonAn;
-                imageSourceFile = monAn.imagePath;
-                LoadImage(imageSourceFile);
+                ImageSourceFile = monAn.imagePath;
             }
         }
 
@@ -121,27 +131,49 @@ namespace PBL3.View
             openFileDialog1.Filter = "Select image(*.jpg; *.png; *.gif) | *.jpg; *.png; *.gif";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                imageSourceFile = openFileDialog1.FileName;
-                LoadImage(imageSourceFile);
+                ImageSourceFile = openFileDialog1.FileName;
             }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (imageSourceFile == "")
+            try
             {
-                imageSourceFile = defaultImage;
+                if (txtTenMon.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập tên món ăn!");
+                    return;
+                }
+                if (txtGiaBan.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập giá bán!");
+                    return;
+                }
+                if (txtGiaNhap.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập giá nhập!");
+                    return;
+                }
+                if (Convert.ToDouble(txtGiaBan.Text) < Convert.ToDouble(txtGiaNhap.Text))
+                {
+                    MessageBox.Show("Giá bán không thể bé hơn giá nhập!");
+                    return;
+                }
+                BLLMonAn.Instance.ExecuteAddUpdate(new MonAn
+                {
+                    id_MonAn = txtMaMonAn.Text,
+                    TenMonAn = txtTenMon.Text,
+                    GiaNhap = Convert.ToDouble(txtGiaNhap.Text),
+                    GiaBan = Convert.ToDouble(txtGiaBan.Text),
+                    imagePath = ImageSourceFile,
+                });
+                EditorEnable(false);
+                Reload();
             }
-            MonAn ma = new MonAn
+            catch (Exception ex)
             {
-                id_MonAn = txtMaMonAn.Text,
-                TenMonAn = txtTenMon.Text,
-                Gia = Convert.ToInt32(txtGiaTien.Text),
-                imagePath = imageSourceFile,
-            };
-            BLLMonAn.Instance.ExecuteAddUpdate(ma);
-            EditorEnable(false);
-            Reload();
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace PBL3.View
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm = null;
-        string id_NhanVien = "";
+        public string id_NhanVien { get; set; }
         public frmNhanvien(string id)
         {
             id_NhanVien = id;
@@ -112,7 +112,7 @@ namespace PBL3.View
         private void iconInfo_Click(object sender, EventArgs e)
         {
             
-            OpenChildForm(new frmThongtintk(id_NhanVien));
+            OpenChildForm(new frmThongTinTaiKhoan(id_NhanVien));
         }
 
         

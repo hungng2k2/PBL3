@@ -12,16 +12,16 @@ using PBL3.DTO;
 
 namespace PBL3.View
 {
-    public partial class frmThongtintk : Form
+    public partial class frmThongTinTaiKhoan : Form
     {
-        string id = "";
-        public frmThongtintk(string a)
+        public string id { get; set; }
+        public frmThongTinTaiKhoan(string a)
         {
             InitializeComponent();
             id = a;
         }
 
-        private void frmThongtintk_Load(object sender, EventArgs e)
+        private void frmThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
             // get id from login form and show information of user
             //MessageBox.Show(id);
@@ -46,13 +46,13 @@ namespace PBL3.View
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-            frmDoiMK frm = new frmDoiMK(id);
+            frmDoiMatKhau frm = new frmDoiMatKhau(id);
             frm.ShowDialog();
         }
 
         private void butCapnhat_Click(object sender, EventArgs e)
         {
-            frmCapnhatthongtin frm = new frmCapnhatthongtin(id);
+            frmCapNhatThongTin frm = new frmCapNhatThongTin(id);
             frm.ShowDialog();
         }
         

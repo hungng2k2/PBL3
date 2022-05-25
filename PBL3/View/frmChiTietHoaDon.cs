@@ -36,9 +36,9 @@ namespace PBL3.View
 
         private void dgvDSMonAn_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvDSMonAn.Columns["id_ChiTietOrder"].HeaderText = "Mã chi tiết Order";
             dgvDSMonAn.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvDSMonAn.Columns["SoLuong"].HeaderText = "Số lượng";
+            dgvDSMonAn.Columns["DonGia"].HeaderText = "Đơn giá";
             dgvDSMonAn.Columns["ThanhTien"].HeaderText = "Thành tiền";
         }
     }

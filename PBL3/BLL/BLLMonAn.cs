@@ -9,7 +9,16 @@ namespace PBL3.BLL
     {
         QLCHTAN db = new QLCHTAN();
 
-        private string imageFilePath = @".\image\";
+        private string _imageFilePath = @".\image\";
+
+        public string DefaultImage
+        {
+            get
+            {
+                return @".\image\default.jpg";
+            }
+            private set { }
+        }
 
         private static BLLMonAn _Instance;
 
@@ -45,7 +54,7 @@ namespace PBL3.BLL
         {
             db.MonAn.Remove(db.MonAn.Find(id));
             db.SaveChanges();
-            string[] files = Directory.GetFiles(imageFilePath, id + ".*");
+            string[] files = Directory.GetFiles(_imageFilePath, id + ".*");
             foreach (string f in files)
             {
                 File.Delete(f);
@@ -72,8 +81,8 @@ namespace PBL3.BLL
         public string CopyImageFile(string sourceFile, string newFileName)
         {
             string extension = ".jpg";
-            string newFilePath = Path.Combine(imageFilePath, newFileName + extension);
-            Directory.CreateDirectory(imageFilePath);
+            string newFilePath = Path.Combine(_imageFilePath, newFileName + extension);
+            Directory.CreateDirectory(_imageFilePath);
             if (String.Compare(Path.GetFullPath(sourceFile).TrimEnd('\\'), Path.GetFullPath(newFilePath).TrimEnd('\\')) == 0)
             {
                 return newFilePath;
@@ -92,7 +101,8 @@ namespace PBL3.BLL
                 {
                     id_MonAn = id,
                     TenMonAn = t.TenMonAn,
-                    Gia = t.Gia,
+                    GiaNhap = t.GiaNhap,
+                    GiaBan = t.GiaBan,
                     SoLuong = 0,
                     imagePath = CopyImageFile(t.imagePath, id),
                 });
@@ -102,7 +112,8 @@ namespace PBL3.BLL
             {
                 MonAn ma = db.MonAn.Find(t.id_MonAn);
                 ma.TenMonAn = t.TenMonAn;
-                ma.Gia = t.Gia;
+                ma.GiaNhap = t.GiaNhap;
+                ma.GiaBan = t.GiaBan;
                 ma.SoLuong = t.SoLuong;
                 ma.imagePath = CopyImageFile(t.imagePath, t.id_MonAn);
                 db.SaveChanges();
@@ -111,7 +122,7 @@ namespace PBL3.BLL
 
         public dynamic GetAll()
         {
-            return db.MonAn.Select(p => new { p.id_MonAn, p.TenMonAn, p.Gia }).ToList();
+            return db.MonAn.Select(p => new { p.id_MonAn, p.TenMonAn, p.GiaNhap, p.GiaBan }).ToList();
         }
 
         public dynamic GetAll2()
@@ -125,7 +136,7 @@ namespace PBL3.BLL
         }
         public dynamic GetMonAn()
         {
-            return db.MonAn.Select(p => new { p.TenMonAn, p.SoLuong, p.Gia }).ToList();
+            return db.MonAn.Select(p => new { p.TenMonAn, p.SoLuong, p.GiaNhap ,p.GiaBan }).ToList();
         }
         public MonAn GetmonByten(string ten)
         {
@@ -137,7 +148,8 @@ namespace PBL3.BLL
             ExecuteAddUpdate(new MonAn {
                 id_MonAn = monAn.id_MonAn,
                 TenMonAn = monAn.TenMonAn,
-                Gia = monAn.Gia,
+                GiaBan = monAn.GiaBan,
+                GiaNhap = monAn.GiaNhap,
                 SoLuong = monAn.SoLuong - soLuong,
                 imagePath = monAn.imagePath,
             });
