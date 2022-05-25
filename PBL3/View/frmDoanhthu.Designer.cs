@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.butDetail = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.butThongke = new System.Windows.Forms.Button();
+            this.dtbTungay = new System.Windows.Forms.DateTimePicker();
             this.txtTongdoanhthu = new System.Windows.Forms.TextBox();
             this.txtSoluonghoadon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtbDenngay = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -50,11 +50,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dtbDenngay);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.butDetail);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.butThongke);
+            this.panel2.Controls.Add(this.dtbTungay);
             this.panel2.Controls.Add(this.txtTongdoanhthu);
             this.panel2.Controls.Add(this.txtSoluonghoadon);
             this.panel2.Controls.Add(this.label5);
@@ -68,27 +68,28 @@
             this.panel2.Size = new System.Drawing.Size(971, 326);
             this.panel2.TabIndex = 0;
             // 
-            // butDetail
+            // butThongke
             // 
-            this.butDetail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDetail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDetail.Location = new System.Drawing.Point(691, 148);
-            this.butDetail.Name = "butDetail";
-            this.butDetail.Size = new System.Drawing.Size(100, 60);
-            this.butDetail.TabIndex = 11;
-            this.butDetail.Text = "Thống kê";
-            this.butDetail.UseVisualStyleBackColor = true;
+            this.butThongke.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butThongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butThongke.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butThongke.Location = new System.Drawing.Point(691, 148);
+            this.butThongke.Name = "butThongke";
+            this.butThongke.Size = new System.Drawing.Size(100, 60);
+            this.butThongke.TabIndex = 11;
+            this.butThongke.Text = "Thống kê";
+            this.butThongke.UseVisualStyleBackColor = true;
+            this.butThongke.Click += new System.EventHandler(this.butThongke_Click);
             // 
-            // dateTimePicker1
+            // dtbTungay
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 97);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtbTungay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtbTungay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtbTungay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtbTungay.Location = new System.Drawing.Point(237, 97);
+            this.dtbTungay.Name = "dtbTungay";
+            this.dtbTungay.Size = new System.Drawing.Size(233, 27);
+            this.dtbTungay.TabIndex = 8;
             // 
             // txtTongdoanhthu
             // 
@@ -162,7 +163,7 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(971, 178);
@@ -195,6 +196,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Ngày",
@@ -205,15 +207,15 @@
             this.comboBox1.Size = new System.Drawing.Size(202, 24);
             this.comboBox1.TabIndex = 12;
             // 
-            // dateTimePicker2
+            // dtbDenngay
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(237, 148);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(233, 27);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dtbDenngay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtbDenngay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtbDenngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtbDenngay.Location = new System.Drawing.Point(237, 148);
+            this.dtbDenngay.Name = "dtbDenngay";
+            this.dtbDenngay.Size = new System.Drawing.Size(233, 27);
+            this.dtbDenngay.TabIndex = 14;
             // 
             // label6
             // 
@@ -238,6 +240,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmDoanhthu";
             this.Text = "frmDoanhthu";
+            this.Load += new System.EventHandler(this.frmDoanhthu_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -249,8 +252,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button butDetail;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button butThongke;
+        private System.Windows.Forms.DateTimePicker dtbTungay;
         private System.Windows.Forms.TextBox txtTongdoanhthu;
         private System.Windows.Forms.TextBox txtSoluonghoadon;
         private System.Windows.Forms.Label label4;
@@ -261,7 +264,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtbDenngay;
         private System.Windows.Forms.Label label6;
     }
 }

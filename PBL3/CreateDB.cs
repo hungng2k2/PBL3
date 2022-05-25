@@ -4,7 +4,9 @@ using System.Data.Entity;
 
 namespace PBL3
 {
-    internal class CreateDB : DropCreateDatabaseAlways<QLCHTAN>
+    internal class CreateDB :
+        //DropCreateDatabaseAlways<QLCHTAN>
+        DropCreateDatabaseIfModelChanges<QLCHTAN>
     {
         protected override void Seed(QLCHTAN context)
         {
@@ -73,6 +75,10 @@ namespace PBL3
                 new KhachHang {id_KhachHang = "KH002", TenKhachHang = "Bùi Thành Nhân", NgaySinh = new DateTime(2001,3,9), GioiTinh = true, SoDienThoai = "0123456792", DiaChi = "Đà Nẵng"},
                 new KhachHang {id_KhachHang = "KH003", TenKhachHang = "Trần Thế Anh", NgaySinh = new DateTime(1992,5,23), GioiTinh = true, SoDienThoai = "0123454292", DiaChi = "Quảng Nam"},
             });
+            
+            //context.HoaDon.AddRange(new HoaDon[]
+            //{
+            //});
         }
     }
 }

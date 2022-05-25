@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLChiTietOrder.cs" />
+    <Compile Include="BLL\BLLDoanhThu.cs" />
     <Compile Include="BLL\BLLHoaDon.cs" />
     <Compile Include="BLL\BLLInterface.cs" />
     <Compile Include="BLL\BLLKhachHang.cs" />

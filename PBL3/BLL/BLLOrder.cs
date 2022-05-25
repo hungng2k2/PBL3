@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using PBL3.DTO;
 
 namespace PBL3.BLL
@@ -68,23 +69,28 @@ namespace PBL3.BLL
                     id_Order = t.id_Order,
                     id_KhachHang = t.id_KhachHang,
                     id_NhanVien = t.id_NhanVien,
+                    TongNhap = t.TongNhap,
                     TongTien = t.TongTien,
                 });
                 db.SaveChanges();
+                MessageBox.Show(t.TongNhap.ToString());
             }
             else
             {
                 Order od = db.Order.Find(t.id_Order);
                 od.id_KhachHang = t.id_KhachHang;
                 od.id_NhanVien = t.id_NhanVien;
+                od.TongNhap = t.TongNhap;
                 od.TongTien = t.TongTien;
                 db.SaveChanges();
+                MessageBox.Show(t.TongNhap.ToString());
+                
             }
         }
 
         public dynamic GetAll()
         {
-            return db.Order.Select(p => p).ToList();
+            return db.Order.Select(p => new {p.id_Order, p.NhanVien, p.KhachHang, p.TongNhap, p.TongTien}).ToList();
         }
 
         public Order GetById(string id)

@@ -41,7 +41,7 @@ namespace PBL3.View
             int i = 1;
             foreach (MonAn monAn in list_orders)
             {
-                var listviewItem = new ListViewItem(new string[] { i + ".", monAn.TenMonAn, monAn.SoLuong.ToString(), monAn.GiaBan.ToString("n0"), (monAn.SoLuong * monAn.GiaBan).ToString("n0") });
+                var listviewItem = new ListViewItem(new string[] { i + ".", monAn.TenMonAn, monAn.SoLuong.ToString(), monAn.GiaBan.ToString("n0"), monAn.GiaNhap.ToString("n0"), (monAn.SoLuong * monAn.GiaBan).ToString("n0") });
                 i++;
                 listView1.Items.Add(listviewItem);
                 sum = sum + monAn.SoLuong * monAn.GiaBan;

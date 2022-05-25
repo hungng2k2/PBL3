@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using PBL3.BLL;
 namespace PBL3.View
 {
     public partial class frmDoanhthu : Form
@@ -15,6 +15,18 @@ namespace PBL3.View
         public frmDoanhthu()
         {
             InitializeComponent();
+        }
+
+        private void frmDoanhthu_Load(object sender, EventArgs e)
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
+
+        private void butThongke_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = BLLDoanhThu.Instance.ThongKe(dtbTungay.Value,dtbDenngay.Value);
+
         }
     }
 }
