@@ -20,8 +20,6 @@ namespace PBL3.DTO
         public string id_Order { get; set; }
         public string id_KhachHang { get; set; }
         public string id_NhanVien { get; set; }
-        public double TongNhap { get; set; }
-        public double TongTien { get; set; }
         [ForeignKey("id_KhachHang")]
         public virtual KhachHang KhachHang { get; set; }
         [ForeignKey("id_NhanVien")]

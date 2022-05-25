@@ -83,7 +83,7 @@ namespace PBL3.BLL
 
         public dynamic GetAll()
         {
-            return db.HoaDon.Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, p.Order.TongTien}).ToList();
+            return db.HoaDon.Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, TongTien = p.Order.ChiTietOrder.Sum(ct => ct.GiaBan)}).ToList();
         }
 
         public HoaDon GetById(string id)
@@ -106,8 +106,6 @@ namespace PBL3.BLL
                 id_Order = id_Order,
                 id_KhachHang = id_KhachHang,
                 id_NhanVien = id_NhanVien,
-                TongNhap = TongNhap,
-                TongTien = TongTien
             });
             this.ExecuteAddUpdate(new HoaDon
             {
@@ -129,9 +127,9 @@ namespace PBL3.BLL
                 {
                     Ngay = gr.Key,
                     SoLuongHoaDon = gr.Count(),
-                    TongNhap = gr.Sum(hd => hd.Order.TongNhap),
-                    TongBan = gr.Sum(hd => hd.Order.TongTien),
-                    TienLoi = gr.Sum(hd => hd.Order.TongTien) - gr.Sum(hd => hd.Order.TongNhap),
+                    TongNhap = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)),
+                    TongBan = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)),
+                    TienLoi = gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaNhap)) - gr.Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan)),
                 });
             return q.ToList();
         }

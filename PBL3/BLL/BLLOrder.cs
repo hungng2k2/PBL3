@@ -69,8 +69,6 @@ namespace PBL3.BLL
                     id_Order = t.id_Order,
                     id_KhachHang = t.id_KhachHang,
                     id_NhanVien = t.id_NhanVien,
-                    TongNhap = t.TongNhap,
-                    TongTien = t.TongTien,
                 });
                 db.SaveChanges();
             }
@@ -79,20 +77,22 @@ namespace PBL3.BLL
                 Order od = db.Order.Find(t.id_Order);
                 od.id_KhachHang = t.id_KhachHang;
                 od.id_NhanVien = t.id_NhanVien;
-                od.TongNhap = t.TongNhap;
-                od.TongTien = t.TongTien;
                 db.SaveChanges();
             }
         }
 
         public dynamic GetAll()
         {
-            return db.Order.Select(p => new {p.id_Order, p.NhanVien, p.KhachHang, p.TongNhap, p.TongTien}).ToList();
+            return db.Order.Select(p => new { p.id_Order, p.NhanVien, p.KhachHang, TongNhap = p.ChiTietOrder.Sum(ct => ct.GiaNhap), TongTien = p.ChiTietOrder.Sum(ct => ct.GiaBan) }).ToList();
         }
 
         public Order GetById(string id)
         {
             return db.Order.Find(id);
+        }
+        public double GetTongGiaBanByIdOrder(string id_Order)
+        {
+            return db.ChiTietOrder.Where(ct => ct.id_Order == id_Order).Sum(t => t.GiaBan);
         }
     }
 }
