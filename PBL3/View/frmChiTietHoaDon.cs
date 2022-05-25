@@ -38,7 +38,7 @@ namespace PBL3.View
         {
             dgvDSMonAn.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvDSMonAn.Columns["SoLuong"].HeaderText = "Số lượng";
-            dgvDSMonAn.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgvDSMonAn.Columns["GiaBan"].HeaderText = "Đơn giá";
             dgvDSMonAn.Columns["ThanhTien"].HeaderText = "Thành tiền";
         }
     }

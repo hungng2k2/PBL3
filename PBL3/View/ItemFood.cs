@@ -8,22 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3.DTO;
+using PBL3.BLL;
 
 namespace PBL3.View
 {
     public partial class ItemFood : UserControl
     {
         public MonAn monAn { get; set; }
-        public ItemFood(MonAn monAn)
+        public ItemFood(String id_MonAn)
         {
-            this.monAn = new MonAn
-            {
-                id_MonAn = monAn.id_MonAn,
-                TenMonAn = monAn.TenMonAn,
-                GiaBan = monAn.GiaBan,
-                SoLuong = monAn.SoLuong,
-                imagePath = monAn.imagePath,
-            };
+            this.monAn = BLLMonAn.Instance.GetById(id_MonAn);
             InitializeComponent();
             LoadImage();
             lbl_name.Text = this.monAn.TenMonAn;
@@ -31,7 +25,7 @@ namespace PBL3.View
             lblAmount.Text = this.monAn.SoLuong.ToString();
             checkOutOfStock();
         }
-        public int count = 0;
+        private int count = 0;
         public event ItemValueChangedEventHandler itemValueChanged;
         public int CountAdded
         {

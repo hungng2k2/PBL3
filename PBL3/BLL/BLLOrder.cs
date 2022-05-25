@@ -73,7 +73,6 @@ namespace PBL3.BLL
                     TongTien = t.TongTien,
                 });
                 db.SaveChanges();
-                MessageBox.Show(t.TongNhap.ToString());
             }
             else
             {
@@ -83,8 +82,6 @@ namespace PBL3.BLL
                 od.TongNhap = t.TongNhap;
                 od.TongTien = t.TongTien;
                 db.SaveChanges();
-                MessageBox.Show(t.TongNhap.ToString());
-                
             }
         }
 

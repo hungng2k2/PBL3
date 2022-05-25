@@ -142,9 +142,9 @@ namespace PBL3.BLL
         {
             return db.MonAn.Where(p => p.TenMonAn == ten).FirstOrDefault();
         }
-        public void Sell(string id, int soLuong)
+        public void Sell(string id_MonAn, int soLuong)
         {
-            MonAn monAn = GetById(id);
+            MonAn monAn = GetById(id_MonAn);
             ExecuteAddUpdate(new MonAn {
                 id_MonAn = monAn.id_MonAn,
                 TenMonAn = monAn.TenMonAn,

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,20 +29,22 @@ namespace PBL3.BLL
         {
 
         }
-        public dynamic ThongKe(DateTime tungay, DateTime denngay)
+        public dynamic ThongKe(DateTime start, DateTime end)
         {
-            // thống kê doanh thu từ ngày đến ngày
-            var query = from hd in db.HoaDon where hd.NgayLap >= tungay && hd.NgayLap <= denngay
-                        group hd by hd.NgayLap into g
-                        select new
-                        {
-                            Ngay = g.Key,
-                            SoLuongHoaDon = g.Count(),
-                            TongNhap = g.Sum(hd => hd.Order.TongNhap),
-                            TongBan = g.Sum(hd => hd.Order.TongTien),
-                            TienLoi = g.Sum(hd => hd.Order.TongTien) - g.Sum(hd => hd.Order.TongNhap),
-                        };
-            return query.ToList();
+            start = start.Date;
+            end = end.Date;
+            var q = db.HoaDon
+                .Where(hd => DbFunctions.TruncateTime(hd.NgayLap) >= start && DbFunctions.TruncateTime(hd.NgayLap) <= end)
+                .GroupBy(hd => hd.NgayLap)
+                .Select(gr => new
+                {
+                    Ngay = gr.Key,
+                    SoLuongHoaDon = gr.Count(),
+                    TongNhap = gr.Sum(hd => hd.Order.TongNhap),
+                    TongBan = gr.Sum(hd => hd.Order.TongTien),
+                    TienLoi = gr.Sum(hd => hd.Order.TongTien) - gr.Sum(hd => hd.Order.TongNhap),
+                });
+            return q.ToList();
         }
 
     }

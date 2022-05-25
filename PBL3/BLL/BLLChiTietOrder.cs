@@ -69,7 +69,8 @@ namespace PBL3.BLL
                     id_Order = t.id_Order,
                     id_MonAn = t.id_MonAn,
                     SoLuong = t.SoLuong,
-                    DonGia = t.DonGia,
+                    GiaNhap = t.GiaNhap,
+                    GiaBan = t.GiaBan,
                 });
                 db.SaveChanges();
             }
@@ -79,7 +80,8 @@ namespace PBL3.BLL
                 ct.id_Order = t.id_Order;
                 ct.id_MonAn = t.id_MonAn;
                 ct.SoLuong = t.SoLuong;
-                ct.DonGia = t.DonGia;
+                ct.GiaNhap = t.GiaNhap;
+                ct.GiaBan = t.GiaBan;
                 db.SaveChanges();
             }
         }
@@ -96,19 +98,20 @@ namespace PBL3.BLL
         public dynamic GetByIdOrder(string id_Order)
         {
             return db.ChiTietOrder.Where(p => p.id_Order == id_Order)
-                .Select(p => new { p.MonAn.TenMonAn, p.SoLuong, p.DonGia, ThanhTien = p.DonGia * p.SoLuong })
+                .Select(p => new { p.MonAn.TenMonAn, p.SoLuong, p.GiaBan, ThanhTien = p.GiaBan * p.SoLuong })
                 .ToList();
         }
-        public void ExcuteListMonAn(string id_Order, List<MonAn> monAns)
+        public void ExcuteListOrder(string id_Order, List<ChiTietOrder> chiTiets)
         {
-            foreach (MonAn monAn in monAns)
+            foreach (ChiTietOrder chiTiet in chiTiets)
             {
                 ExecuteAddUpdate(new ChiTietOrder
                 {
                     id_Order = id_Order,
-                    id_MonAn = monAn.id_MonAn,
-                    SoLuong = monAn.SoLuong,
-                    DonGia = monAn.GiaBan
+                    id_MonAn = chiTiet.id_MonAn,
+                    SoLuong = chiTiet.SoLuong,
+                    GiaNhap = chiTiet.GiaNhap,
+                    GiaBan = chiTiet.GiaBan
                 });
             }
         }

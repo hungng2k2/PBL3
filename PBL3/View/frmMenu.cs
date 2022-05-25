@@ -15,6 +15,7 @@ namespace PBL3.View
         public frmMenu(string id_NhanVien)
         {
             this.id_NhanVien = id_NhanVien;
+            itemFoods = new List<ItemFood>();
             InitializeComponent();
         }
 
@@ -24,19 +25,15 @@ namespace PBL3.View
         }
         private void Reload()
         {
+            itemFoods.Clear();
             var data = BLLMonAn.Instance.GetAll2();
-            var list = new ItemFood[data.Count];
-            int i = 0;
-            itemFoods = new List<ItemFood>();
             foreach (var item in data)
             {
-                list[i] = new ItemFood(item);
-                list[i].itemValueChanged += frmMenu_itemValueChanged;
-                itemFoods.Add(list[i]);
-                i++;
+                itemFoods.Add(new ItemFood(item.id_MonAn));
+                itemFoods[itemFoods.Count-1].itemValueChanged += frmMenu_itemValueChanged;
             }
             flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.AddRange(list);
+            flowLayoutPanel1.Controls.AddRange(itemFoods.ToArray());
             lbl_Tongtien.Text = "₫0";
             lbl_numOrder.Text = "0";
             totalNumOrder = 0;
@@ -72,19 +69,18 @@ namespace PBL3.View
         {
             if (Convert.ToInt32(lbl_numOrder.Text) > 0)
             {
-                List<MonAn> list_order = new List<MonAn>();
+                List<ChiTietOrder> list_order = new List<ChiTietOrder>();
                 int i = 1;
                 foreach (ItemFood item in flowLayoutPanel1.Controls)
                 {
-                    if (item.count > 0)
+                    if (item.CountAdded > 0)
                     {
-                        list_order.Add(new MonAn()
+                        list_order.Add(new ChiTietOrder
                         {
                             id_MonAn = item.monAn.id_MonAn,
-                            TenMonAn = item.monAn.TenMonAn,
+                            SoLuong = item.CountAdded,
+                            GiaNhap = item.monAn.GiaNhap,
                             GiaBan = item.monAn.GiaBan,
-                            imagePath = item.monAn.imagePath,
-                            SoLuong = item.count,
                         });
                         i++;
                     }
