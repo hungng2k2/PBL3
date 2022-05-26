@@ -22,6 +22,7 @@ namespace PBL3.View
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon().ToString();
             fillchart();
         }
 
@@ -76,5 +77,15 @@ namespace PBL3.View
                 chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Now.AddYears(-1), DateTime.Now);
             }
         }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.Columns["Ngay"].HeaderText = "Ngày";
+            dataGridView1.Columns["SoLuongHoaDon"].HeaderText = "Số Lượng Hóa Đơn";
+            dataGridView1.Columns["TongNhap"].HeaderText = "Tổng Nhập";
+            dataGridView1.Columns["TongBan"].HeaderText = "Tổng Bán";
+            dataGridView1.Columns["TienLoi"].HeaderText = "Tiền Lời";
+        }
+
     }
 }

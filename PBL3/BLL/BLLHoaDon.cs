@@ -157,5 +157,9 @@ namespace PBL3.BLL
             ds.Tables.Add(dt);
             return ds;
         }
+        public int GetSoHoaDon()
+        {
+            return db.HoaDon.Count();
+        }
     }
 }

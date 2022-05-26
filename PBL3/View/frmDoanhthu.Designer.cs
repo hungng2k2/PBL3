@@ -43,6 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelThd = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,12 +53,14 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labelThd);
             this.panel2.Controls.Add(this.chart1);
             this.panel2.Controls.Add(this.dtbDenngay);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.butThongke);
             this.panel2.Controls.Add(this.dtbTungay);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
@@ -90,7 +94,7 @@
             this.dtbDenngay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtbDenngay.CausesValidation = false;
             this.dtbDenngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtbDenngay.Location = new System.Drawing.Point(274, 149);
+            this.dtbDenngay.Location = new System.Drawing.Point(204, 147);
             this.dtbDenngay.Name = "dtbDenngay";
             this.dtbDenngay.Size = new System.Drawing.Size(233, 27);
             this.dtbDenngay.TabIndex = 14;
@@ -102,7 +106,7 @@
             this.label6.CausesValidation = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(136, 149);
+            this.label6.Location = new System.Drawing.Point(66, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 25);
             this.label6.TabIndex = 13;
@@ -117,9 +121,9 @@
             "Ngày",
             "Tháng",
             "Năm"});
-            this.comboBox1.Location = new System.Drawing.Point(305, 208);
+            this.comboBox1.Location = new System.Drawing.Point(243, 204);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 24);
+            this.comboBox1.Size = new System.Drawing.Size(194, 24);
             this.comboBox1.TabIndex = 12;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -129,7 +133,7 @@
             this.butThongke.CausesValidation = false;
             this.butThongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butThongke.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butThongke.Location = new System.Drawing.Point(266, 254);
+            this.butThongke.Location = new System.Drawing.Point(337, 265);
             this.butThongke.Name = "butThongke";
             this.butThongke.Size = new System.Drawing.Size(100, 60);
             this.butThongke.TabIndex = 11;
@@ -143,7 +147,7 @@
             this.dtbTungay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtbTungay.CausesValidation = false;
             this.dtbTungay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtbTungay.Location = new System.Drawing.Point(274, 98);
+            this.dtbTungay.Location = new System.Drawing.Point(204, 96);
             this.dtbTungay.Name = "dtbTungay";
             this.dtbTungay.Size = new System.Drawing.Size(233, 27);
             this.dtbTungay.TabIndex = 8;
@@ -155,7 +159,7 @@
             this.label5.CausesValidation = false;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(115, 206);
+            this.label5.Location = new System.Drawing.Point(66, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 25);
             this.label5.TabIndex = 3;
@@ -168,7 +172,7 @@
             this.label4.CausesValidation = false;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(148, 98);
+            this.label4.Location = new System.Drawing.Point(66, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 3;
@@ -210,6 +214,32 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1134, 110);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.CausesValidation = false;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(66, 281);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tổng số hóa đơn";
+            // 
+            // labelThd
+            // 
+            this.labelThd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelThd.AutoSize = true;
+            this.labelThd.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThd.ForeColor = System.Drawing.Color.Red;
+            this.labelThd.Location = new System.Drawing.Point(232, 265);
+            this.labelThd.Name = "labelThd";
+            this.labelThd.Size = new System.Drawing.Size(49, 54);
+            this.labelThd.TabIndex = 17;
+            this.labelThd.Text = "0";
             // 
             // frmDoanhthu
             // 
@@ -246,5 +276,7 @@
         private System.Windows.Forms.DateTimePicker dtbDenngay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelThd;
     }
 }
