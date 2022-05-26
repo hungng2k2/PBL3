@@ -20,17 +20,12 @@ namespace PBL3.View
 
         private void frmDoanhthu_Load(object sender, EventArgs e)
         {
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvThongke.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvThongke.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon().ToString();
             fillchart();
-        }
-
-        private void butThongke_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = BLLHoaDon.Instance.ThongKe(dtbTungay.Value,dtbDenngay.Value);
-            chart1.Series["Doanh thu"].Points.Clear();
-            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(dtbTungay.Value, dtbDenngay.Value);
+            dtpStartDate.Enabled = false;
+            dtpEndDate.Enabled = false;
         }
         private void fillchart()
         {
@@ -53,39 +48,64 @@ namespace PBL3.View
             chart1.Series["Doanh thu"].Points.AddXY("12", "200000");
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedIndex == 0)
-                // thong ke trong ngay
-            {
-                dataGridView1.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Now, DateTime.Now);
-                chart1.Series["Doanh thu"].Points.Clear();
-                chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Now, DateTime.Now);
-            }
-            else if (comboBox1.SelectedIndex == 1)
-                // thong ke theo thang
-            {
-                dataGridView1.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Now.AddMonths(-1), DateTime.Now);
-                chart1.Series["Doanh thu"].Points.Clear();
-                chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Now.AddMonths(-1), DateTime.Now);
-            }
-            else if (comboBox1.SelectedIndex == 2)
-            // thong ke theo nam
-            {
-                dataGridView1.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Now.AddYears(-1), DateTime.Now);
-                chart1.Series["Doanh thu"].Points.Clear();
-                chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Now.AddYears(-1), DateTime.Now);
-            }
-        }
-
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dataGridView1.Columns["Ngay"].HeaderText = "Ngày";
-            dataGridView1.Columns["SoLuongHoaDon"].HeaderText = "Số Lượng Hóa Đơn";
-            dataGridView1.Columns["TongNhap"].HeaderText = "Tổng Nhập";
-            dataGridView1.Columns["TongBan"].HeaderText = "Tổng Bán";
-            dataGridView1.Columns["TienLoi"].HeaderText = "Tiền Lời";
+            dgvThongke.Columns["Ngay"].HeaderText = "Ngày";
+            dgvThongke.Columns["SoLuongHoaDon"].HeaderText = "Số lượng hóa đơn";
+            dgvThongke.Columns["TongNhap"].HeaderText = "Tổng nhập";
+            dgvThongke.Columns["TongBan"].HeaderText = "Tổng bán";
+            dgvThongke.Columns["TienLoi"].HeaderText = "Tiền lời";
         }
 
+        private void butNgay_Click(object sender, EventArgs e)
+        {
+            dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today, DateTime.Now);
+            chart1.Series["Doanh thu"].Points.Clear();
+            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today, DateTime.Now);
+        }
+
+        private void butTuan_Click(object sender, EventArgs e)
+        {
+            dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddDays(-7), DateTime.Now);
+            chart1.Series["Doanh thu"].Points.Clear();
+            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddDays(-7), DateTime.Now);
+        }
+
+        private void butThang_Click(object sender, EventArgs e)
+        {
+            dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddMonths(-1), DateTime.Now);
+            chart1.Series["Doanh thu"].Points.Clear();
+            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddMonths(-1), DateTime.Now);
+        }
+
+        private void butNam_Click(object sender, EventArgs e)
+        {
+            dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddYears(-1), DateTime.Now);
+            chart1.Series["Doanh thu"].Points.Clear();
+            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddYears(-1), DateTime.Now);
+        }
+
+        private void butThongKe_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Enabled = false;
+            dtpEndDate.Enabled = false;
+            butNgay.Enabled = true;
+            butTuan.Enabled = true;
+            butThang.Enabled = true;
+            butNam.Enabled = true;
+            dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(dtpStartDate.Value, dtpEndDate.Value);
+            chart1.Series["Doanh thu"].Points.Clear();
+            chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(dtpStartDate.Value, dtpEndDate.Value);
+        }
+
+        private void butCustom_Click(object sender, EventArgs e)
+        {
+            dtpStartDate.Enabled = true;
+            dtpEndDate.Enabled = true;
+            butNgay.Enabled = false;
+            butTuan.Enabled = false;
+            butThang.Enabled = false;
+            butNam.Enabled = false;
+        }
     }
 }
