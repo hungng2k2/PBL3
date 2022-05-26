@@ -21,7 +21,7 @@ namespace PBL3.View
 
         private void frmHoadon_Load(object sender, EventArgs e)
         {
-            txtMahoadon.Enabled = false;
+            EditorEnable(false);
             Reload();
             dgvDSHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDSHoaDon.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -47,6 +47,26 @@ namespace PBL3.View
                 string id_HoaDon = dgvDSHoaDon.SelectedRows[0].Cells["id_HoaDon"].Value.ToString();
                 frmChiTietHoaDon frm = new frmChiTietHoaDon(id_HoaDon);
                 frm.Show();
+            }
+        }
+        public void EditorEnable(bool b)
+        {
+            txtMahoadon.Enabled = b;
+            txtmaKhachhang.Enabled = b;
+            txtNhanvienlap.Enabled = b;
+            dateTimePicker1.Enabled = b;
+        }
+
+        private void dgvDSHoaDon_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDSHoaDon.SelectedRows.Count == 1)
+            {
+                string id = dgvDSHoaDon.SelectedRows[0].Cells["id_HoaDon"].Value.ToString();
+                HoaDon hd = BLLHoaDon.Instance.GetById(id);
+                txtMahoadon.Text = hd.id_HoaDon;
+                txtmaKhachhang.Text = hd.Order.KhachHang.TenKhachHang;
+                txtNhanvienlap.Text = hd.Order.NhanVien.TenNhanVien;
+                dateTimePicker1.Value = hd.NgayLap;
             }
         }
     }

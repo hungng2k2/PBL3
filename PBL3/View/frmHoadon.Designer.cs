@@ -31,10 +31,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.butDetail = new System.Windows.Forms.Button();
-            this.butSave = new System.Windows.Forms.Button();
-            this.butDelete = new System.Windows.Forms.Button();
-            this.butUpdate = new System.Windows.Forms.Button();
-            this.butAdd = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtNhanvienlap = new System.Windows.Forms.TextBox();
             this.txtmaKhachhang = new System.Windows.Forms.TextBox();
@@ -45,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSHoaDon = new System.Windows.Forms.DataGridView();
+            this.butDelete = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
@@ -54,10 +51,7 @@
             // 
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.butDetail);
-            this.panel2.Controls.Add(this.butSave);
             this.panel2.Controls.Add(this.butDelete);
-            this.panel2.Controls.Add(this.butUpdate);
-            this.panel2.Controls.Add(this.butAdd);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.txtNhanvienlap);
             this.panel2.Controls.Add(this.txtmaKhachhang);
@@ -89,7 +83,7 @@
             this.butDetail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.butDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butDetail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDetail.Location = new System.Drawing.Point(746, 239);
+            this.butDetail.Location = new System.Drawing.Point(784, 147);
             this.butDetail.Name = "butDetail";
             this.butDetail.Size = new System.Drawing.Size(100, 60);
             this.butDetail.TabIndex = 12;
@@ -97,60 +91,13 @@
             this.butDetail.UseVisualStyleBackColor = true;
             this.butDetail.Click += new System.EventHandler(this.butDetail_Click);
             // 
-            // butSave
-            // 
-            this.butSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butSave.Location = new System.Drawing.Point(589, 239);
-            this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(100, 60);
-            this.butSave.TabIndex = 11;
-            this.butSave.Text = "Lưu";
-            this.butSave.UseVisualStyleBackColor = true;
-            // 
-            // butDelete
-            // 
-            this.butDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDelete.Location = new System.Drawing.Point(435, 239);
-            this.butDelete.Name = "butDelete";
-            this.butDelete.Size = new System.Drawing.Size(100, 60);
-            this.butDelete.TabIndex = 10;
-            this.butDelete.Text = "Xóa";
-            this.butDelete.UseVisualStyleBackColor = true;
-            // 
-            // butUpdate
-            // 
-            this.butUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butUpdate.Location = new System.Drawing.Point(269, 239);
-            this.butUpdate.Name = "butUpdate";
-            this.butUpdate.Size = new System.Drawing.Size(100, 60);
-            this.butUpdate.TabIndex = 9;
-            this.butUpdate.Text = "Sửa";
-            this.butUpdate.UseVisualStyleBackColor = true;
-            // 
-            // butAdd
-            // 
-            this.butAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butAdd.Location = new System.Drawing.Point(114, 239);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(100, 60);
-            this.butAdd.TabIndex = 8;
-            this.butAdd.Text = "Thêm";
-            this.butAdd.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(674, 167);
+            this.dateTimePicker1.Location = new System.Drawing.Point(209, 251);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(30);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
             this.dateTimePicker1.TabIndex = 7;
@@ -159,7 +106,8 @@
             // 
             this.txtNhanvienlap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNhanvienlap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhanvienlap.Location = new System.Drawing.Point(209, 162);
+            this.txtNhanvienlap.Location = new System.Drawing.Point(209, 138);
+            this.txtNhanvienlap.Margin = new System.Windows.Forms.Padding(30);
             this.txtNhanvienlap.Name = "txtNhanvienlap";
             this.txtNhanvienlap.Size = new System.Drawing.Size(233, 30);
             this.txtNhanvienlap.TabIndex = 6;
@@ -168,7 +116,8 @@
             // 
             this.txtmaKhachhang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtmaKhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmaKhachhang.Location = new System.Drawing.Point(674, 88);
+            this.txtmaKhachhang.Location = new System.Drawing.Point(209, 192);
+            this.txtmaKhachhang.Margin = new System.Windows.Forms.Padding(30);
             this.txtmaKhachhang.Name = "txtmaKhachhang";
             this.txtmaKhachhang.Size = new System.Drawing.Size(233, 30);
             this.txtmaKhachhang.TabIndex = 5;
@@ -178,6 +127,7 @@
             this.txtMahoadon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMahoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMahoadon.Location = new System.Drawing.Point(209, 88);
+            this.txtMahoadon.Margin = new System.Windows.Forms.Padding(30);
             this.txtMahoadon.Name = "txtMahoadon";
             this.txtMahoadon.Size = new System.Drawing.Size(233, 30);
             this.txtMahoadon.TabIndex = 4;
@@ -188,7 +138,8 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(502, 167);
+            this.label5.Location = new System.Drawing.Point(46, 253);
+            this.label5.Margin = new System.Windows.Forms.Padding(30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 25);
             this.label5.TabIndex = 3;
@@ -200,11 +151,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(499, 88);
+            this.label4.Location = new System.Drawing.Point(46, 197);
+            this.label4.Margin = new System.Windows.Forms.Padding(30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 25);
+            this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Mã khách hàng";
+            this.label4.Text = "Khách hàng";
             // 
             // label3
             // 
@@ -212,7 +164,8 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(46, 167);
+            this.label3.Location = new System.Drawing.Point(46, 138);
+            this.label3.Margin = new System.Windows.Forms.Padding(30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 25);
             this.label3.TabIndex = 1;
@@ -225,6 +178,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(46, 88);
+            this.label2.Margin = new System.Windows.Forms.Padding(30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
             this.label2.TabIndex = 0;
@@ -252,9 +206,23 @@
             this.dgvDSHoaDon.Name = "dgvDSHoaDon";
             this.dgvDSHoaDon.RowHeadersWidth = 51;
             this.dgvDSHoaDon.RowTemplate.Height = 24;
+            this.dgvDSHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSHoaDon.Size = new System.Drawing.Size(965, 155);
             this.dgvDSHoaDon.TabIndex = 0;
             this.dgvDSHoaDon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHoaDon_DataBindingComplete);
+            this.dgvDSHoaDon.SelectionChanged += new System.EventHandler(this.dgvDSHoaDon_SelectionChanged);
+            // 
+            // butDelete
+            // 
+            this.butDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butDelete.Location = new System.Drawing.Point(618, 147);
+            this.butDelete.Name = "butDelete";
+            this.butDelete.Size = new System.Drawing.Size(100, 60);
+            this.butDelete.TabIndex = 10;
+            this.butDelete.Text = "Xóa";
+            this.butDelete.UseVisualStyleBackColor = true;
             // 
             // frmHoadon
             // 
@@ -279,10 +247,6 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button butDetail;
-        private System.Windows.Forms.Button butSave;
-        private System.Windows.Forms.Button butDelete;
-        private System.Windows.Forms.Button butUpdate;
-        private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtNhanvienlap;
         private System.Windows.Forms.TextBox txtmaKhachhang;
@@ -294,5 +258,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDSHoaDon;
+        private System.Windows.Forms.Button butDelete;
     }
 }

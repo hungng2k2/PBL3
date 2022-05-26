@@ -39,8 +39,17 @@ namespace PBL3.View
             chart1.Series["Doanh thu"].YValueMembers = "Tiền Lời";
             chart1.Titles.Add("Thống kê doanh thu");
             chart1.Series["Doanh thu"].Points.AddXY("1", "100000");
-            chart1.Series["Doanh thu"].Points.AddXY("2", "200000");
+            chart1.Series["Doanh thu"].Points.AddXY("2", "800000");
             chart1.Series["Doanh thu"].Points.AddXY("3", "300000");
+            chart1.Series["Doanh thu"].Points.AddXY("4", "800000");
+            chart1.Series["Doanh thu"].Points.AddXY("5", "500000");
+            chart1.Series["Doanh thu"].Points.AddXY("6", "1000000");
+            chart1.Series["Doanh thu"].Points.AddXY("7", "700000");
+            chart1.Series["Doanh thu"].Points.AddXY("8", "800000");
+            chart1.Series["Doanh thu"].Points.AddXY("9", "900000");
+            chart1.Series["Doanh thu"].Points.AddXY("10", "1000000");
+            chart1.Series["Doanh thu"].Points.AddXY("11", "500000");
+            chart1.Series["Doanh thu"].Points.AddXY("12", "200000");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

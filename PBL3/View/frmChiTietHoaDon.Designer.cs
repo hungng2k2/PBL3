@@ -119,6 +119,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmChiTietHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChiTietHoaDon";
             this.Load += new System.EventHandler(this.frmChiTietHoaDon_Load);
             this.panel1.ResumeLayout(false);
