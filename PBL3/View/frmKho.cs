@@ -88,7 +88,8 @@ namespace PBL3.View
         {
             dgvDSMonAn.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvDSMonAn.Columns["SoLuong"].HeaderText = "Số lượng";
-            dgvDSMonAn.Columns["GiaBan"].HeaderText = "Giá Bán";
+            dgvDSMonAn.Columns["GiaNhap"].HeaderText = "Giá nhập";
+            dgvDSMonAn.Columns["GiaBan"].HeaderText = "Giá bán";
         }
     }
 }

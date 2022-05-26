@@ -196,6 +196,7 @@
             this.chart1.CausesValidation = false;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(567, 73);
@@ -303,6 +304,7 @@
             this.dgvThongke.Name = "dgvThongke";
             this.dgvThongke.RowHeadersWidth = 51;
             this.dgvThongke.RowTemplate.Height = 24;
+            this.dgvThongke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongke.Size = new System.Drawing.Size(1134, 110);
             this.dgvThongke.TabIndex = 0;
             this.dgvThongke.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);

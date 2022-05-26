@@ -22,7 +22,7 @@ namespace PBL3.View
         {
             dgvThongke.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThongke.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon().ToString();
+            //labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon().ToString();
             fillchart();
             dtpStartDate.Enabled = false;
             dtpEndDate.Enabled = false;
@@ -59,6 +59,7 @@ namespace PBL3.View
 
         private void butNgay_Click(object sender, EventArgs e)
         {
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon(DateTime.Today, DateTime.Now).ToString();
             dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today, DateTime.Now);
             chart1.Series["Doanh thu"].Points.Clear();
             chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today, DateTime.Now);
@@ -66,6 +67,7 @@ namespace PBL3.View
 
         private void butTuan_Click(object sender, EventArgs e)
         {
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon(DateTime.Today.AddDays(-7), DateTime.Now).ToString();
             dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddDays(-7), DateTime.Now);
             chart1.Series["Doanh thu"].Points.Clear();
             chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddDays(-7), DateTime.Now);
@@ -73,6 +75,7 @@ namespace PBL3.View
 
         private void butThang_Click(object sender, EventArgs e)
         {
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon(DateTime.Today.AddMonths(-1), DateTime.Now).ToString();
             dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddMonths(-1), DateTime.Now);
             chart1.Series["Doanh thu"].Points.Clear();
             chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddMonths(-1), DateTime.Now);
@@ -80,6 +83,7 @@ namespace PBL3.View
 
         private void butNam_Click(object sender, EventArgs e)
         {
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon(DateTime.Today.AddYears(-1), DateTime.Now).ToString();
             dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(DateTime.Today.AddYears(-1), DateTime.Now);
             chart1.Series["Doanh thu"].Points.Clear();
             chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddYears(-1), DateTime.Now);
@@ -93,6 +97,7 @@ namespace PBL3.View
             butTuan.Enabled = true;
             butThang.Enabled = true;
             butNam.Enabled = true;
+            labelThd.Text = BLLHoaDon.Instance.GetSoHoaDon(dtpStartDate.Value, dtpEndDate.Value).ToString();
             dgvThongke.DataSource = BLLHoaDon.Instance.ThongKe(dtpStartDate.Value, dtpEndDate.Value);
             chart1.Series["Doanh thu"].Points.Clear();
             chart1.DataSource = BLLHoaDon.Instance.ThongKeChart(dtpStartDate.Value, dtpEndDate.Value);

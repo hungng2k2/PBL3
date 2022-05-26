@@ -157,9 +157,11 @@ namespace PBL3.BLL
             ds.Tables.Add(dt);
             return ds;
         }
-        public int GetSoHoaDon()
+        public int GetSoHoaDon(DateTime start, DateTime end)
         {
-            return db.HoaDon.Count();
+            start = start.Date;
+            end = end.Date;
+            return db.HoaDon.Where(hd => hd.NgayLap >= start && hd.NgayLap <= end).Count();
         }
     }
 }
