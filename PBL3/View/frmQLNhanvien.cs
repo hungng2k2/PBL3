@@ -103,17 +103,17 @@ namespace PBL3.View
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(txtTenNhanVien.Text == "")
+            if (txtTenNhanVien.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên nhân viên!");
                 return;
             }
-            if((DateTime.Now.Year - dpNgaySinh.Value.Year) < 16)
+            if ((DateTime.Now.Year - dpNgaySinh.Value.Year) < 16)
             {
                 MessageBox.Show("Ngày sinh không hợp lệ!");
                 return;
             }
-            if(rbMale.Checked == false && rbFemale.Checked == false)
+            if (rbMale.Checked == false && rbFemale.Checked == false)
             {
                 MessageBox.Show("Vui lòng chọn giới tính!");
                 return;
@@ -149,8 +149,15 @@ namespace PBL3.View
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa nhân viên có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
-                    BLLNhanVien.Instance.Delete(id);
-                    Reload();
+                    if (id == "NV000")
+                    {
+                        MessageBox.Show("Không thể xóa admin!");
+                    }
+                    else
+                    {
+                        BLLNhanVien.Instance.Delete(id);
+                        Reload();
+                    }
                 }
             }
         }
@@ -163,17 +170,17 @@ namespace PBL3.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(cbbSearch.SelectedIndex >= 0)
+            if (cbbSearch.SelectedIndex >= 0)
             {
-                if(cbbSearch.SelectedIndex == 0)
+                if (cbbSearch.SelectedIndex == 0)
                 {
                     dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchById(txtSearch.Text);
                 }
-                if(cbbSearch.SelectedIndex == 1)
+                if (cbbSearch.SelectedIndex == 1)
                 {
                     dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByTenNhanVien(txtSearch.Text);
                 }
-                if(cbbSearch.SelectedIndex == 2)
+                if (cbbSearch.SelectedIndex == 2)
                 {
                     dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchBySoDienThoai(txtSearch.Text);
                 }
@@ -188,6 +195,20 @@ namespace PBL3.View
         {
             Reload();
             EditorEnable(false);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (dgvDSNhanVien.SelectedRows.Count == 1)
+            {
+                string id_NhanVien = dgvDSNhanVien.SelectedRows[0].Cells[0].Value.ToString();
+                DialogResult dr = MessageBox.Show("Bạn muốn reset nhân viên có ID '" + id_NhanVien + "'?", "Xác nhận reset", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    BLLNhanVien.Instance.ResetAccount(id_NhanVien);
+                    Reload();
+                }
+            }
         }
     }
 }

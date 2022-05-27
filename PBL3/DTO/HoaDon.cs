@@ -12,6 +12,7 @@ namespace PBL3.DTO
         public string id_HoaDon { get; set; }
         public string id_Order { get; set; }
         public DateTime NgayLap { get; set; }        
+        public bool IsDelete { get; set; }
         [ForeignKey("id_Order")]
         public virtual Order Order { get; set; }
     }

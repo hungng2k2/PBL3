@@ -43,6 +43,7 @@ namespace PBL3.View
                     {
                         MessageBox.Show("Đổi mật khẩu thành công");
                         nv.Password = txtMKmoi.Text;
+                        BLLNhanVien.Instance.ExecuteAddUpdate(nv);
                         this.Close();
                     }
                 }

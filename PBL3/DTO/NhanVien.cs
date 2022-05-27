@@ -27,6 +27,7 @@ namespace PBL3.DTO
         [StringLength(20)]
         public string Password { get; set; }
         public string ChucVu { get; set; }
+        public bool IsDeleted { get; set; }
         public virtual ICollection<Order> Order { get; set; }
     }
 }
