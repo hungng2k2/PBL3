@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.butDetail = new System.Windows.Forms.Button();
+            this.butDelete = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtNhanvienlap = new System.Windows.Forms.TextBox();
             this.txtmaKhachhang = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSHoaDon = new System.Windows.Forms.DataGridView();
-            this.butDelete = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
@@ -90,6 +90,18 @@
             this.butDetail.Text = "Chi tiết";
             this.butDetail.UseVisualStyleBackColor = true;
             this.butDetail.Click += new System.EventHandler(this.butDetail_Click);
+            // 
+            // butDelete
+            // 
+            this.butDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butDelete.Location = new System.Drawing.Point(618, 147);
+            this.butDelete.Name = "butDelete";
+            this.butDelete.Size = new System.Drawing.Size(100, 60);
+            this.butDelete.TabIndex = 10;
+            this.butDelete.Text = "Xóa";
+            this.butDelete.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -211,18 +223,6 @@
             this.dgvDSHoaDon.TabIndex = 0;
             this.dgvDSHoaDon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHoaDon_DataBindingComplete);
             this.dgvDSHoaDon.SelectionChanged += new System.EventHandler(this.dgvDSHoaDon_SelectionChanged);
-            // 
-            // butDelete
-            // 
-            this.butDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDelete.Location = new System.Drawing.Point(618, 147);
-            this.butDelete.Name = "butDelete";
-            this.butDelete.Size = new System.Drawing.Size(100, 60);
-            this.butDelete.TabIndex = 10;
-            this.butDelete.Text = "Xóa";
-            this.butDelete.UseVisualStyleBackColor = true;
             // 
             // frmHoadon
             // 
