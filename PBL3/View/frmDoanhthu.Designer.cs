@@ -205,7 +205,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Doanh thu";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(535, 252);
+            this.chart1.Size = new System.Drawing.Size(561, 252);
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
