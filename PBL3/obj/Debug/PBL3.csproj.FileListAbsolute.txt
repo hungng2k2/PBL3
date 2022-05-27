@@ -33,7 +33,6 @@ D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmKho.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDoanhthu.resources
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmHoadon.resources
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDatmon.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoanhthu.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmHoadon.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmKhachhang.resources
@@ -84,8 +83,6 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csp
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.exe
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.pdb
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongtintk.resources
-C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMK.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmCapnhatthongtin.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmChiTietHoaDon.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmChiTietHoaDon.resources
@@ -97,3 +94,5 @@ D:\PBL3\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDoiMatKhau.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resources
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\bin\Debug\Guna.UI2.dll
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMatKhau.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resources
