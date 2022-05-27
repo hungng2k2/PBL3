@@ -275,14 +275,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin tài khoản";
             // 
-            // frmThongtintk
+            // frmThongTinTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(866, 486);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "frmThongtintk";
+            this.Name = "frmThongTinTaiKhoan";
             this.Text = "frmThongtintk";
             this.Load += new System.EventHandler(this.frmThongTinTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
