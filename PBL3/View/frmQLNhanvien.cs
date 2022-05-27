@@ -23,6 +23,8 @@ namespace PBL3.View
         private void Reload()
         {
             dgvDSNhanVien.DataSource = BLLNhanVien.Instance.GetAll();
+            txtSearch.Text = "";
+            cbbSearch.SelectedIndex = -1;
         }
 
         public void EditorEnable(bool b)
@@ -38,6 +40,9 @@ namespace PBL3.View
             btnSua.Enabled = !b;
             btnXoa.Enabled = !b;
             dgvDSNhanVien.Enabled = !b;
+            txtSearch.Enabled = !b;
+            cbbSearch.Enabled = !b;
+            btnSearch.Enabled = !b;
         }
 
         public void EditorReset()
@@ -156,6 +161,33 @@ namespace PBL3.View
             EditorEnable(false);
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(cbbSearch.SelectedIndex >= 0)
+            {
+                if(cbbSearch.SelectedIndex == 0)
+                {
+                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchById(txtSearch.Text);
+                }
+                if(cbbSearch.SelectedIndex == 1)
+                {
+                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByTenNhanVien(txtSearch.Text);
+                }
+                if(cbbSearch.SelectedIndex == 2)
+                {
+                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchBySoDienThoai(txtSearch.Text);
+                }
+                if (cbbSearch.SelectedIndex == 3)
+                {
+                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByDiaChi(txtSearch.Text);
+                }
+            }
+        }
 
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            Reload();
+            EditorEnable(false);
+        }
     }
 }

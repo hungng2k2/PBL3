@@ -123,5 +123,33 @@ namespace PBL3.BLL
             }
             return id.Trim();
         }
+        public dynamic SearchById(string txt)
+        {
+            return db.NhanVien
+                .Where(p => p.id_NhanVien.ToLower().Contains(txt.ToLower()))
+                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .ToList();
+        }
+        public dynamic SearchByTenNhanVien(string txt)
+        {
+            return db.NhanVien
+                .Where(p => p.TenNhanVien.ToLower().Contains(txt.ToLower()))
+                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .ToList();
+        }
+        public dynamic SearchBySoDienThoai(string txt)
+        {
+            return db.NhanVien
+                .Where(p => p.SoDienThoai.ToLower().Contains(txt.ToLower()))
+                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .ToList();
+        }
+        public dynamic SearchByDiaChi(string txt)
+        {
+            return db.NhanVien
+                .Where(p => p.DiaChi.ToLower().Contains(txt.ToLower()))
+                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .ToList();
+        }
     }
 }
