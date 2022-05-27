@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PBL3.DTO
 {
+    [Table("KhachHang")]
     public class KhachHang
     {
         public KhachHang()
@@ -19,6 +21,7 @@ namespace PBL3.DTO
         public bool GioiTinh { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
+        public bool IsDeleted { get; set; }
         public virtual ICollection<Order> Order { get; set; }
     }
 }

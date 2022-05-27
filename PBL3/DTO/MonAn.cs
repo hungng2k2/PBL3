@@ -18,6 +18,7 @@ namespace PBL3.DTO
         public double GiaBan { get; set; }
         public int SoLuong { get; set; }
         public string imagePath { get; set; } 
+        public bool IsDeleted { get; set; }
         public virtual ICollection<ChiTietOrder> ChiTietOrder { get; set; }
     }
 }

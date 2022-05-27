@@ -33,8 +33,8 @@ namespace PBL3.View
         {
             if (dgvDSMonAn.SelectedRows.Count == 1)
             {
-                string tenmon = dgvDSMonAn.SelectedRows[0].Cells[0].Value.ToString();
-                MonAn monAn = BLLMonAn.Instance.GetmonByten(tenmon);
+                string id_MonAn = dgvDSMonAn.SelectedRows[0].Cells[0].Value.ToString();
+                MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
                 txtTenMon.Text = monAn.TenMonAn.ToString();
                 txtSoLuong.Text = monAn.SoLuong.ToString();
                 txtDonGia.Text = monAn.GiaBan.ToString();
@@ -59,8 +59,8 @@ namespace PBL3.View
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string tenmon = dgvDSMonAn.SelectedRows[0].Cells[0].Value.ToString();
-            MonAn monAn = BLLMonAn.Instance.GetmonByten(tenmon);
+            string id_MonAn = dgvDSMonAn.SelectedRows[0].Cells[0].Value.ToString();
+            MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
             monAn.SoLuong = Convert.ToInt32(txtSoLuong.Text);
             BLLMonAn.Instance.ExecuteAddUpdate(monAn);
             Reload();
@@ -86,6 +86,7 @@ namespace PBL3.View
 
         private void dgvDSMonAn_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvDSMonAn.Columns["id_MonAn"].HeaderText = "Mã món ăn";
             dgvDSMonAn.Columns["TenMonAn"].HeaderText = "Tên món ăn";
             dgvDSMonAn.Columns["SoLuong"].HeaderText = "Số lượng";
             dgvDSMonAn.Columns["GiaNhap"].HeaderText = "Giá nhập";

@@ -64,8 +64,8 @@ namespace PBL3.View
                 string id = dgvDSHoaDon.SelectedRows[0].Cells["id_HoaDon"].Value.ToString();
                 HoaDon hd = BLLHoaDon.Instance.GetById(id);
                 txtMahoadon.Text = hd.id_HoaDon;
-                txtmaKhachhang.Text = hd.Order.KhachHang.TenKhachHang;
-                txtNhanvienlap.Text = hd.Order.NhanVien.TenNhanVien;
+                txtmaKhachhang.Text = BLLOrder.Instance.GetById(hd.id_Order).id_KhachHang;
+                txtNhanvienlap.Text = BLLNhanVien.Instance.GetById(BLLOrder.Instance.GetById(hd.id_Order).id_NhanVien).TenNhanVien;
                 dateTimePicker1.Value = hd.NgayLap;
             }
         }
