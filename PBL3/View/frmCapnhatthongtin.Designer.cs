@@ -254,11 +254,11 @@
             this.iconButtonHuy.UseVisualStyleBackColor = true;
             this.iconButtonHuy.Click += new System.EventHandler(this.iconButtonHuy_Click);
             // 
-            // frmCapnhatthongtin
+            // frmCapNhatThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(898, 458);
             this.ControlBox = false;
             this.Controls.Add(this.iconButtonHuy);
@@ -283,7 +283,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmCapnhatthongtin";
+            this.Name = "frmCapNhatThongTin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCapnhatthongtin_Load);
             this.ResumeLayout(false);

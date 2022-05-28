@@ -144,11 +144,11 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "ĐỔI MẬT KHẨU";
             // 
-            // frmDoiMK
+            // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(793, 426);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
@@ -163,7 +163,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmDoiMK";
+            this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
