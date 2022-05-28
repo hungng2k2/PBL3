@@ -156,27 +156,22 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(187, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 38);
+            this.label2.Size = new System.Drawing.Size(183, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "FASTFOOD";
             // 
             // btnLogin
             // 
             this.btnLogin.BorderRadius = 25;
-            this.btnLogin.CheckedState.Parent = this.btnLogin;
-            this.btnLogin.CustomImages.Parent = this.btnLogin;
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.HoverState.Parent = this.btnLogin;
             this.btnLogin.Location = new System.Drawing.Point(192, 372);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
             this.btnLogin.Size = new System.Drawing.Size(180, 45);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
