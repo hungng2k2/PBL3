@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThem = new System.Windows.Forms.Button();
@@ -39,18 +42,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.AnhMinhHoa = new System.Windows.Forms.PictureBox();
+            this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.txtTenMon = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMaMonAn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvThucdon = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGiaNhap = new System.Windows.Forms.TextBox();
+            this.dgvThucdon = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -217,6 +220,14 @@
             this.AnhMinhHoa.TabIndex = 3;
             this.AnhMinhHoa.TabStop = false;
             // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaNhap.Location = new System.Drawing.Point(737, 91);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(161, 30);
+            this.txtGiaNhap.TabIndex = 2;
+            // 
             // txtGiaBan
             // 
             this.txtGiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,6 +243,17 @@
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(161, 30);
             this.txtTenMon.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(635, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 22);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Giá nhập";
             // 
             // txtMaMonAn
             // 
@@ -298,44 +320,73 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
             // 
-            // dgvThucdon
-            // 
-            this.dgvThucdon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThucdon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvThucdon.Location = new System.Drawing.Point(3, 18);
-            this.dgvThucdon.Name = "dgvThucdon";
-            this.dgvThucdon.RowHeadersWidth = 51;
-            this.dgvThucdon.RowTemplate.Height = 24;
-            this.dgvThucdon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
-            this.dgvThucdon.TabIndex = 1;
-            this.dgvThucdon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThucdon_DataBindingComplete);
-            this.dgvThucdon.SelectionChanged += new System.EventHandler(this.dgvThucdon_SelectionChanged);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label5
+            // dgvThucdon
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(635, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 22);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Giá nhập";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThucdon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvThucdon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThucdon.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvThucdon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvThucdon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThucdon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThucdon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvThucdon.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThucdon.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvThucdon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvThucdon.EnableHeadersVisualStyles = false;
+            this.dgvThucdon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThucdon.Location = new System.Drawing.Point(3, 18);
+            this.dgvThucdon.Name = "dgvThucdon";
+            this.dgvThucdon.RowHeadersVisible = false;
+            this.dgvThucdon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvThucdon.RowTemplate.Height = 24;
+            this.dgvThucdon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
+            this.dgvThucdon.TabIndex = 6;
+            this.dgvThucdon.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Cyan;
+            this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvThucdon.ThemeStyle.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvThucdon.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThucdon.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.dgvThucdon.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvThucdon.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvThucdon.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvThucdon.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvThucdon.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvThucdon.ThemeStyle.ReadOnly = false;
+            this.dgvThucdon.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.dgvThucdon.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThucdon.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvThucdon.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dgvThucdon.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvThucdon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.dgvThucdon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvThucdon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThucdon_DataBindingComplete);
+            this.dgvThucdon.SelectionChanged += new System.EventHandler(this.dgvThucdon_SelectionChanged);
             // 
-            // txtGiaNhap
-            // 
-            this.txtGiaNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaNhap.Location = new System.Drawing.Point(737, 91);
-            this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(161, 30);
-            this.txtGiaNhap.TabIndex = 2;
-            // 
-            // frmThucdon
+            // frmThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -343,7 +394,7 @@
             this.ClientSize = new System.Drawing.Size(971, 504);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmThucdon";
+            this.Name = "frmThucDon";
             this.Text = "frmThucdon";
             this.Load += new System.EventHandler(this.frmThucdon_Load);
             this.panel1.ResumeLayout(false);
@@ -375,7 +426,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvThucdon;
         private System.Windows.Forms.PictureBox AnhMinhHoa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnChonAnh;
@@ -383,5 +433,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txtGiaNhap;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvThucdon;
     }
 }

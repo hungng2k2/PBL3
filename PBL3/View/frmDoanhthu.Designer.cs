@@ -31,7 +31,12 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.butThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.butCustom = new Guna.UI2.WinForms.Guna2Button();
             this.butNam = new Guna.UI2.WinForms.Guna2Button();
@@ -40,14 +45,12 @@
             this.butNgay = new Guna.UI2.WinForms.Guna2Button();
             this.labelThd = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvThongke = new System.Windows.Forms.DataGridView();
+            this.dgvThongke = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,6 +59,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dtpEndDate);
+            this.panel2.Controls.Add(this.dtpStartDate);
             this.panel2.Controls.Add(this.butThongKe);
             this.panel2.Controls.Add(this.butCustom);
             this.panel2.Controls.Add(this.butNam);
@@ -64,9 +69,7 @@
             this.panel2.Controls.Add(this.butNgay);
             this.panel2.Controls.Add(this.labelThd);
             this.panel2.Controls.Add(this.chart1);
-            this.panel2.Controls.Add(this.dtpEndDate);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.dtpStartDate);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
@@ -75,6 +78,34 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1140, 371);
             this.panel2.TabIndex = 0;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpEndDate.Checked = true;
+            this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpEndDate.Location = new System.Drawing.Point(173, 122);
+            this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(221, 36);
+            this.dtpEndDate.TabIndex = 20;
+            this.dtpEndDate.Value = new System.DateTime(2022, 6, 2, 9, 49, 23, 855);
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpStartDate.Checked = true;
+            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpStartDate.Location = new System.Drawing.Point(173, 62);
+            this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(221, 36);
+            this.dtpStartDate.TabIndex = 20;
+            this.dtpStartDate.Value = new System.DateTime(2022, 6, 2, 9, 49, 23, 855);
             // 
             // butThongKe
             // 
@@ -209,17 +240,6 @@
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpEndDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEndDate.CausesValidation = false;
-            this.dtpEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEndDate.Location = new System.Drawing.Point(168, 124);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(233, 27);
-            this.dtpEndDate.TabIndex = 14;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -232,17 +252,6 @@
             this.label6.Size = new System.Drawing.Size(96, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Đến ngày";
-            // 
-            // dtpStartDate
-            // 
-            this.dtpStartDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate.CausesValidation = false;
-            this.dtpStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate.Location = new System.Drawing.Point(168, 73);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(233, 27);
-            this.dtpStartDate.TabIndex = 8;
             // 
             // label2
             // 
@@ -298,15 +307,63 @@
             // 
             // dgvThongke
             // 
-            this.dgvThongke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThongke.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvThongke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongke.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvThongke.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvThongke.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThongke.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongke.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvThongke.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongke.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvThongke.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvThongke.EnableHeadersVisualStyles = false;
+            this.dgvThongke.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
             this.dgvThongke.Location = new System.Drawing.Point(3, 20);
             this.dgvThongke.Name = "dgvThongke";
-            this.dgvThongke.RowHeadersWidth = 51;
+            this.dgvThongke.RowHeadersVisible = false;
+            this.dgvThongke.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvThongke.RowTemplate.Height = 24;
             this.dgvThongke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongke.Size = new System.Drawing.Size(1134, 110);
-            this.dgvThongke.TabIndex = 0;
+            this.dgvThongke.TabIndex = 4;
+            this.dgvThongke.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Cyan;
+            this.dgvThongke.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThongke.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvThongke.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvThongke.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvThongke.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvThongke.ThemeStyle.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvThongke.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvThongke.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            this.dgvThongke.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvThongke.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvThongke.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvThongke.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvThongke.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvThongke.ThemeStyle.ReadOnly = false;
+            this.dgvThongke.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.dgvThongke.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThongke.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvThongke.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dgvThongke.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvThongke.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            this.dgvThongke.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvThongke.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
             // frmDoanhthu
@@ -333,12 +390,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvThongke;
-        private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label2;
@@ -349,5 +403,8 @@
         private Guna.UI2.WinForms.Guna2Button butNgay;
         private Guna.UI2.WinForms.Guna2Button butCustom;
         private Guna.UI2.WinForms.Guna2Button butThongKe;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvThongke;
     }
 }
