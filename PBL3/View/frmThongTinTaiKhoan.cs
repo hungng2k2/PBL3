@@ -26,21 +26,21 @@ namespace PBL3.View
             // get id from login form and show information of user
             //MessageBox.Show(id);
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
-            txtTen.Text = nv.TenNhanVien;
+            lbTen.Text = nv.TenNhanVien;
             if (nv.ChucVu == "QuanLy")
-                txtChucvu.Text = "Quản Lý";
+                lbChucvu.Text = "Quản Lý";
             else
-                txtChucvu.Text = "Nhân Viên";
-            txtDiachi.Text = nv.DiaChi;
-            txtSdt.Text = nv.SoDienThoai;
-            dateTimePicker1.Value = nv.NgaySinh;
+                lbChucvu.Text = "Nhân Viên";
+            lbDc.Text = nv.DiaChi;
+            lbSdt.Text = nv.SoDienThoai;
+            lbDate.Text = nv.NgaySinh.ToString("dd/MM/yyyy");
             if ((bool)nv.GioiTinh)
             {
-                txtGioitinh.Text = "Nam";
+                lbGioitinh.Text = "Nam";
             }
             else
             {
-                txtGioitinh.Text = "Nữ";
+                lbGioitinh.Text = "Nữ";
             }
             txtUsername.Text = nv.Username;
             txtPassword.Text = nv.Password;
@@ -58,6 +58,7 @@ namespace PBL3.View
             frmCapNhatThongTin frm = new frmCapNhatThongTin(id);
             frm.ShowDialog();
         }
-        
+
+
     }
 }
