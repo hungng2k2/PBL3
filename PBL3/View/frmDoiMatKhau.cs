@@ -29,22 +29,29 @@ namespace PBL3.View
             }
             else
             {
-                if (txtMKmoi.Text != txtNhaplai.Text)
+                if (txtMKcu.Text != nv.Password)
                 {
-                    MessageBox.Show("Mật khẩu mới không khớp");
+                    MessageBox.Show("Mật khẩu không chính xác!");
                 }
                 else
                 {
-                    if (txtMKcu.Text == txtMKmoi.Text)
+                    if (txtMKmoi.Text != txtNhaplai.Text)
                     {
-                        MessageBox.Show("Mật khẩu mới không được trùng với mật khẩu cũ");
+                        MessageBox.Show("Mật khẩu mới không khớp");
                     }
                     else
                     {
-                        MessageBox.Show("Đổi mật khẩu thành công");
-                        nv.Password = txtMKmoi.Text;
-                        BLLNhanVien.Instance.ExecuteAddUpdate(nv);
-                        this.Close();
+                        if (nv.Password == txtMKmoi.Text)
+                        {
+                            MessageBox.Show("Mật khẩu mới không được trùng với mật khẩu cũ");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đổi mật khẩu thành công");
+                            nv.Password = txtMKmoi.Text;
+                            BLLNhanVien.Instance.ExecuteAddUpdate(nv);
+                            this.Close();
+                        }
                     }
                 }
             }
