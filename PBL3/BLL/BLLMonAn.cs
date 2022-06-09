@@ -156,5 +156,20 @@ namespace PBL3.BLL
                 imagePath = monAn.imagePath,
             });
         }
+        public dynamic Search(string name)
+        {
+            return db.MonAn
+                .Where(p => p.IsDeleted == false)
+                .Where(p => p.TenMonAn.Contains(name.ToLower()))
+                .Select(p => new { p.id_MonAn, p.TenMonAn, p.GiaNhap, p.GiaBan }).ToList();
+        }
+        public dynamic SearchMonan(string name)
+        {
+            return db.MonAn
+                .Where(p => p.IsDeleted == false)
+                .Where(p => p.TenMonAn.Contains(name.ToLower()))
+                .Select(p => new { p.id_MonAn, p.TenMonAn, p.SoLuong, p.GiaNhap, p.GiaBan })
+                .OrderBy(p => p.SoLuong).ToList();
+        }
     }
 }

@@ -120,7 +120,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmChiTietHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmChiTietHoaDon";
+            this.Text = "Chi tiết hóa đơn";
             this.Load += new System.EventHandler(this.frmChiTietHoaDon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

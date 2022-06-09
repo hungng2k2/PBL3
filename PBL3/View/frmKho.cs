@@ -92,5 +92,18 @@ namespace PBL3.View
             dgvDSMonAn.Columns["GiaNhap"].HeaderText = "Giá nhập";
             dgvDSMonAn.Columns["GiaBan"].HeaderText = "Giá bán";
         }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text;
+            if (search.Length > 0)
+            {
+                dgvDSMonAn.DataSource = BLLMonAn.Instance.SearchMonan(search);
+            }
+            else
+            {
+                Reload();
+            }
+        }
     }
 }

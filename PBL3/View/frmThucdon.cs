@@ -181,5 +181,18 @@ namespace PBL3.View
             dgvThucdon_SelectionChanged(sender, e);
             EditorEnable(false);
         }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text;
+            if (search.Length > 0)
+            {
+                dgvThucdon.DataSource = BLLMonAn.Instance.Search(search);
+            }
+            else
+            {
+                Reload();
+            }
+        }
     }
 }

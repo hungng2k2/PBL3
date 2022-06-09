@@ -84,6 +84,7 @@ namespace PBL3.BLL
                 nv.GioiTinh = t.GioiTinh;
                 nv.SoDienThoai = t.SoDienThoai;
                 nv.NgaySinh = t.NgaySinh.Date;
+                nv.Username = t.Username;
                 db.SaveChanges();
             }
         }

@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.butDetail = new System.Windows.Forms.Button();
-            this.butDelete = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtNhanvienlap = new System.Windows.Forms.TextBox();
             this.txtmaKhachhang = new System.Windows.Forms.TextBox();
@@ -45,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.detailbut = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
@@ -52,9 +51,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.detailbut);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.butDetail);
-            this.panel2.Controls.Add(this.butDelete);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.txtNhanvienlap);
             this.panel2.Controls.Add(this.txtmaKhachhang);
@@ -80,31 +78,6 @@
             this.label6.Size = new System.Drawing.Size(104, 29);
             this.label6.TabIndex = 13;
             this.label6.Text = "Hóa đơn";
-            // 
-            // butDetail
-            // 
-            this.butDetail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDetail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDetail.Location = new System.Drawing.Point(784, 147);
-            this.butDetail.Name = "butDetail";
-            this.butDetail.Size = new System.Drawing.Size(100, 60);
-            this.butDetail.TabIndex = 12;
-            this.butDetail.Text = "Chi tiết";
-            this.butDetail.UseVisualStyleBackColor = true;
-            this.butDetail.Click += new System.EventHandler(this.butDetail_Click);
-            // 
-            // butDelete
-            // 
-            this.butDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDelete.Location = new System.Drawing.Point(618, 147);
-            this.butDelete.Name = "butDelete";
-            this.butDelete.Size = new System.Drawing.Size(100, 60);
-            this.butDelete.TabIndex = 10;
-            this.butDelete.Text = "Xóa";
-            this.butDelete.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -215,30 +188,30 @@
             // 
             // dgvDSHoaDon
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDSHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSHoaDon.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDSHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDSHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDSHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDSHoaDon.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSHoaDon.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDSHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSHoaDon.EnableHeadersVisualStyles = false;
             this.dgvDSHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -275,6 +248,22 @@
             this.dgvDSHoaDon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHoaDon_DataBindingComplete);
             this.dgvDSHoaDon.SelectionChanged += new System.EventHandler(this.dgvDSHoaDon_SelectionChanged);
             // 
+            // detailbut
+            // 
+            this.detailbut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.detailbut.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.detailbut.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.detailbut.IconColor = System.Drawing.Color.Black;
+            this.detailbut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.detailbut.Location = new System.Drawing.Point(603, 138);
+            this.detailbut.Name = "detailbut";
+            this.detailbut.Size = new System.Drawing.Size(176, 60);
+            this.detailbut.TabIndex = 15;
+            this.detailbut.Text = "Xem chi tiết hóa đơn";
+            this.detailbut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.detailbut.UseVisualStyleBackColor = true;
+            this.detailbut.Click += new System.EventHandler(this.butDetail_Click);
+            // 
             // frmHoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -297,7 +286,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button butDetail;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtNhanvienlap;
         private System.Windows.Forms.TextBox txtmaKhachhang;
@@ -308,7 +296,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button butDelete;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDSHoaDon;
+        private FontAwesome.Sharp.IconButton detailbut;
     }
 }

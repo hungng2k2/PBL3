@@ -97,5 +97,13 @@ namespace PBL3.BLL
         {
             return db.KhachHang.Find(id);
         }
+        public dynamic Search(string name)
+        {
+            return db.KhachHang
+                .Where(p => p.IsDeleted == false)
+                .Where(p => p.TenKhachHang.Contains(name.ToLower()))
+                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .ToList();
+        }
     }
 }

@@ -134,5 +134,18 @@ namespace PBL3.View
             dgvDSKhachHang_SelectionChanged(sender, e);
             EditorEnable(false);
         }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text;
+            if (search.Length > 0)
+            {
+                dgvDSKhachHang.DataSource = BLLKhachHang.Instance.Search(search);
+            }
+            else
+            {
+                Reload();
+            }
+        }
     }
 }

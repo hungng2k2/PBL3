@@ -174,19 +174,39 @@ namespace PBL3.View
             {
                 if (cbbSearch.SelectedIndex == 0)
                 {
+                    if (txtSearch.Text == "")
+                    {
+                        Reload();
+                    }
+                    else
                     dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchById(txtSearch.Text);
                 }
                 if (cbbSearch.SelectedIndex == 1)
                 {
-                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByTenNhanVien(txtSearch.Text);
+                    if (txtSearch.Text == "")
+                    {
+                        Reload();
+                    }
+                    else
+                        dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByTenNhanVien(txtSearch.Text);
                 }
                 if (cbbSearch.SelectedIndex == 2)
                 {
-                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchBySoDienThoai(txtSearch.Text);
+                    if (txtSearch.Text == "")
+                    {
+                        Reload();
+                    }
+                    else
+                        dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchBySoDienThoai(txtSearch.Text);
                 }
                 if (cbbSearch.SelectedIndex == 3)
                 {
-                    dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByDiaChi(txtSearch.Text);
+                    if (txtSearch.Text == "")
+                    {
+                        Reload();
+                    }
+                    else
+                        dgvDSNhanVien.DataSource = BLLNhanVien.Instance.SearchByDiaChi(txtSearch.Text);
                 }
             }
         }

@@ -52,8 +52,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dgvThucdon = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.butSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,6 +66,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.butSearch);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
@@ -71,7 +75,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(971, 326);
+            this.panel1.Size = new System.Drawing.Size(1293, 326);
             this.panel1.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -83,7 +87,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnChonAnh);
             this.flowLayoutPanel1.Controls.Add(this.btnLuu);
             this.flowLayoutPanel1.Controls.Add(this.btnHuy);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(128, 255);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(289, 255);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(723, 65);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -194,7 +198,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 41);
+            this.panel2.Location = new System.Drawing.Point(173, 41);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(947, 204);
             this.panel2.TabIndex = 1;
@@ -302,7 +306,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(398, 9);
+            this.label1.Location = new System.Drawing.Point(559, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 29);
             this.label1.TabIndex = 0;
@@ -315,14 +319,10 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 326);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(971, 178);
+            this.groupBox1.Size = new System.Drawing.Size(1293, 178);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dgvThucdon
             // 
@@ -359,7 +359,7 @@
             this.dgvThucdon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvThucdon.RowTemplate.Height = 24;
             this.dgvThucdon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThucdon.Size = new System.Drawing.Size(965, 157);
+            this.dgvThucdon.Size = new System.Drawing.Size(1287, 157);
             this.dgvThucdon.TabIndex = 6;
             this.dgvThucdon.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Cyan;
             this.dgvThucdon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
@@ -386,12 +386,39 @@
             this.dgvThucdon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvThucdon_DataBindingComplete);
             this.dgvThucdon.SelectionChanged += new System.EventHandler(this.dgvThucdon_SelectionChanged);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(1073, 297);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(110, 27);
+            this.txtSearch.TabIndex = 17;
+            // 
+            // butSearch
+            // 
+            this.butSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.butSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.butSearch.Location = new System.Drawing.Point(1187, 297);
+            this.butSearch.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(100, 27);
+            this.butSearch.TabIndex = 16;
+            this.butSearch.Text = "Tìm kiếm";
+            this.butSearch.UseVisualStyleBackColor = true;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
+            // 
             // frmThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(971, 504);
+            this.ClientSize = new System.Drawing.Size(1293, 504);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmThucDon";
@@ -434,5 +461,7 @@
         private System.Windows.Forms.TextBox txtGiaNhap;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvThucdon;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button butSearch;
     }
 }
