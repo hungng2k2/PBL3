@@ -43,9 +43,25 @@ namespace PBL3.View
 
         private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                btnLogin_Click(sender,e);
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void butShowpass_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "")
+            {
+                if (txtPassword.PasswordChar == '*')
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
+
             }
         }
     }
