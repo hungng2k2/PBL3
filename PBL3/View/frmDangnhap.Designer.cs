@@ -316,6 +316,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(352, 45);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
             // 
             // frmDangnhap
             // 

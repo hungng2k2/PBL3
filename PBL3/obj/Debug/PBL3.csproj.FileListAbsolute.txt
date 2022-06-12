@@ -96,3 +96,4 @@ E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.Vie
 E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\bin\Debug\Guna.UI2.dll
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDoiMatKhau.resources
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resources
+C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDashBoard.resources

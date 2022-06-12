@@ -41,6 +41,8 @@ namespace PBL3.View
             lbKhachhang.Text = BLLKhachHang.Instance.TongKhachHang().ToString();
             lbMonAn.Text = BLLMonAn.Instance.TongMonAn().ToString();
         }
+
+
     }
     
 }
