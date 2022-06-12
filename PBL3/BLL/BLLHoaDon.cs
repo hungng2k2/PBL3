@@ -176,23 +176,28 @@ namespace PBL3.BLL
             end = end.Date;
             return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan - ct.GiaNhap));
         }
-        //public List<MonAn> Top5()
-        //{
-        //    return db.HoaDon
-        //        .Where(hd => hd.IsDelete == false)
-        //        .Select(hd => hd.Order.ChiTietOrder)
-        //        .SelectMany(ct => ct)
-        //        .GroupBy(ct => ct.id_MonAn)
-        //        .Select(gr => new
-        //        {
-        //            id_MonAn = gr.Key,
-        //            SoLuong = gr.Sum(ct => ct.SoLuong)
-        //        })
-        //        .OrderByDescending(gr => gr.SoLuong)
-        //        .Take(5)
-        //        .Select(gr => gr.id_MonAn)
-        //        .Select(id => db.MonAn.(id))
-        //        .ToList();
-        //}
+        public dynamic Top5()
+        {
+            var listID = db.HoaDon
+                .Where(hd => hd.IsDelete == false)
+                .Select(hd => hd.Order.ChiTietOrder)
+                .SelectMany(ct => ct)
+                .GroupBy(ct => ct.id_MonAn)
+                .Select(gr => new
+                {
+                    id_MonAn = gr.Key,
+                    SoLuong = gr.Sum(ct => ct.SoLuong)
+                })
+                .OrderByDescending(gr => gr.SoLuong)
+                .Take(5);
+
+            var listMonAn = db.MonAn.AsEnumerable().Join(listID, ma => ma.id_MonAn, gr => gr.id_MonAn, (ma, gr) => new
+            {
+                TenMonAn = ma.TenMonAn,
+                SoLuong = gr.SoLuong,
+            });
+
+            return listMonAn.ToArray();
+        }
     }
 }
