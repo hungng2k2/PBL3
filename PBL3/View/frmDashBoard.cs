@@ -29,10 +29,10 @@ namespace PBL3.View
             chartLoinhuan.Series[0].YValueMembers = "Tiền lời";
             chartLoinhuan.DataBind();
 
-            //chartTop5.DataSource = BLLHoaDon.Instance.Top5();
-            //chartTop5.Series[0].XValueMember = "Key";
-            //chartTop5.Series[0].YValueMembers = "Value";
-            //chartTop5.DataBind();
+            chartTop5.DataSource = BLLHoaDon.Instance.Top5();
+            chartTop5.Series[0].XValueMember = "TenMonAn";
+            chartTop5.Series[0].YValueMembers = "SoLuong";
+            chartTop5.DataBind();
 
             dgvUnderStock.DataSource = BLLMonAn.Instance.GetUnderStock();
             dgvUnderStock.Columns["id_MonAn"].HeaderText = "Mã món ăn";
