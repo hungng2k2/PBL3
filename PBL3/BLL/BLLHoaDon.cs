@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PBL3.DTO;
-
 namespace PBL3.BLL
 {
     public class BLLHoaDon : BLLInterface<HoaDon>
@@ -165,5 +164,35 @@ namespace PBL3.BLL
             end = end.Date;
             return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Count();
         }
+        public double GetTongTien(DateTime start, DateTime end)
+        {
+            start = start.Date;
+            end = end.Date;
+            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan));
+        }
+        public double GetDoanhThu(DateTime start, DateTime end)
+        {
+            start = start.Date;
+            end = end.Date;
+            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan - ct.GiaNhap));
+        }
+        //public List<MonAn> Top5()
+        //{
+        //    return db.HoaDon
+        //        .Where(hd => hd.IsDelete == false)
+        //        .Select(hd => hd.Order.ChiTietOrder)
+        //        .SelectMany(ct => ct)
+        //        .GroupBy(ct => ct.id_MonAn)
+        //        .Select(gr => new
+        //        {
+        //            id_MonAn = gr.Key,
+        //            SoLuong = gr.Sum(ct => ct.SoLuong)
+        //        })
+        //        .OrderByDescending(gr => gr.SoLuong)
+        //        .Take(5)
+        //        .Select(gr => gr.id_MonAn)
+        //        .Select(id => db.MonAn.(id))
+        //        .ToList();
+        //}
     }
 }

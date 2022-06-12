@@ -115,6 +115,10 @@ namespace PBL3.View
             OpenChildForm(new frmThongTinTaiKhoan(id_NhanVien));
         }
 
-        
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(255, 163, 26));
+            OpenChildForm(new frmDashBoard());
+        }
     }
 }

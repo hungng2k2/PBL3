@@ -29,8 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
             FontAwesome.Sharp.IconButton btnHD;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
+            FontAwesome.Sharp.IconButton btnTrangchu;
             this.btnKH = new FontAwesome.Sharp.IconButton();
             this.btnDM = new FontAwesome.Sharp.IconButton();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             btnHD = new FontAwesome.Sharp.IconButton();
+            btnTrangchu = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -51,6 +53,28 @@
             this.panelTl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnHD
+            // 
+            btnHD.FlatAppearance.BorderSize = 0;
+            btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnHD.ForeColor = System.Drawing.SystemColors.Control;
+            btnHD.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            btnHD.IconColor = System.Drawing.Color.White;
+            btnHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnHD.IconSize = 36;
+            btnHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnHD.Location = new System.Drawing.Point(0, 260);
+            btnHD.Name = "btnHD";
+            btnHD.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            btnHD.Size = new System.Drawing.Size(200, 60);
+            btnHD.TabIndex = 3;
+            btnHD.Text = "Hóa đơn";
+            btnHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnHD.UseVisualStyleBackColor = true;
+            btnHD.Click += new System.EventHandler(this.btnHD_Click);
             // 
             // btnKH
             // 
@@ -63,7 +87,7 @@
             this.btnKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKH.IconSize = 36;
             this.btnKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKH.Location = new System.Drawing.Point(0, 80);
+            this.btnKH.Location = new System.Drawing.Point(0, 140);
             this.btnKH.Name = "btnKH";
             this.btnKH.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnKH.Size = new System.Drawing.Size(200, 60);
@@ -85,7 +109,7 @@
             this.btnDM.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDM.IconSize = 36;
             this.btnDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDM.Location = new System.Drawing.Point(0, 140);
+            this.btnDM.Location = new System.Drawing.Point(0, 200);
             this.btnDM.Name = "btnDM";
             this.btnDM.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnDM.Size = new System.Drawing.Size(200, 60);
@@ -99,6 +123,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(btnTrangchu);
             this.panelMenu.Controls.Add(btnHD);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.iconButton1);
@@ -151,7 +176,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 36;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 260);
+            this.iconButton1.Location = new System.Drawing.Point(0, 320);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.iconButton1.Size = new System.Drawing.Size(200, 60);
@@ -228,27 +253,27 @@
             this.panelDesktop.Size = new System.Drawing.Size(930, 551);
             this.panelDesktop.TabIndex = 2;
             // 
-            // btnHD
+            // btnTrangchu
             // 
-            btnHD.FlatAppearance.BorderSize = 0;
-            btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnHD.ForeColor = System.Drawing.SystemColors.Control;
-            btnHD.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            btnHD.IconColor = System.Drawing.Color.White;
-            btnHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnHD.IconSize = 36;
-            btnHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnHD.Location = new System.Drawing.Point(0, 200);
-            btnHD.Name = "btnHD";
-            btnHD.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            btnHD.Size = new System.Drawing.Size(200, 60);
-            btnHD.TabIndex = 3;
-            btnHD.Text = "Hóa đơn";
-            btnHD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnHD.UseVisualStyleBackColor = true;
-            btnHD.Click += new System.EventHandler(this.btnHD_Click);
+            btnTrangchu.FlatAppearance.BorderSize = 0;
+            btnTrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnTrangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnTrangchu.ForeColor = System.Drawing.SystemColors.Control;
+            btnTrangchu.IconChar = FontAwesome.Sharp.IconChar.Home;
+            btnTrangchu.IconColor = System.Drawing.Color.White;
+            btnTrangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTrangchu.IconSize = 36;
+            btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnTrangchu.Location = new System.Drawing.Point(0, 74);
+            btnTrangchu.Name = "btnTrangchu";
+            btnTrangchu.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            btnTrangchu.Size = new System.Drawing.Size(200, 60);
+            btnTrangchu.TabIndex = 4;
+            btnTrangchu.Text = "Trang chủ";
+            btnTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnTrangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnTrangchu.UseVisualStyleBackColor = true;
+            btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
             // frmNhanvien
             // 

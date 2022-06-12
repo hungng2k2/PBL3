@@ -105,5 +105,9 @@ namespace PBL3.BLL
                 .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
                 .ToList();
         }
+        public int TongKhachHang()
+        {
+            return db.KhachHang.Where(p => p.IsDeleted == false).Count();
+        }
     }
 }

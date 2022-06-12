@@ -171,5 +171,16 @@ namespace PBL3.BLL
                 .Select(p => new { p.id_MonAn, p.TenMonAn, p.SoLuong, p.GiaNhap, p.GiaBan })
                 .OrderBy(p => p.SoLuong).ToList();
         }
+        public dynamic GetUnderStock()
+        {
+            return db.MonAn
+                .Where(p => p.IsDeleted == false)
+                .Where(p => p.SoLuong == 0)
+                .Select(p => new { p.id_MonAn, p.TenMonAn }).ToList();
+        }
+        public int TongMonAn()
+        {
+            return db.MonAn.Where(p => p.IsDeleted == false).Count();
+        }
     }
 }
