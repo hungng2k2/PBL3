@@ -83,7 +83,7 @@ namespace PBL3.BLL
         {
             return db.HoaDon
                 .Where(p => p.IsDelete == false)
-                .Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, TongTien = p.Order.ChiTietOrder.Sum(ct => ct.GiaBan) }).ToList();
+                .Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, TongTien = p.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong) }).ToList();
         }
 
         public HoaDon GetById(string id)

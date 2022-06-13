@@ -92,7 +92,7 @@ namespace PBL3.BLL
         }
         public double GetTongGiaBanByIdOrder(string id_Order)
         {
-            return db.ChiTietOrder.Where(ct => ct.id_Order == id_Order).Sum(t => t.GiaBan);
+            return db.ChiTietOrder.Where(ct => ct.id_Order == id_Order).Sum(t => t.GiaBan * t.SoLuong);
         }
     }
 }
