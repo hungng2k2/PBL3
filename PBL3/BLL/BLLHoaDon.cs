@@ -166,13 +166,13 @@ namespace PBL3.BLL
         {
             start = start.Date;
             end = end.Date;
-            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan));
+            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong));
         }
         public double GetDoanhThu(DateTime start, DateTime end)
         {
             start = start.Date;
             end = end.Date;
-            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan - ct.GiaNhap));
+            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong - ct.GiaNhap * ct.SoLuong));
         }
         public dynamic Top5()
         {
