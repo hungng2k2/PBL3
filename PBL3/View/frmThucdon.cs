@@ -144,14 +144,29 @@ namespace PBL3.View
                     MessageBox.Show("Vui lòng nhập tên món ăn!");
                     return;
                 }
+                if(BLLValidation.Instance.CheckName(txtTenMon.Text) == false)
+                {
+                    MessageBox.Show("Tên món ăn không hợp lệ!");
+                    return;
+                }
                 if (txtGiaBan.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập giá bán!");
                     return;
                 }
+                if (BLLValidation.Instance.CheckNumber(txtGiaBan.Text) == false)
+                {
+                    MessageBox.Show("Giá bán không hợp lệ!");
+                    return;
+                }
                 if (txtGiaNhap.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập giá nhập!");
+                    return;
+                }
+                if (BLLValidation.Instance.CheckNumber(txtGiaNhap.Text) == false)
+                {
+                    MessageBox.Show("Giá nhập không hợp lệ!");
                     return;
                 }
                 if (Convert.ToDouble(txtGiaBan.Text) < Convert.ToDouble(txtGiaNhap.Text))

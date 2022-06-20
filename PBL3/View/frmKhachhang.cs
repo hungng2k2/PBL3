@@ -116,6 +116,36 @@ namespace PBL3.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtTenKhachHang.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckName(txtTenKhachHang.Text) == false)
+            {
+                MessageBox.Show("Tên khách hàng không hợp lệ!");
+                return;
+            }
+            if (rbMale.Checked == false && rbFemale.Checked == false)
+            {
+                MessageBox.Show("Vui lòng chọn giới tính!");
+                return;
+            }
+            if (txtSoDienThoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckPhoneNumber(txtSoDienThoai.Text) == false)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!");
+                return;
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ!");
+                return;
+            }
             BLLKhachHang.Instance.ExecuteAddUpdate(new KhachHang
             {
                 id_KhachHang = txtMaKhachHang.Text,

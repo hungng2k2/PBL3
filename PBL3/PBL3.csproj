@@ -76,6 +76,7 @@
     <Compile Include="BLL\BLLMonAn.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
+    <Compile Include="BLL\BLLValidation.cs" />
     <Compile Include="View\frmChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>

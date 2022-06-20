@@ -1,6 +1,7 @@
 ﻿using PBL3.BLL;
 using PBL3.DTO;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace PBL3.View
@@ -108,6 +109,11 @@ namespace PBL3.View
                 MessageBox.Show("Vui lòng nhập tên nhân viên!");
                 return;
             }
+            if (BLLValidation.Instance.CheckName(txtTenNhanVien.Text) == false)
+            {
+                MessageBox.Show("Tên nhân viên không hợp lệ!");
+                return;
+            }
             if ((DateTime.Now.Year - dpNgaySinh.Value.Year) < 16)
             {
                 MessageBox.Show("Ngày sinh không hợp lệ!");
@@ -121,6 +127,11 @@ namespace PBL3.View
             if (txtSoDienThoai.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckPhoneNumber(txtSoDienThoai.Text) == false)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!");
                 return;
             }
             if (txtDiaChi.Text == "")
