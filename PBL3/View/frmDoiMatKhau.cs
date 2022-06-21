@@ -61,5 +61,38 @@ namespace PBL3.View
         {
             this.Close();
         }
+
+        private void butShowPassOld_Click(object sender, EventArgs e)
+        {
+            if (txtMKcu.Text != "")
+            {
+                if (txtMKcu.PasswordChar == '*')
+                {
+                    txtMKcu.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtMKcu.PasswordChar = '*';
+                }
+
+            }
+        }
+
+        private void butShowPassNew_Click(object sender, EventArgs e)
+        {
+            if (txtMKmoi.Text != "")
+            {
+                if (txtMKmoi.PasswordChar == '*')
+                {
+                    txtMKmoi.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtMKmoi.PasswordChar = '*';
+                }
+
+            }
+        }
+
     }
 }

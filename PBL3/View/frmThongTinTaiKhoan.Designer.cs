@@ -34,8 +34,11 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lbDc = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbSdt = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
             this.lbGioitinh = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +50,6 @@
             this.butCapnhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbSdt = new System.Windows.Forms.Label();
-            this.lbDc = new System.Windows.Forms.Label();
-            this.lbDate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +130,16 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Tên đăng nhập:";
             // 
+            // lbDc
+            // 
+            this.lbDc.AutoSize = true;
+            this.lbDc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDc.Location = new System.Drawing.Point(618, 83);
+            this.lbDc.Name = "lbDc";
+            this.lbDc.Size = new System.Drawing.Size(71, 25);
+            this.lbDc.TabIndex = 15;
+            this.lbDc.Text = "Địa chỉ";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -140,6 +150,16 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Địa chỉ:";
             // 
+            // lbSdt
+            // 
+            this.lbSdt.AutoSize = true;
+            this.lbSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSdt.Location = new System.Drawing.Point(618, 36);
+            this.lbSdt.Name = "lbSdt";
+            this.lbSdt.Size = new System.Drawing.Size(126, 25);
+            this.lbSdt.TabIndex = 16;
+            this.lbSdt.Text = "Số điện thoại";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -149,6 +169,16 @@
             this.label6.Size = new System.Drawing.Size(132, 25);
             this.label6.TabIndex = 16;
             this.label6.Text = "Số điện thoại:";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(197, 133);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(99, 25);
+            this.lbDate.TabIndex = 17;
+            this.lbDate.Text = "Ngày sinh";
             // 
             // lbGioitinh
             // 
@@ -185,7 +215,7 @@
             this.lbChucvu.AutoSize = true;
             this.lbChucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChucvu.ForeColor = System.Drawing.Color.Red;
-            this.lbChucvu.Location = new System.Drawing.Point(197, 79);
+            this.lbChucvu.Location = new System.Drawing.Point(197, 81);
             this.lbChucvu.Name = "lbChucvu";
             this.lbChucvu.Size = new System.Drawing.Size(92, 25);
             this.lbChucvu.TabIndex = 19;
@@ -269,36 +299,6 @@
             this.label1.Size = new System.Drawing.Size(256, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin tài khoản";
-            // 
-            // lbSdt
-            // 
-            this.lbSdt.AutoSize = true;
-            this.lbSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSdt.Location = new System.Drawing.Point(618, 36);
-            this.lbSdt.Name = "lbSdt";
-            this.lbSdt.Size = new System.Drawing.Size(126, 25);
-            this.lbSdt.TabIndex = 16;
-            this.lbSdt.Text = "Số điện thoại";
-            // 
-            // lbDc
-            // 
-            this.lbDc.AutoSize = true;
-            this.lbDc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDc.Location = new System.Drawing.Point(618, 83);
-            this.lbDc.Name = "lbDc";
-            this.lbDc.Size = new System.Drawing.Size(71, 25);
-            this.lbDc.TabIndex = 15;
-            this.lbDc.Text = "Địa chỉ";
-            // 
-            // lbDate
-            // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(197, 133);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(82, 25);
-            this.lbDate.TabIndex = 17;
-            this.lbDate.Text = "Giới tính";
             // 
             // frmThongTinTaiKhoan
             // 

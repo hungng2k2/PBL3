@@ -184,7 +184,7 @@
             this.lbHoadon.AutoSize = true;
             this.lbHoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoadon.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lbHoadon.Location = new System.Drawing.Point(99, 45);
+            this.lbHoadon.Location = new System.Drawing.Point(111, 45);
             this.lbHoadon.Name = "lbHoadon";
             this.lbHoadon.Size = new System.Drawing.Size(54, 20);
             this.lbHoadon.TabIndex = 3;

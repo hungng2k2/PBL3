@@ -99,3 +99,4 @@ C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmThongTinTaiKhoan.resou
 C:\Users\admin\Documents\PBL3\PBL3\obj\Debug\PBL3.View.frmDashBoard.resources
 D:\PBL3\PBL3\bin\Debug\Guna.UI2.dll
 D:\PBL3\PBL3\obj\Debug\PBL3.View.frmDashBoard.resources
+E:\DUT - Sophomore\PBL3 - Công nghệ phần mềm\Code\PBL3\obj\Debug\PBL3.View.frmDashBoard.resources

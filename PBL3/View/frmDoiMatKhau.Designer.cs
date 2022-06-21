@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.butShowPassNew = new FontAwesome.Sharp.IconButton();
+            this.butShowPassOld = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.iconButtonHuy = new FontAwesome.Sharp.IconButton();
             this.iconButtonCapnhat = new FontAwesome.Sharp.IconButton();
@@ -43,6 +45,8 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.butShowPassNew);
+            this.guna2CustomGradientPanel1.Controls.Add(this.butShowPassOld);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.iconButtonHuy);
             this.guna2CustomGradientPanel1.Controls.Add(this.iconButtonCapnhat);
@@ -61,6 +65,38 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(793, 426);
             this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // butShowPassNew
+            // 
+            this.butShowPassNew.BackColor = System.Drawing.Color.White;
+            this.butShowPassNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butShowPassNew.ForeColor = System.Drawing.Color.Transparent;
+            this.butShowPassNew.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.butShowPassNew.IconColor = System.Drawing.Color.Black;
+            this.butShowPassNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.butShowPassNew.IconSize = 24;
+            this.butShowPassNew.Location = new System.Drawing.Point(630, 178);
+            this.butShowPassNew.Name = "butShowPassNew";
+            this.butShowPassNew.Size = new System.Drawing.Size(31, 18);
+            this.butShowPassNew.TabIndex = 60;
+            this.butShowPassNew.UseVisualStyleBackColor = false;
+            this.butShowPassNew.Click += new System.EventHandler(this.butShowPassNew_Click);
+            // 
+            // butShowPassOld
+            // 
+            this.butShowPassOld.BackColor = System.Drawing.Color.White;
+            this.butShowPassOld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butShowPassOld.ForeColor = System.Drawing.Color.Transparent;
+            this.butShowPassOld.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.butShowPassOld.IconColor = System.Drawing.Color.Black;
+            this.butShowPassOld.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.butShowPassOld.IconSize = 24;
+            this.butShowPassOld.Location = new System.Drawing.Point(630, 130);
+            this.butShowPassOld.Name = "butShowPassOld";
+            this.butShowPassOld.Size = new System.Drawing.Size(31, 18);
+            this.butShowPassOld.TabIndex = 59;
+            this.butShowPassOld.UseVisualStyleBackColor = false;
+            this.butShowPassOld.Click += new System.EventHandler(this.butShowPassOld_Click);
             // 
             // label4
             // 
@@ -158,9 +194,9 @@
             this.label2.ForeColor = System.Drawing.Color.Khaki;
             this.label2.Location = new System.Drawing.Point(131, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 25);
+            this.label2.Size = new System.Drawing.Size(225, 25);
             this.label2.TabIndex = 52;
-            this.label2.Text = "Nhập lại mật khẩu";
+            this.label2.Text = "Nhập lại mật khẩu mới";
             // 
             // txtMKmoi
             // 
@@ -203,5 +239,7 @@
         private System.Windows.Forms.TextBox txtMKcu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMKmoi;
+        private FontAwesome.Sharp.IconButton butShowPassNew;
+        private FontAwesome.Sharp.IconButton butShowPassOld;
     }
 }

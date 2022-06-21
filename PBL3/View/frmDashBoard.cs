@@ -21,8 +21,8 @@ namespace PBL3.View
         private void frmDashBoard_Load(object sender, EventArgs e)
         {
             lbHoadon.Text = BLLHoaDon.Instance.GetSoHoaDon(DateTime.MinValue,DateTime.MaxValue).ToString();
-            lbTongban.Text = BLLHoaDon.Instance.GetTongTien(DateTime.MinValue, DateTime.MaxValue).ToString();
-            lbLoiNhuan.Text = BLLHoaDon.Instance.GetDoanhThu(DateTime.MinValue, DateTime.MaxValue).ToString();
+            lbTongban.Text = BLLHoaDon.Instance.GetTongTien(DateTime.MinValue, DateTime.MaxValue).ToString("n0");
+            lbLoiNhuan.Text = BLLHoaDon.Instance.GetDoanhThu(DateTime.MinValue, DateTime.MaxValue).ToString("n0");
 
             chartLoinhuan.DataSource = BLLHoaDon.Instance.ThongKeChart(DateTime.Today.AddMonths(-1), DateTime.Now);
             chartLoinhuan.Series[0].XValueMember = "Ngày";
