@@ -51,7 +51,7 @@ namespace PBL3.View
                 GioiTinh = nv.GioiTinh,
                 SoDienThoai = txtSdt.Text,
                 DiaChi = txtDiachi.Text,
-                Username = nv.Username,
+                Username = txtUsername.Text,
                 ChucVu = nv.ChucVu,
                 Password = nv.Password,
             });
