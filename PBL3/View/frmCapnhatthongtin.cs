@@ -25,7 +25,10 @@ namespace PBL3.View
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             txtID.Text = nv.id_NhanVien;
             txtTen.Text = nv.TenNhanVien;
-            txtChucvu.Text = nv.ChucVu;
+            if (nv.ChucVu == "QuanLy")
+                txtChucvu.Text = "Quản lý";
+            else
+                txtChucvu.Text = "Nhân viên";
             txtDiachi.Text = nv.DiaChi;
             txtSdt.Text = nv.SoDienThoai;
             dateTimePicker1.Value = nv.NgaySinh;

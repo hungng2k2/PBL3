@@ -107,6 +107,7 @@
             this.dgvDSMonAn.Name = "dgvDSMonAn";
             this.dgvDSMonAn.RowHeadersWidth = 51;
             this.dgvDSMonAn.RowTemplate.Height = 24;
+            this.dgvDSMonAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSMonAn.Size = new System.Drawing.Size(870, 331);
             this.dgvDSMonAn.TabIndex = 0;
             this.dgvDSMonAn.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSMonAn_DataBindingComplete);

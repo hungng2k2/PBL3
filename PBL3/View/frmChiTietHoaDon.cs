@@ -31,7 +31,7 @@ namespace PBL3.View
             HoaDon hd = BLLHoaDon.Instance.GetById(id_HoaDon);
             dgvDSMonAn.DataSource = BLLChiTietOrder.Instance.GetByIdOrder(hd.id_Order);
             lblKhachHang.Text = BLLKhachHang.Instance.GetById(BLLOrder.Instance.GetById(hd.id_Order).id_KhachHang).TenKhachHang;
-            lblTongTien.Text = BLLOrder.Instance.GetTongGiaBanByIdOrder(hd.id_Order).ToString();
+            lblTongTien.Text = BLLOrder.Instance.GetTongGiaBanByIdOrder(hd.id_Order).ToString("n0");
         }
 
         private void dgvDSMonAn_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

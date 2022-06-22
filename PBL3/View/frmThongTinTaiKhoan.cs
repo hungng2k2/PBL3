@@ -28,9 +28,9 @@ namespace PBL3.View
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             lbTen.Text = nv.TenNhanVien;
             if (nv.ChucVu == "QuanLy")
-                lbChucvu.Text = "Quản Lý";
+                lbChucvu.Text = "Quản lý";
             else
-                lbChucvu.Text = "Nhân Viên";
+                lbChucvu.Text = "Nhân viên";
             lbDc.Text = nv.DiaChi;
             lbSdt.Text = nv.SoDienThoai;
             lbDate.Text = nv.NgaySinh.ToString("dd/MM/yyyy");

@@ -41,7 +41,14 @@ namespace PBL3.View
             int i = 1;
             foreach (ChiTietOrder item in list_orders)
             {
-                ListViewItem listviewItem = new ListViewItem(new string[] { i + ".", BLLMonAn.Instance.GetById(item.id_MonAn).TenMonAn, item.SoLuong.ToString(), item.GiaBan.ToString("n0"), (item.SoLuong * item.GiaBan).ToString("n0") });
+                ListViewItem listviewItem = new ListViewItem(new string[] 
+                { 
+                    i + ".", 
+                    BLLMonAn.Instance.GetById(item.id_MonAn).TenMonAn, 
+                    item.SoLuong.ToString(), 
+                    item.GiaBan.ToString("n0"), 
+                    (item.SoLuong * item.GiaBan).ToString("n0") 
+                });
                 i++;
                 listView1.Items.Add(listviewItem);
                 sum = sum + item.SoLuong * item.GiaBan;
