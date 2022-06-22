@@ -49,8 +49,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.txtGiamgia = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtThoigian = new System.Windows.Forms.TextBox();
@@ -167,8 +165,6 @@
             // 
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.txtGiamgia);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtThoigian);
@@ -203,16 +199,6 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtGiamgia
-            // 
-            resources.ApplyResources(this.txtGiamgia, "txtGiamgia");
-            this.txtGiamgia.Name = "txtGiamgia";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
             // 
             // txtSDT
             // 
@@ -309,8 +295,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtGiamgia;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtThoigian;
