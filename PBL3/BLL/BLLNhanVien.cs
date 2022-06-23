@@ -1,10 +1,11 @@
 ﻿using PBL3.DTO;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PBL3.BLL
 {
-    public class BLLNhanVien : BLLInterface<NhanVien>
+    public class BLLNhanVien
     {        
         QLCHTAN db = new QLCHTAN();
         private static BLLNhanVien _Instance;
@@ -93,11 +94,18 @@ namespace PBL3.BLL
             db.NhanVien.Find(id).Password = "123456";
             db.SaveChanges();
         }
-        public dynamic GetAll()
+        public List<NhanVien_View> GetAll()
         {
             return db.NhanVien
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi})
+                .Select(p => new NhanVien_View { 
+                    id_NhanVien = p.id_NhanVien,
+                    TenNhanVien = p.TenNhanVien,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
 
@@ -128,32 +136,64 @@ namespace PBL3.BLL
             }
             return id.Trim();
         }
-        public dynamic SearchById(string txt)
+        public List<NhanVien_View> SearchById(string txt)
         {
             return db.NhanVien
                 .Where(p => p.IsDeleted == false && p.id_NhanVien.ToLower().Contains(txt.ToLower()))
-                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new NhanVien_View
+                {
+                    id_NhanVien = p.id_NhanVien,
+                    TenNhanVien = p.TenNhanVien,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
-        public dynamic SearchByTenNhanVien(string txt)
+        public List<NhanVien_View> SearchByTenNhanVien(string txt)
         {
             return db.NhanVien
                 .Where(p => p.IsDeleted == false && p.TenNhanVien.ToLower().Contains(txt.ToLower()))
-                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new NhanVien_View
+                {
+                    id_NhanVien = p.id_NhanVien,
+                    TenNhanVien = p.TenNhanVien,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
-        public dynamic SearchBySoDienThoai(string txt)
+        public List<NhanVien_View> SearchBySoDienThoai(string txt)
         {
             return db.NhanVien
                 .Where(p => p.IsDeleted == false && p.SoDienThoai.ToLower().Contains(txt.ToLower()))
-                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new NhanVien_View
+                {
+                    id_NhanVien = p.id_NhanVien,
+                    TenNhanVien = p.TenNhanVien,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
-        public dynamic SearchByDiaChi(string txt)
+        public List<NhanVien_View> SearchByDiaChi(string txt)
         {
             return db.NhanVien
                 .Where(p => p.IsDeleted == false && p.DiaChi.ToLower().Contains(txt.ToLower()))
-                .Select(p => new { p.id_NhanVien, p.TenNhanVien, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new NhanVien_View
+                {
+                    id_NhanVien = p.id_NhanVien,
+                    TenNhanVien = p.TenNhanVien,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
     }

@@ -7,7 +7,7 @@ using PBL3.DTO;
 
 namespace PBL3.BLL
 {
-    public class BLLChiTietOrder : BLLInterface<ChiTietOrder>
+    public class BLLChiTietOrder
     {
         QLCHTAN db;
         private static BLLChiTietOrder _Instance;
@@ -86,7 +86,7 @@ namespace PBL3.BLL
             }
         }
 
-        public dynamic GetAll()
+        public List<ChiTietOrder> GetAll()
         {
             return db.ChiTietOrder.Select(p => p).ToList();
         }
@@ -95,13 +95,18 @@ namespace PBL3.BLL
         {
             return db.ChiTietOrder.Find(id);
         }
-        public dynamic GetByIdOrder(string id_Order)
+        public List<ChiTietOrder_View> GetByIdOrder(string id_Order)
         {
             return db.ChiTietOrder.Where(p => p.id_Order == id_Order)
-                .Select(p => new { p.MonAn.TenMonAn, p.SoLuong, p.GiaBan, ThanhTien = p.GiaBan * p.SoLuong })
+                .Select(p => new ChiTietOrder_View {
+                    TenMonAn = p.MonAn.TenMonAn,
+                    SoLuong = p.SoLuong,
+                    GiaBan = p.GiaBan,
+                    ThanhTien = p.GiaBan * p.SoLuong
+                })
                 .ToList();
         }
-        public void ExcuteListOrder(string id_Order, List<ChiTietOrder> chiTiets)
+        public void ExecuteListOrder(string id_Order, List<ChiTietOrder> chiTiets)
         {
             foreach (ChiTietOrder chiTiet in chiTiets)
             {

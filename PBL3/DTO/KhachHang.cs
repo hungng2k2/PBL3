@@ -19,6 +19,7 @@ namespace PBL3.DTO
         public string TenKhachHang { get; set; }
         public DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
+        [StringLength(10)]
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
         public bool IsDeleted { get; set; }

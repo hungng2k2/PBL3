@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 namespace PBL3.BLL
 {
-    public class BLLHoaDon : BLLInterface<HoaDon>
+    public class BLLHoaDon
     {
         QLCHTAN db = new QLCHTAN();
         private static BLLHoaDon _Instance;
@@ -79,11 +79,18 @@ namespace PBL3.BLL
             }
         }
 
-        public dynamic GetAll()
+        public List<HoaDon_View> GetAll()
         {
             return db.HoaDon
                 .Where(p => p.IsDelete == false)
-                .Select(p => new { p.id_HoaDon, p.Order.NhanVien.TenNhanVien, p.Order.KhachHang.TenKhachHang, p.NgayLap, TongTien = p.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong) }).ToList();
+                .Select(p => new HoaDon_View{
+                    id_HoaDon = p.id_HoaDon,
+                    TenNhanVien = p.Order.NhanVien.TenNhanVien,
+                    TenKhachHang = p.Order.KhachHang.TenKhachHang,
+                    NgayLap = p.NgayLap,
+                    TongTien = p.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong)
+                })
+                .ToList();
         }
 
         public HoaDon GetById(string id)
@@ -113,17 +120,17 @@ namespace PBL3.BLL
                 id_Order = id_Order,
                 NgayLap = DateTime.Now
             });
-            BLLChiTietOrder.Instance.ExcuteListOrder(id_Order, chiTiets);
+            BLLChiTietOrder.Instance.ExecuteListOrder(id_Order, chiTiets);
         }
 
-        public dynamic ThongKe(DateTime start, DateTime end)
+        public List<HoaDon_ViewThongKe> ThongKe(DateTime start, DateTime end)
         {
             start = start.Date;
             end = end.Date;
             var q = db.HoaDon
                 .Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end)
                 .GroupBy(hd => hd.NgayLap)
-                .Select(gr => new
+                .Select(gr => new HoaDon_ViewThongKe
                 {
                     Ngay = gr.Key,
                     SoLuongHoaDon = gr.Count(),
@@ -166,13 +173,19 @@ namespace PBL3.BLL
         {
             start = start.Date;
             end = end.Date;
-            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong));
+            if (db.HoaDon.Select(hd => hd).Count() == 0)
+                return 0;
+            else
+                return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong));
         }
         public double GetDoanhThu(DateTime start, DateTime end)
         {
             start = start.Date;
             end = end.Date;
-            return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong - ct.GiaNhap * ct.SoLuong));
+            if (db.HoaDon.Select(hd => hd).Count() == 0)
+                return 0;
+            else
+                return db.HoaDon.Where(hd => hd.IsDelete == false && hd.NgayLap >= start && hd.NgayLap <= end).Sum(hd => hd.Order.ChiTietOrder.Sum(ct => ct.GiaBan * ct.SoLuong - ct.GiaNhap * ct.SoLuong));
         }
         public dynamic Top5()
         {

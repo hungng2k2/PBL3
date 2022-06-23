@@ -26,7 +26,7 @@ namespace PBL3.View
         private void Reload()
         {
             itemFoods.Clear();
-            var data = BLLMonAn.Instance.GetAll2();
+            var data = BLLMonAn.Instance.GetAll();
             foreach (var item in data)
             {
                 itemFoods.Add(new ItemFood(item.id_MonAn));

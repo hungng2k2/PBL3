@@ -72,7 +72,7 @@ namespace PBL3.View
 
         public void Reload()
         {
-            dgvThucdon.DataSource = BLLMonAn.Instance.GetAll();
+            dgvThucdon.DataSource = BLLMonAn.Instance.GetAllMonAnViewThucDon();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace PBL3.View
             string search = txtSearch.Text;
             if (search.Length > 0)
             {
-                dgvThucdon.DataSource = BLLMonAn.Instance.Search(search);
+                dgvThucdon.DataSource = BLLMonAn.Instance.SearchMonAnViewThucDon(search);
             }
             else
             {

@@ -8,7 +8,7 @@ using PBL3.DTO;
 
 namespace PBL3.BLL
 {
-    public class BLLOrder : BLLInterface<Order>
+    public class BLLOrder
     {
         QLCHTAN db = new QLCHTAN();
         private static BLLOrder _Instance;
@@ -80,12 +80,6 @@ namespace PBL3.BLL
                 db.SaveChanges();
             }
         }
-
-        public dynamic GetAll()
-        {
-            return db.Order.Select(p => new { p.id_Order, p.NhanVien, p.KhachHang, TongNhap = p.ChiTietOrder.Sum(ct => ct.GiaNhap), TongTien = p.ChiTietOrder.Sum(ct => ct.GiaBan) }).ToList();
-        }
-
         public Order GetById(string id)
         {
             return db.Order.Find(id);

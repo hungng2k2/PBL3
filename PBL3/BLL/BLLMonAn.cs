@@ -1,11 +1,12 @@
 ﻿using PBL3.DTO;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 namespace PBL3.BLL
 {
-    public class BLLMonAn : BLLInterface<MonAn>
+    public class BLLMonAn
     {
         QLCHTAN db = new QLCHTAN();
 
@@ -115,14 +116,20 @@ namespace PBL3.BLL
             }
         }
 
-        public dynamic GetAll()
+        public List<MonAn_ViewThucDon> GetAllMonAnViewThucDon()
         {
             return db.MonAn
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new { p.id_MonAn, p.TenMonAn, p.GiaNhap, p.GiaBan }).ToList();
+                .Select(p => new MonAn_ViewThucDon{
+                    id_MonAn = p.id_MonAn,
+                    TenMonAn = p.TenMonAn,
+                    GiaNhap = p.GiaNhap,
+                    GiaBan = p.GiaBan 
+                })
+                .ToList();
         }
 
-        public dynamic GetAll2()
+        public List<MonAn> GetAll()
         {
             return db.MonAn
                 .Where(p => p.IsDeleted == false)
@@ -133,11 +140,19 @@ namespace PBL3.BLL
         {
             return db.MonAn.Find(id);
         }
-        public dynamic GetMonAn()
+        public List<MonAn_ViewKho> GetAllMonAnViewKho()
         {
             return db.MonAn
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new { p.id_MonAn, p.TenMonAn, p.SoLuong, p.GiaNhap ,p.GiaBan }).OrderBy(p => p.SoLuong).ToList();
+                .Select(p => new MonAn_ViewKho{
+                    id_MonAn = p.id_MonAn,
+                    TenMonAn = p.TenMonAn,
+                    SoLuong = p.SoLuong,
+                    GiaNhap = p.GiaNhap,
+                    GiaBan = p.GiaBan 
+                })
+                .OrderBy(p => p.SoLuong)
+                .ToList();
         }
         public void Sell(string id_MonAn, int soLuong)
         {
@@ -151,20 +166,35 @@ namespace PBL3.BLL
                 imagePath = monAn.imagePath,
             });
         }
-        public dynamic Search(string name)
+        public List<MonAn_ViewThucDon> SearchMonAnViewThucDon(string name)
         {
             return db.MonAn
                 .Where(p => p.IsDeleted == false)
                 .Where(p => p.TenMonAn.Contains(name.ToLower()))
-                .Select(p => new { p.id_MonAn, p.TenMonAn, p.GiaNhap, p.GiaBan }).ToList();
+                .Select(p => new MonAn_ViewThucDon
+                {
+                    id_MonAn = p.id_MonAn,
+                    TenMonAn = p.TenMonAn,
+                    GiaNhap = p.GiaNhap,
+                    GiaBan = p.GiaBan
+                })
+                .ToList();
         }
-        public dynamic SearchMonan(string name)
+        public List<MonAn_ViewKho> SearchMonAnViewKho(string name)
         {
             return db.MonAn
                 .Where(p => p.IsDeleted == false)
                 .Where(p => p.TenMonAn.Contains(name.ToLower()))
-                .Select(p => new { p.id_MonAn, p.TenMonAn, p.SoLuong, p.GiaNhap, p.GiaBan })
-                .OrderBy(p => p.SoLuong).ToList();
+                .Select(p => new MonAn_ViewKho
+                {
+                    id_MonAn = p.id_MonAn,
+                    TenMonAn = p.TenMonAn,
+                    SoLuong = p.SoLuong,
+                    GiaNhap = p.GiaNhap,
+                    GiaBan = p.GiaBan
+                })
+                .OrderBy(p => p.SoLuong)
+                .ToList();
         }
         public dynamic GetUnderStock()
         {
