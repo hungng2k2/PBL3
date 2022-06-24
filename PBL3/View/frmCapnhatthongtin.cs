@@ -45,6 +45,36 @@ namespace PBL3.View
 
         private void iconButtonCapnhat_Click(object sender, EventArgs e)
         {
+            if (txtTen.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckName(txtTen.Text) == false)
+            {
+                MessageBox.Show("Tên không hợp lệ!");
+                return;
+            }
+            if ((DateTime.Now.Year - dateTimePicker1.Value.Year) < 16)
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ!");
+                return;
+            }
+            if (txtSdt.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckPhoneNumber(txtSdt.Text) == false)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!");
+                return;
+            }
+            if (txtDiachi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ!");
+                return;
+            }
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
             BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
             {

@@ -26,7 +26,7 @@ namespace PBL3.View
         }
         public void Reload()
         {
-            dgvDSMonAn.DataSource = BLLMonAn.Instance.GetMonAn();
+            dgvDSMonAn.DataSource = BLLMonAn.Instance.GetAllMonAnViewKho();
         }
 
         private void dgvDSMonAn_SelectionChanged(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace PBL3.View
             string search = txtSearch.Text;
             if (search.Length > 0)
             {
-                dgvDSMonAn.DataSource = BLLMonAn.Instance.SearchMonan(search);
+                dgvDSMonAn.DataSource = BLLMonAn.Instance.SearchMonAnViewKho(search);
             }
             else
             {

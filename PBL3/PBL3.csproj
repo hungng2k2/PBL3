@@ -77,6 +77,13 @@
     <Compile Include="BLL\BLLNhanVien.cs" />
     <Compile Include="BLL\BLLOrder.cs" />
     <Compile Include="BLL\BLLValidation.cs" />
+    <Compile Include="DTO\ChiTietOrder_View.cs" />
+    <Compile Include="DTO\HoaDon_View.cs" />
+    <Compile Include="DTO\HoaDon_ViewThongKe.cs" />
+    <Compile Include="DTO\KhachHang_View.cs" />
+    <Compile Include="DTO\MonAn_ViewKho.cs" />
+    <Compile Include="DTO\MonAn_ViewThucDon.cs" />
+    <Compile Include="DTO\NhanVien_View.cs" />
     <Compile Include="View\frmChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>

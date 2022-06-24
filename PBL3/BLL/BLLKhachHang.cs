@@ -1,10 +1,11 @@
 ﻿using PBL3.DTO;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PBL3.BLL
 {
-    public class BLLKhachHang : BLLInterface<KhachHang>
+    public class BLLKhachHang
     {
         QLCHTAN db = new QLCHTAN();
         private static BLLKhachHang _Instance;
@@ -85,11 +86,18 @@ namespace PBL3.BLL
             }
         }
 
-        public dynamic GetAll()
+        public List<KhachHang_View> GetAll()
         {
             return db.KhachHang
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new KhachHang_View{
+                    id_KhachHang = p.id_KhachHang,
+                    TenKhachHang = p.TenKhachHang,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi 
+                })
                 .ToList();
         }
 
@@ -97,12 +105,20 @@ namespace PBL3.BLL
         {
             return db.KhachHang.Find(id);
         }
-        public dynamic Search(string name)
+        public List<KhachHang_View> Search(string name)
         {
             return db.KhachHang
                 .Where(p => p.IsDeleted == false)
                 .Where(p => p.TenKhachHang.Contains(name.ToLower()))
-                .Select(p => new { p.id_KhachHang, p.TenKhachHang, p.NgaySinh, GioiTinh = p.GioiTinh ? "Nam" : "Nữ", p.SoDienThoai, p.DiaChi })
+                .Select(p => new KhachHang_View
+                {
+                    id_KhachHang = p.id_KhachHang,
+                    TenKhachHang = p.TenKhachHang,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh ? "Nam" : "Nữ",
+                    SoDienThoai = p.SoDienThoai,
+                    DiaChi = p.DiaChi
+                })
                 .ToList();
         }
         public int TongKhachHang()
