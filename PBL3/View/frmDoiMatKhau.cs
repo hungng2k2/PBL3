@@ -49,7 +49,14 @@ namespace PBL3.View
                         {
                             MessageBox.Show("Đổi mật khẩu thành công");
                             nv.Password = txtMKmoi.Text;
-                            BLLNhanVien.Instance.ExecuteAddUpdate(nv);
+                            if (BLLNhanVien.Instance.ExecuteAddUpdate(nv))
+                            {
+                                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+                            }
                             this.Close();
                         }
                     }

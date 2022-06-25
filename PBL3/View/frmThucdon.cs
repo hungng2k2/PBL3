@@ -90,7 +90,14 @@ namespace PBL3.View
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa món ăn có id '" + id_MonAn + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
-                    BLLMonAn.Instance.Delete(id_MonAn);
+                    if (BLLMonAn.Instance.Delete(id_MonAn))
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
                     Reload();
                 }
             }
@@ -137,58 +144,60 @@ namespace PBL3.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            try
+
+            if (txtTenMon.Text == "")
             {
-                if (txtTenMon.Text == "")
-                {
-                    MessageBox.Show("Vui lòng nhập tên món ăn!");
-                    return;
-                }
-                if(BLLValidation.Instance.CheckName(txtTenMon.Text) == false)
-                {
-                    MessageBox.Show("Tên món ăn không hợp lệ!");
-                    return;
-                }
-                if (txtGiaBan.Text == "")
-                {
-                    MessageBox.Show("Vui lòng nhập giá bán!");
-                    return;
-                }
-                if (BLLValidation.Instance.CheckNumber(txtGiaBan.Text) == false)
-                {
-                    MessageBox.Show("Giá bán không hợp lệ!");
-                    return;
-                }
-                if (txtGiaNhap.Text == "")
-                {
-                    MessageBox.Show("Vui lòng nhập giá nhập!");
-                    return;
-                }
-                if (BLLValidation.Instance.CheckNumber(txtGiaNhap.Text) == false)
-                {
-                    MessageBox.Show("Giá nhập không hợp lệ!");
-                    return;
-                }
-                if (Convert.ToDouble(txtGiaBan.Text) < Convert.ToDouble(txtGiaNhap.Text))
-                {
-                    MessageBox.Show("Giá bán không thể bé hơn giá nhập!");
-                    return;
-                }
-                BLLMonAn.Instance.ExecuteAddUpdate(new MonAn
-                {
-                    id_MonAn = txtMaMonAn.Text,
-                    TenMonAn = txtTenMon.Text,
-                    GiaNhap = Convert.ToDouble(txtGiaNhap.Text),
-                    GiaBan = Convert.ToDouble(txtGiaBan.Text),
-                    imagePath = ImageSourceFile,
-                });
-                EditorEnable(false);
-                Reload();
+                MessageBox.Show("Vui lòng nhập tên món ăn!");
+                return;
             }
-            catch (Exception ex)
+            if (BLLValidation.Instance.CheckName(txtTenMon.Text) == false)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tên món ăn không hợp lệ!");
+                return;
             }
+            if (txtGiaBan.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập giá bán!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckNumber(txtGiaBan.Text) == false)
+            {
+                MessageBox.Show("Giá bán không hợp lệ!");
+                return;
+            }
+            if (txtGiaNhap.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập giá nhập!");
+                return;
+            }
+            if (BLLValidation.Instance.CheckNumber(txtGiaNhap.Text) == false)
+            {
+                MessageBox.Show("Giá nhập không hợp lệ!");
+                return;
+            }
+            if (Convert.ToDouble(txtGiaBan.Text) < Convert.ToDouble(txtGiaNhap.Text))
+            {
+                MessageBox.Show("Giá bán không thể bé hơn giá nhập!");
+                return;
+            }
+            if (BLLMonAn.Instance.ExecuteAddUpdate(new MonAn
+            {
+                id_MonAn = txtMaMonAn.Text,
+                TenMonAn = txtTenMon.Text,
+                GiaNhap = Convert.ToDouble(txtGiaNhap.Text),
+                GiaBan = Convert.ToDouble(txtGiaBan.Text),
+                imagePath = ImageSourceFile,
+            }))
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+            }
+            EditorEnable(false);
+            Reload();
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

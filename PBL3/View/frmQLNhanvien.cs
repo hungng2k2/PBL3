@@ -139,7 +139,8 @@ namespace PBL3.View
                 MessageBox.Show("Vui lòng nhập địa chỉ!");
                 return;
             }
-            BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
+
+            if(BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
             {
                 id_NhanVien = txtMaNhanVien.Text,
                 TenNhanVien = txtTenNhanVien.Text,
@@ -147,7 +148,14 @@ namespace PBL3.View
                 GioiTinh = rbMale.Checked,
                 SoDienThoai = txtSoDienThoai.Text,
                 DiaChi = txtDiaChi.Text
-            });
+            }))
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+            }
             EditorEnable(false);
             Reload();
         }
@@ -166,7 +174,14 @@ namespace PBL3.View
                     }
                     else
                     {
-                        BLLNhanVien.Instance.Delete(id);
+                        if (BLLNhanVien.Instance.Delete(id))
+                        {
+                            MessageBox.Show("Xóa thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại!");
+                        }
                         Reload();
                     }
                 }
@@ -236,7 +251,14 @@ namespace PBL3.View
                 DialogResult dr = MessageBox.Show("Bạn muốn reset nhân viên có ID '" + id_NhanVien + "'?", "Xác nhận reset", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
-                    BLLNhanVien.Instance.ResetAccount(id_NhanVien);
+                    if (BLLNhanVien.Instance.ResetAccount(id_NhanVien))
+                    {
+                        MessageBox.Show("Reset tài khoản thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Reset tài khoản thất bại!");
+                    };
                     Reload();
                 }
             }

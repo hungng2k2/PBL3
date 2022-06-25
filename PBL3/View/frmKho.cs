@@ -62,7 +62,14 @@ namespace PBL3.View
             string id_MonAn = dgvDSMonAn.SelectedRows[0].Cells[0].Value.ToString();
             MonAn monAn = BLLMonAn.Instance.GetById(id_MonAn);
             monAn.SoLuong = Convert.ToInt32(txtSoLuong.Text);
-            BLLMonAn.Instance.ExecuteAddUpdate(monAn);
+            if (BLLMonAn.Instance.ExecuteAddUpdate(monAn))
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+            }
             Reload();
             dgvDSMonAn_SelectionChanged(sender, e);
             EditorEnable(false);

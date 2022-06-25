@@ -11,7 +11,7 @@ namespace PBL3.DTO
         public string id_NhanVien { get; set; }
         public string TenNhanVien { get; set; }
         public DateTime NgaySinh { get; set; }
-        public String GioiTinh { get; set; }
+        public string GioiTinh { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
     }
