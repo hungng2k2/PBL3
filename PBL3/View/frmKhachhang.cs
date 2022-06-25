@@ -100,7 +100,14 @@ namespace PBL3.View
                 DialogResult dr = MessageBox.Show("Bạn muốn xóa khách hàng có ID '" + id + "'?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
-                    BLLKhachHang.Instance.Delete(id);
+                    if(BLLKhachHang.Instance.Delete(id))
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
                     Reload();
                 }
             }
@@ -146,7 +153,7 @@ namespace PBL3.View
                 MessageBox.Show("Vui lòng nhập địa chỉ!");
                 return;
             }
-            BLLKhachHang.Instance.ExecuteAddUpdate(new KhachHang
+            if(BLLKhachHang.Instance.ExecuteAddUpdate(new KhachHang
             {
                 id_KhachHang = txtMaKhachHang.Text,
                 TenKhachHang = txtTenKhachHang.Text,
@@ -154,7 +161,14 @@ namespace PBL3.View
                 GioiTinh = rbMale.Checked,
                 SoDienThoai = txtSoDienThoai.Text,
                 DiaChi = txtDiaChi.Text
-            });
+            }))
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+            }
             EditorEnable(false);
             Reload();
         }

@@ -71,7 +71,6 @@
   <ItemGroup>
     <Compile Include="BLL\BLLChiTietOrder.cs" />
     <Compile Include="BLL\BLLHoaDon.cs" />
-    <Compile Include="BLL\BLLInterface.cs" />
     <Compile Include="BLL\BLLKhachHang.cs" />
     <Compile Include="BLL\BLLMonAn.cs" />
     <Compile Include="BLL\BLLNhanVien.cs" />

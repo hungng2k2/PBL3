@@ -76,7 +76,7 @@ namespace PBL3.View
                 return;
             }
             NhanVien nv = BLLNhanVien.Instance.GetById(id);
-            BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
+            if(BLLNhanVien.Instance.ExecuteAddUpdate(new NhanVien
             {
                 id_NhanVien = nv.id_NhanVien,
                 TenNhanVien = txtTen.Text,
@@ -87,7 +87,14 @@ namespace PBL3.View
                 Username = txtUsername.Text,
                 ChucVu = nv.ChucVu,
                 Password = nv.Password,
-            });
+            }))
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật cơ sở dữ liệu thất bại!");
+            }
             MessageBox.Show("Cập nhật thông tin thành công");
             this.Close();
         }
