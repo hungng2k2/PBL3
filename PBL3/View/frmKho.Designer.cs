@@ -47,9 +47,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.butSearch = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMonAn)).BeginInit();
             this.panel2.SuspendLayout();
@@ -112,6 +112,7 @@
             this.dgvDSMonAn.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
             this.dgvDSMonAn.Location = new System.Drawing.Point(3, 18);
             this.dgvDSMonAn.Name = "dgvDSMonAn";
+            this.dgvDSMonAn.ReadOnly = true;
             this.dgvDSMonAn.RowHeadersVisible = false;
             this.dgvDSMonAn.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvDSMonAn.RowTemplate.Height = 24;
@@ -132,7 +133,7 @@
             this.dgvDSMonAn.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDSMonAn.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDSMonAn.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvDSMonAn.ThemeStyle.ReadOnly = false;
+            this.dgvDSMonAn.ThemeStyle.ReadOnly = true;
             this.dgvDSMonAn.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.dgvDSMonAn.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDSMonAn.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,18 +301,6 @@
             this.panel1.Size = new System.Drawing.Size(971, 326);
             this.panel1.TabIndex = 3;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.flowLayoutPanel1.Controls.Add(this.btnThem);
-            this.flowLayoutPanel1.Controls.Add(this.btnLuu);
-            this.flowLayoutPanel1.Controls.Add(this.btnHuy);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(242, 228);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(494, 83);
-            this.flowLayoutPanel1.TabIndex = 14;
-            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -334,6 +323,18 @@
             this.butSearch.Text = "Tìm kiếm";
             this.butSearch.UseVisualStyleBackColor = true;
             this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.flowLayoutPanel1.Controls.Add(this.btnThem);
+            this.flowLayoutPanel1.Controls.Add(this.btnLuu);
+            this.flowLayoutPanel1.Controls.Add(this.btnHuy);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(242, 228);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(494, 83);
+            this.flowLayoutPanel1.TabIndex = 14;
             // 
             // frmKho
             // 

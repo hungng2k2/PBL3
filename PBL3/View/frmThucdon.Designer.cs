@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.butSearch = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvThucdon = new Guna.UI2.WinForms.Guna2DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.butSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +77,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 326);
             this.panel1.TabIndex = 8;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(1073, 297);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(110, 27);
+            this.txtSearch.TabIndex = 17;
+            // 
+            // butSearch
+            // 
+            this.butSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.butSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.butSearch.Location = new System.Drawing.Point(1187, 297);
+            this.butSearch.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(100, 27);
+            this.butSearch.TabIndex = 16;
+            this.butSearch.Text = "Tìm kiếm";
+            this.butSearch.UseVisualStyleBackColor = true;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -355,6 +378,7 @@
             this.dgvThucdon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
             this.dgvThucdon.Location = new System.Drawing.Point(3, 18);
             this.dgvThucdon.Name = "dgvThucdon";
+            this.dgvThucdon.ReadOnly = true;
             this.dgvThucdon.RowHeadersVisible = false;
             this.dgvThucdon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvThucdon.RowTemplate.Height = 24;
@@ -375,7 +399,7 @@
             this.dgvThucdon.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvThucdon.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvThucdon.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvThucdon.ThemeStyle.ReadOnly = false;
+            this.dgvThucdon.ThemeStyle.ReadOnly = true;
             this.dgvThucdon.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.dgvThucdon.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvThucdon.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,29 +413,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(1073, 297);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(110, 27);
-            this.txtSearch.TabIndex = 17;
-            // 
-            // butSearch
-            // 
-            this.butSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.butSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.butSearch.Location = new System.Drawing.Point(1187, 297);
-            this.butSearch.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.butSearch.Name = "butSearch";
-            this.butSearch.Size = new System.Drawing.Size(100, 27);
-            this.butSearch.TabIndex = 16;
-            this.butSearch.Text = "Tìm kiếm";
-            this.butSearch.UseVisualStyleBackColor = true;
-            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
             // 
             // frmThucDon
             // 

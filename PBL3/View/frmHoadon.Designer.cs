@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.detailbut = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtNhanvienlap = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDSHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.detailbut = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHoaDon)).BeginInit();
@@ -66,6 +66,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(971, 326);
             this.panel2.TabIndex = 1;
+            // 
+            // detailbut
+            // 
+            this.detailbut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.detailbut.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.detailbut.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.detailbut.IconColor = System.Drawing.Color.Black;
+            this.detailbut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.detailbut.Location = new System.Drawing.Point(603, 138);
+            this.detailbut.Name = "detailbut";
+            this.detailbut.Size = new System.Drawing.Size(176, 60);
+            this.detailbut.TabIndex = 15;
+            this.detailbut.Text = "Xem chi tiết hóa đơn";
+            this.detailbut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.detailbut.UseVisualStyleBackColor = true;
+            this.detailbut.Click += new System.EventHandler(this.butDetail_Click);
             // 
             // label6
             // 
@@ -188,35 +204,36 @@
             // 
             // dgvDSHoaDon
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
-            this.dgvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
+            this.dgvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSHoaDon.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDSHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDSHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDSHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSHoaDon.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSHoaDon.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(210)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSHoaDon.EnableHeadersVisualStyles = false;
             this.dgvDSHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(235)))), ((int)(((byte)(241)))));
             this.dgvDSHoaDon.Location = new System.Drawing.Point(3, 20);
             this.dgvDSHoaDon.Name = "dgvDSHoaDon";
+            this.dgvDSHoaDon.ReadOnly = true;
             this.dgvDSHoaDon.RowHeadersVisible = false;
             this.dgvDSHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvDSHoaDon.RowTemplate.Height = 24;
@@ -237,7 +254,7 @@
             this.dgvDSHoaDon.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDSHoaDon.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDSHoaDon.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvDSHoaDon.ThemeStyle.ReadOnly = false;
+            this.dgvDSHoaDon.ThemeStyle.ReadOnly = true;
             this.dgvDSHoaDon.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.dgvDSHoaDon.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDSHoaDon.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,22 +264,6 @@
             this.dgvDSHoaDon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvDSHoaDon.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSHoaDon_DataBindingComplete);
             this.dgvDSHoaDon.SelectionChanged += new System.EventHandler(this.dgvDSHoaDon_SelectionChanged);
-            // 
-            // detailbut
-            // 
-            this.detailbut.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.detailbut.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.detailbut.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.detailbut.IconColor = System.Drawing.Color.Black;
-            this.detailbut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.detailbut.Location = new System.Drawing.Point(603, 138);
-            this.detailbut.Name = "detailbut";
-            this.detailbut.Size = new System.Drawing.Size(176, 60);
-            this.detailbut.TabIndex = 15;
-            this.detailbut.Text = "Xem chi tiết hóa đơn";
-            this.detailbut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.detailbut.UseVisualStyleBackColor = true;
-            this.detailbut.Click += new System.EventHandler(this.butDetail_Click);
             // 
             // frmHoadon
             // 
